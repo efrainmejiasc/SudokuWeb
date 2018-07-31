@@ -78,5 +78,23 @@ namespace SudokuWeb.Models
             return resultado;
         }
 
+        public int ActivarInactivarDesactivarCliente(string MAIL , string ESTADO)
+        {
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            int resultado = new int();
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActivarInactivarDesactivarCliente", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
     }
 }

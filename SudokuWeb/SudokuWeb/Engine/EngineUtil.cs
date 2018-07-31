@@ -31,26 +31,26 @@ namespace SudokuWeb.Engine
             string existeUsuario = ModeloDb.SeleccionUsuario(USUARIO);
             if (existeMail != string.Empty && existeUsuario != string.Empty)
             {
-                 resultado = "La Direccion de Correo Electronico y el Usuario ya se Encuentran Registrados";
+                 resultado = "La Direccion de Correo Electronico y el Usuario ya se Encuentran Registrados"; //001
             }
             else if (existeMail != string.Empty && existeUsuario == string.Empty)
             {
-                 resultado = "La Direccion de Correo Electronico ya se Encuentra Registrada";
+                 resultado = "La Direccion de Correo Electronico ya se Encuentra Registrada";//002
             }
             else if (existeMail == string.Empty && existeUsuario != string.Empty)
             {
-                resultado = "El Nombre de Usuario ya se Encuentra Registrado";
+                resultado = "El Nombre de Usuario ya se Encuentra Registrado";//003
             }
             else if (existeMail == string.Empty && existeUsuario == string.Empty)
             {
                 int r = ModeloDb.InsertarCliente(MAIL, NOMBRE, USUARIO, PASSWORD);
                 if (r == -1)
                 {
-                    resultado = "Cuenta Registrada Exitosamente";
+                    resultado = "Cuenta Registrada Exitosamente";//200
                 }
                 else
                 {
-                    resultado = "La Cuenta No Pudo ser Registrada Exitosamente, Intentelo mas Tarde";
+                    resultado = "La Cuenta No Pudo ser Registrada Exitosamente, Intentelo mas Tarde";//004
                 }
             }
 
