@@ -8,7 +8,6 @@ namespace SudokuWeb.Engine
 {
     public class MailNotificacion
     {
-
         public bool EnviarMail(string asunto,string cuerpo,string mailCliente)
         {
             bool result = false;

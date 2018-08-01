@@ -9,6 +9,9 @@ namespace SudokuWeb.Engine
     public class EngineUtil
     {
         private static Models.EngineModel ModeloDb = new Models.EngineModel();
+        private static Engine.MailNotificacion FuncionMail = new Engine.MailNotificacion();
+
+
 
         public string ConvertirBase64(string cadena)
         {
@@ -46,7 +49,9 @@ namespace SudokuWeb.Engine
                 int r = ModeloDb.InsertarCliente(MAIL, NOMBRE, USUARIO, PASSWORD);
                 if (r == -1)
                 {
-                    resultado = "Cuenta Registrada Exitosamente";//200
+                    EngineUtil Funcion = new EngineUtil();
+                    bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + ConstruirUrlEstadoCliiente(MAIL,USUARIO,"ACTIVO") , MAIL);
+                    resultado = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar el Estado de Su Cuenta";//200
                 }
                 else
                 {
@@ -57,6 +62,21 @@ namespace SudokuWeb.Engine
 
             return resultado;
         }
+
+
+        [System.Web.Services.WebMethod]
+        public static string ConstruirUrlEstadoCliiente (string MAIL , string USUARIO , string ESTADO)
+        {
+            string urlEstadoCliente = string.Empty;
+            EngineUtil Funcion = new EngineUtil();
+            string MAIL64 = Funcion.ConvertirBase64(MAIL);
+            urlEstadoCliente = Models.EngineData.urlEstado + Models.EngineData.interrogacion + Models.EngineData.usuario + USUARIO +
+                               Models.EngineData.y + Models.EngineData.estado + ESTADO + Models.EngineData.y + Models.EngineData.mail + MAIL64;
+
+            return urlEstadoCliente;
+        }
+
+      
 
     }
 }
