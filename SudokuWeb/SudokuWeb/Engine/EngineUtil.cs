@@ -76,7 +76,24 @@ namespace SudokuWeb.Engine
             return urlEstadoCliente;
         }
 
-      
+        [System.Web.Services.WebMethod]
+        public static string Logeo (string USUARIO, string PASSWORD)
+        {
+            string resultado = string.Empty;
+            string existeUsuarioPassword = ModeloDb.LogeoCliente(USUARIO,PASSWORD,"ACTIVO");
+            if (existeUsuarioPassword == string.Empty)
+            {
+                resultado = "El Usuario con el Password Ingresado no Existe o se Encuentra Inactivo"; //005
+            }
+            else
+            {
+                resultado = "Auntentificacion Exitosa"; // 500
+            }
+
+            return resultado;
+        }
+
+
 
     }
 }

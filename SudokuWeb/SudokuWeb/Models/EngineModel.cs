@@ -96,5 +96,28 @@ namespace SudokuWeb.Models
             return resultado;
         }
 
+        public string LogeoCliente(string USUARIO , string PASSWORD,string ESTADO)
+        {
+            object obj = new object();
+            string resultado = string.Empty;
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_LogeoCliente", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@USUARIO", USUARIO);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                obj = command.ExecuteScalar();
+                Conexion.Close();
+            }
+            if (obj != null)
+            {
+                resultado = obj.ToString();
+            }
+            return resultado;
+        }
+
     }
 }
