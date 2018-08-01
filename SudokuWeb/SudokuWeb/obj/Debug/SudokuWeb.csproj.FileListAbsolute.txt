@@ -6,4 +6,3 @@ C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWe
 C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csproj.CoreCompileInputs.cache
 C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.dll
 C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.pdb
-C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csprojResolveAssemblyReference.cache
