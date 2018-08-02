@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="default.aspx" />
     <Content Include="fonts\open-sans-v15-latin-300.woff" />
     <Content Include="fonts\open-sans-v15-latin-300.woff2" />
     <Content Include="fonts\open-sans-v15-latin-800.woff" />
@@ -80,20 +81,7 @@
     <Content Include="images\front.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\main-background.jpg" />
-    <Content Include="static\css\main.fef15ef4.css.map" />
-    <Content Include="static\js\main.e3d05407.js.map" />
-    <Content Include="static\media\brand-icons.13db00b7.eot" />
-    <Content Include="static\media\brand-icons.a046592b.woff" />
-    <Content Include="static\media\brand-icons.c5ebe0b3.ttf" />
-    <Content Include="static\media\brand-icons.e8c322de.woff2" />
-    <Content Include="static\media\icons.0ab54153.woff2" />
-    <Content Include="static\media\icons.8e3c7f55.eot" />
-    <Content Include="static\media\icons.b87b9ba5.ttf" />
-    <Content Include="static\media\icons.faff9214.woff" />
-    <Content Include="static\media\outline-icons.701ae6ab.eot" />
-    <Content Include="static\media\outline-icons.ad97afd3.ttf" />
-    <Content Include="static\media\outline-icons.cd6c777f.woff2" />
-    <Content Include="static\media\outline-icons.ef60a4f6.woff" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -103,19 +91,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="index.html" />
-    <Content Include="static\css\main.fef15ef4.css" />
-    <Content Include="static\js\main.e3d05407.js" />
-    <Content Include="static\media\brand-icons.a1a749e8.svg" />
-    <Content Include="static\media\flags.9c74e172.png" />
-    <Content Include="static\media\icons.962a1bf3.svg" />
-    <Content Include="static\media\outline-icons.82f60bd0.svg" />
-    <Content Include="View\ActSudoku.aspx" />
+    <Content Include="images\SudokuEnCasa.ico" />
+    <Content Include="js\main.js" />
+    <Content Include="View\ActivarCuentaSudoku.aspx" />
+    <Content Include="View\RegistrarCuenta.aspx" />
+    <Content Include="View\Login.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Engine\EngineUtil.cs" />
     <Compile Include="Engine\MailNotificacion.cs" />
     <Compile Include="Global.asax.cs">
@@ -124,12 +116,26 @@
     <Compile Include="Models\EngineData.cs" />
     <Compile Include="Models\EngineModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\ActSudoku.aspx.cs">
-      <DependentUpon>ActSudoku.aspx</DependentUpon>
+    <Compile Include="View\ActivarCuentaSudoku.aspx.cs">
+      <DependentUpon>ActivarCuentaSudoku.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\ActSudoku.aspx.designer.cs">
-      <DependentUpon>ActSudoku.aspx</DependentUpon>
+    <Compile Include="View\ActivarCuentaSudoku.aspx.designer.cs">
+      <DependentUpon>ActivarCuentaSudoku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegistrarCuenta.aspx.cs">
+      <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\RegistrarCuenta.aspx.designer.cs">
+      <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

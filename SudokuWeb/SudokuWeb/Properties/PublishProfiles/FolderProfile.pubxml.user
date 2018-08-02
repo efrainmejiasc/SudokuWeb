@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\EfrainMejiasC\Downloads\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>08/15/2017 13:12:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/27/2016 14:50:24</publishTime>
+    </File>
+    <File Include="bin/SudokuWeb.dll">
+      <publishTime>08/01/2018 16:05:03</publishTime>
+    </File>
+    <File Include="bin/SudokuWeb.pdb">
+      <publishTime>08/01/2018 16:05:03</publishTime>
+    </File>
+    <File Include="fonts/open-sans-v15-latin-300.woff">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/open-sans-v15-latin-300.woff2">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/open-sans-v15-latin-800.woff">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/open-sans-v15-latin-800.woff2">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/open-sans-v15-latin-regular.woff">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/open-sans-v15-latin-regular.woff2">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/oswald-v16-latin-600.woff">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/oswald-v16-latin-600.woff2">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/oswald-v16-latin-regular.woff">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="fonts/oswald-v16-latin-regular.woff2">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/30/2018 09:51:40</publishTime>
+    </File>
+    <File Include="images/front.png">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="images/main-background.jpg">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/css/main.fef15ef4.css">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/css/main.fef15ef4.css.map">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/js/main.e3d05407.js">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/js/main.e3d05407.js.map">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/brand-icons.13db00b7.eot">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/brand-icons.a046592b.woff">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/brand-icons.a1a749e8.svg">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/brand-icons.c5ebe0b3.ttf">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/brand-icons.e8c322de.woff2">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/flags.9c74e172.png">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/icons.0ab54153.woff2">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/icons.8e3c7f55.eot">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/icons.962a1bf3.svg">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/icons.b87b9ba5.ttf">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/icons.faff9214.woff">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/outline-icons.701ae6ab.eot">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/outline-icons.82f60bd0.svg">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/outline-icons.ad97afd3.ttf">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/outline-icons.cd6c777f.woff2">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="static/media/outline-icons.ef60a4f6.woff">
+      <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="View/ActSudoku.aspx">
+      <publishTime>07/31/2018 18:45:37</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>08/01/2018 16:05:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
