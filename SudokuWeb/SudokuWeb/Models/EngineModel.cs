@@ -96,6 +96,31 @@ namespace SudokuWeb.Models
             return resultado;
         }
 
+        public int SeleccionHorasActivar(string MAIL,string ESTADO)
+        {
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            object obj = new object();
+            int  resultado = - 1;
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_SeleccionHorasActivar", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                command.Parameters.AddWithValue("@FECHA", DateTime.Now);
+                obj = command.ExecuteScalar();
+                Conexion.Close();
+            }
+
+            if (obj != null)
+            {
+                resultado = Convert.ToInt32(obj);
+            }
+
+            return resultado;
+        }
+
         public string LogeoCliente(string USUARIO , string PASSWORD,string ESTADO)
         {
             object obj = new object();

@@ -9,6 +9,8 @@ namespace SudokuWeb.View
 {
     public partial class Login : System.Web.UI.Page
     {
+        Models.EngineModel g = new Models.EngineModel();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) { LimpiarTexto(); }

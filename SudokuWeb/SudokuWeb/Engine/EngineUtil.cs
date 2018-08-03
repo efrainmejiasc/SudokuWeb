@@ -173,6 +173,19 @@ namespace SudokuWeb.Engine
         }
 
         [System.Web.Services.WebMethod]
+        public static bool  SeleccionHorasActivar (string MAIL, string ESTADO)
+        {
+            bool resultado = false;
+            int r = ModeloDb.SeleccionHorasActivar(MAIL, ESTADO);
+            if (r >= 0 && r <= 3)
+            {
+                resultado = true;
+            }
+
+            return resultado;
+        }
+
+        [System.Web.Services.WebMethod]
         public static string ActivarInactivarDesactivarCliente(string MAIL, string ESTADO)
         {
             string resultado = string.Empty;
