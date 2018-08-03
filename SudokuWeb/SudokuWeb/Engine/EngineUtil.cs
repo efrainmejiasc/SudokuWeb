@@ -147,6 +147,21 @@ namespace SudokuWeb.Engine
             return resultado;
         }
 
+        [System.Web.Services.WebMethod]
+        public static string ActivarInactivarDesactivarCliente(string MAIL, string ESTADO)
+        {
+            string resultado = string.Empty;
+            int r = ModeloDb.ActivarInactivarDesactivarCliente(MAIL, ESTADO);
+            if (r == -1)
+            {
+                resultado = Models.EngineData.activacionExitosa + HttpContext.Current.Session["Usuario"].ToString();
+            }
+            else
+            {
+                resultado = "La Cuenta No Pudo ser Activada, Intentelo mas Tarde"; 
+            }
+            return resultado;
+        }
 
         [System.Web.Services.WebMethod]
         public static string ConstruirUrlEstadoCliiente (string MAIL , string USUARIO , string ESTADO)

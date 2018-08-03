@@ -28,8 +28,9 @@ namespace SudokuWeb.Models
 
         public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar el Estado de Su Cuenta";
         public static string asuntoActivacion =  "Activacion de Cuenta Sudoku Para Todos";
-        public static string cuerpoActivacion = "Bienvenido a Sudoku Para Todos , para activar su cuenta puede seguir el siguiente link </br></br>";  
-        public static  string loginExitoso = "Auntentificacion Exitosa";
+        public static string cuerpoActivacion = "Bienvenido a Sudoku Para Todos , para activar su cuenta puede seguir el siguiente link o cortar y pegar en su navegador web</br></br>";  
+        public static string loginExitoso = "Auntentificacion Exitosa";
+        public static string activacionExitosa = "Cuenta Activada Exitosamente, ";
 
     }
 }
