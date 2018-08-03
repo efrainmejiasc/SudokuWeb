@@ -15,6 +15,7 @@
          <div>
               <asp:Image ID="imgLogo" runat="server"  ImageUrl="~/images/logo.png" Width="203px" />
               <asp:Label ID="lblUserName" runat="server" Text="NombreUsuario"></asp:Label>
+              <asp:DropDownList ID="dropIdioma" runat="server" OnSelectedIndexChanged="dropIdioma_SelectedIndexChanged" AutoPostBack="True"> </asp:DropDownList>
               <asp:Button ID="btnLogin" runat="server"   Text="INICIAR SESION"  ForeColor="Gray" OnClick="BtnInit_Click" />
               <asp:Button ID="btnRegistro" runat="server"  Text="REGISTRATE"  ForeColor="Gray" OnClick="BtnInit_Click"/>
               <asp:Button ID="btnCerrarSesion" runat="server"  Text="CERRAR SESION" ForeColor="Gray" OnClick="BtnInit_Click" />
