@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 
 namespace SudokuWeb.Engine
@@ -10,7 +11,6 @@ namespace SudokuWeb.Engine
     {
         private static Models.EngineModel ModeloDb = new Models.EngineModel();
         private static Engine.MailNotificacion FuncionMail = new Engine.MailNotificacion();
-
 
 
         public string ConvertirBase64(string cadena)
@@ -26,39 +26,123 @@ namespace SudokuWeb.Engine
             return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
         }
 
-        [System.Web.Services.WebMethod]
-        public static string  CrearPerfilCliente(string MAIL, string NOMBRE, string USUARIO, string PASSWORD)
+        public bool EmailEsValido(string email)
         {
+            string expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            bool resultado = false;
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, string.Empty).Length == 0)
+                {
+                    resultado = true;
+                }
+            }
+            return resultado;
+        }
+
+        public bool InternetConnection()
+        {
+            bool r = false;
+            try
+            {
+                System.Net.IPHostEntry host = System.Net.Dns.GetHostEntry("www.google.com");
+                r = true;
+            }
+            catch { }
+            return r;
+        }
+
+        // ************************************************************************************************************************************************
+
+        [System.Web.Services.WebMethod]
+        public static string  CrearPerfilCliente(string MAIL, string NOMBRE, string USUARIO, string PASSWORD,string PASSWORD2,bool ROBOT)
+        {
+            EngineUtil Funcion = new EngineUtil();
             string resultado = string.Empty;
+
+            if (NOMBRE == string.Empty)
+            {
+                resultado = "El Campo Nombre No Puede Estar Vacio";
+                return resultado;
+            }
+            else if (MAIL == string.Empty)
+            {
+                resultado = "El Campo Correo Electronico No Puede Estar Vacio";
+                return resultado;
+            }
+            else if (USUARIO == string.Empty)
+            {
+              resultado = "El Campo Nombre de Usuario No Puede Estar Vacio";
+              return resultado;
+            }
+            else if (USUARIO.Contains(" "))
+            {
+                resultado = "El Campo Nombre de Usuario No Puede Contener Espacios en Blanco";
+                return resultado;
+            }
+            else if (PASSWORD == string.Empty)
+            {
+                resultado = "El Campo Contraseña No Puede Estar Vacio";
+                return resultado;
+            }
+            else if (PASSWORD.Contains(" "))
+            {
+                resultado = "El Campo Contraseña No Puede Contener Espacios en Blanco";
+                return resultado;
+            }
+            else if (PASSWORD2 == string.Empty)
+            {
+                resultado = "El Campo Confirmar Contraseña No Puede Estar Vacio";
+                return resultado;
+            }
+            else if (PASSWORD.Contains(" "))
+            {
+                resultado = "El Campo Confirmar Contraseña No Puede Contener Espacios en Blanco";
+                return resultado;
+            }
+            else if (PASSWORD != PASSWORD2)
+            {
+                resultado = "Las Contrasñas deben ser Iguales";
+                return resultado;
+            }
+            else if (!Funcion.EmailEsValido(MAIL))
+            {
+                resultado = "Debe Ingresar una Direccion de Correo Valida";
+                return resultado;
+            }
+            else if (ROBOT == false)
+            {
+                resultado = "Seleccione la Casilla No Soy un Robot";
+                return resultado;
+            }
+
             string existeMail = ModeloDb.SeleccionMail(MAIL);
             string existeUsuario = ModeloDb.SeleccionUsuario(USUARIO);
             if (existeMail != string.Empty && existeUsuario != string.Empty)
             {
-                 resultado = "La Direccion de Correo Electronico y el Usuario ya se Encuentran Registrados"; //001
+                 resultado = "La Direccion de Correo Electronico y el Usuario ya se Encuentran Registrados"; 
             }
             else if (existeMail != string.Empty && existeUsuario == string.Empty)
             {
-                 resultado = "La Direccion de Correo Electronico ya se Encuentra Registrada";//002
+                 resultado = "La Direccion de Correo Electronico ya se Encuentra Registrada";
             }
             else if (existeMail == string.Empty && existeUsuario != string.Empty)
             {
-                resultado = "El Nombre de Usuario ya se Encuentra Registrado";//003
+                resultado = "El Nombre de Usuario ya se Encuentra Registrado";
             }
             else if (existeMail == string.Empty && existeUsuario == string.Empty)
             {
                 int r = ModeloDb.InsertarCliente(MAIL, NOMBRE, USUARIO, PASSWORD);
                 if (r == -1)
                 {
-                    EngineUtil Funcion = new EngineUtil();
                     bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + ConstruirUrlEstadoCliiente(MAIL,USUARIO,"ACTIVO") , MAIL);
-                    resultado = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar el Estado de Su Cuenta";//200
+                    resultado = Models.EngineData.CuentaRegistradaExitosamente;//200
                 }
                 else
                 {
-                    resultado = "La Cuenta No Pudo ser Registrada Exitosamente, Intentelo mas Tarde";//004
+                    resultado = "La Cuenta No Pudo ser Registrada Exitosamente, Intentelo mas Tarde";
                 }
             }
-
 
             return resultado;
         }
@@ -77,22 +161,37 @@ namespace SudokuWeb.Engine
         }
 
         [System.Web.Services.WebMethod]
-        public static string Logeo (string USUARIO, string PASSWORD)
+        public static string Login (string USUARIO, string PASSWORD,bool ROBOT)
         {
             string resultado = string.Empty;
+            if (USUARIO == string.Empty)
+            {
+                resultado = "El Campo Usuario No Puede Estar Vacio";
+                return resultado;
+            }
+            else if (PASSWORD == string.Empty)
+            {
+                resultado = "El Campo Contraseña No Puede Estar Vacio";
+                return resultado;
+            }
+            else if (ROBOT == false)
+            {
+                resultado = "Seleccione la Casilla No Soy un Robot";
+                return resultado;
+            }
+
             string existeUsuarioPassword = ModeloDb.LogeoCliente(USUARIO,PASSWORD,"ACTIVO");
             if (existeUsuarioPassword == string.Empty)
             {
-                resultado = "El Usuario con el Password Ingresado no Existe o se Encuentra Inactivo"; //005
+                resultado = "El Usuario con el Password Ingresado no Existe o se Encuentra Inactivo"; 
             }
             else
             {
-                resultado = "Auntentificacion Exitosa"; // 500
+                resultado = Models.EngineData.loginExitoso;// 500
             }
 
             return resultado;
         }
-
 
 
     }

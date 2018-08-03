@@ -11,7 +11,17 @@ namespace SudokuWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserName"] != null)
+            {
+                lblUserName.Text = Session["UserName"].ToString();
+                btnCerrarSesion.Visible = true;
+            }
+            else
+            {
+                lblUserName.Text = string.Empty;
+                lblUserName.Visible = false;
+                btnCerrarSesion.Visible = false;
+            }
         }
 
         protected void BtnInit_Click(object sender, EventArgs e)
@@ -24,6 +34,11 @@ namespace SudokuWeb
                     break;
                 case ("btnRegistro"):
                     Response.Redirect("View/RegistrarCuenta.aspx");
+                    break;
+                case ("btncerrarSesion"):
+                    lblUserName.Text = string.Empty;
+                    lblUserName.Visible = false;
+                    btnCerrarSesion.Visible = false;
                     break;
             }
         }
