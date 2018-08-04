@@ -67,21 +67,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
-    <Content Include="fonts\open-sans-v15-latin-300.woff" />
-    <Content Include="fonts\open-sans-v15-latin-300.woff2" />
-    <Content Include="fonts\open-sans-v15-latin-800.woff" />
-    <Content Include="fonts\open-sans-v15-latin-800.woff2" />
-    <Content Include="fonts\open-sans-v15-latin-regular.woff" />
-    <Content Include="fonts\open-sans-v15-latin-regular.woff2" />
-    <Content Include="fonts\oswald-v16-latin-600.woff" />
-    <Content Include="fonts\oswald-v16-latin-600.woff2" />
-    <Content Include="fonts\oswald-v16-latin-regular.woff" />
-    <Content Include="fonts\oswald-v16-latin-regular.woff2" />
+    <Content Include="public\fonts\open-sans-v15-latin-300.woff" />
+    <Content Include="public\fonts\open-sans-v15-latin-300.woff2" />
+    <Content Include="public\fonts\open-sans-v15-latin-800.woff" />
+    <Content Include="public\fonts\open-sans-v15-latin-800.woff2" />
+    <Content Include="public\fonts\open-sans-v15-latin-regular.woff" />
+    <Content Include="public\fonts\open-sans-v15-latin-regular.woff2" />
+    <Content Include="public\fonts\oswald-v16-latin-600.woff" />
+    <Content Include="public\fonts\oswald-v16-latin-600.woff2" />
+    <Content Include="public\fonts\oswald-v16-latin-regular.woff" />
+    <Content Include="public\fonts\oswald-v16-latin-regular.woff2" />
     <None Include="packages.config" />
-    <Content Include="images\front.png" />
-    <Content Include="images\logo.png" />
-    <Content Include="images\main-background.jpg" />
+    <Content Include="public\images\front.png" />
+    <Content Include="public\images\logo.png" />
+    <Content Include="public\images\main-background.jpg" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="public\app.js.map" />
+    <Content Include="public\main.css.map" />
+    <Content Include="src\styles\main.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -91,8 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="images\SudokuEnCasa.ico" />
+    <Content Include="public\images\SudokuEnCasa.ico" />
     <Content Include="js\main.js" />
+    <Content Include="public\app.js" />
+    <Content Include="public\main.css" />
+    <Content Include="src\js\main.js" />
     <Content Include="View\ActivarCuentaSudoku.aspx" />
     <Content Include="View\RegistrarCuenta.aspx" />
     <Content Include="View\Login.aspx" />

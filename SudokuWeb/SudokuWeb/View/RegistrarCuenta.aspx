@@ -6,9 +6,10 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Sudoku Para Todos</title>
-     <link rel="shortcut icon" href="~/images/SudokuEnCasa.ico"/>
-    <script type="text/javascript" src="/js/main.js"></script>
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+       <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico"/>
+      <script type="text/javascript" src="/js/main.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="/public/app.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
