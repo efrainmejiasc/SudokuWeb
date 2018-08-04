@@ -91,10 +91,13 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>06/27/2016 14:50:24</publishTime>
     </File>
     <File Include="bin/SudokuWeb.dll">
-      <publishTime>08/01/2018 16:05:03</publishTime>
+      <publishTime>08/03/2018 19:20:02</publishTime>
     </File>
     <File Include="bin/SudokuWeb.pdb">
-      <publishTime>08/01/2018 16:05:03</publishTime>
+      <publishTime>08/03/2018 19:20:02</publishTime>
+    </File>
+    <File Include="default.aspx">
+      <publishTime>08/03/2018 09:22:45</publishTime>
     </File>
     <File Include="fonts/open-sans-v15-latin-300.woff">
       <publishTime>08/01/2018 15:15:28</publishTime>
@@ -138,8 +141,14 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="images/main-background.jpg">
       <publishTime>08/01/2018 15:15:28</publishTime>
     </File>
+    <File Include="images/SudokuEnCasa.ico">
+      <publishTime>08/01/2018 18:49:21</publishTime>
+    </File>
     <File Include="index.html">
       <publishTime>08/01/2018 15:15:28</publishTime>
+    </File>
+    <File Include="js/main.js">
+      <publishTime>08/02/2018 17:47:24</publishTime>
     </File>
     <File Include="static/css/main.fef15ef4.css">
       <publishTime>08/01/2018 15:15:28</publishTime>
@@ -201,8 +210,17 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
     <File Include="static/media/outline-icons.ef60a4f6.woff">
       <publishTime>08/01/2018 15:15:28</publishTime>
     </File>
+    <File Include="View/ActivarCuentaSudoku.aspx">
+      <publishTime>08/03/2018 08:10:27</publishTime>
+    </File>
     <File Include="View/ActSudoku.aspx">
       <publishTime>07/31/2018 18:45:37</publishTime>
+    </File>
+    <File Include="View/Login.aspx">
+      <publishTime>08/02/2018 21:06:59</publishTime>
+    </File>
+    <File Include="View/RegistrarCuenta.aspx">
+      <publishTime>08/02/2018 20:29:49</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>08/01/2018 16:05:04</publishTime>
