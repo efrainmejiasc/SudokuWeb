@@ -1,0 +1,31 @@
+.navbar {
+  .inner-container {
+    max-width: $inner-container-max-width;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .column-alfa {
+      .logo {
+        width: 150px;
+      }
+      .username {
+      }
+    }
+    .column-beta {
+      display: flex;
+      .menu-list {
+        display: flex;
+        > .menu-list-item {
+          margin-right: 2rem;
+          > .button {
+          }
+        }
+      }
+      .language-selector {
+        width: 100px;
+      }
+    }
+  }
+}

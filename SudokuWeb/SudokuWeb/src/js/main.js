@@ -1,16 +1,9 @@
-// import toggleMenu from './toggleMenu';
+import toggleMenu from './toggleMenu';
+import navbarOnScroll from './navbarOnScroll';
+import smoothScroll from './smoothScroll';
+import menuActive from './menuActive';
 
-// toggleMenu();
-
-function MostrarVentana(idDiv) {
-    var ventana = document.getElementById(idDiv);
-    ventana.style.display = 'block';
-}
-
-function OcultarVentana() {
-    var ventana = document.getElementById(idDiv);
-    ventana.style.display = 'none';
-}
-
-
-alert("hola sudoku web");
+toggleMenu();
+navbarOnScroll();
+smoothScroll();
+menuActive();
