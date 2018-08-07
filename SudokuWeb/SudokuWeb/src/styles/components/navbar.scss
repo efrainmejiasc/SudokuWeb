@@ -1,5 +1,7 @@
 .navbar {
+  @include box-shadow(2px, 2px, 5px, 0px, rgba(79, 79, 79, 0.3));
   .inner-container {
+    overflow: visible;
     max-width: $inner-container-max-width;
     margin: 0 auto;
     padding: 0.5rem 2rem;
@@ -8,7 +10,7 @@
     justify-content: space-between;
     .column-alfa {
       .logo {
-        width: 150px;
+        width: 100px;
       }
       .username {
       }
@@ -19,12 +21,26 @@
         display: flex;
         > .menu-list-item {
           margin-right: 2rem;
-          > .button {
+          > .anchor {
+            font-weight: 800;
+            border: 1px solid #50cc91;
+            border-radius: 4px;
+            padding: 0.4rem 1.2rem;
+            color: #565959;
+            transition: 0.4s all;
+            text-transform: uppercase;
+            white-space: nowrap;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            &:hover {
+              background-color: #50cc91;
+              color: #ffffff;
+            }
           }
         }
       }
-      .language-selector {
-        width: 100px;
+      .languagepicker {
+        width: 50px;
       }
     }
   }

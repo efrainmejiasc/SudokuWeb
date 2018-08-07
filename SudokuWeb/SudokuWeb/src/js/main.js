@@ -1,9 +1,5 @@
 import toggleMenu from './toggleMenu';
-import navbarOnScroll from './navbarOnScroll';
-import smoothScroll from './smoothScroll';
-import menuActive from './menuActive';
+import languageSwitcher from './languageSwitcher';
 
-toggleMenu();
-navbarOnScroll();
-smoothScroll();
-menuActive();
+// toggleMenu();
+languageSwitcher();

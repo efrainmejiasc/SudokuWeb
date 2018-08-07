@@ -1,0 +1,11 @@
+.background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-image: url('images/main-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  filter: opacity(0.2);
+  z-index: -1;
+}
