@@ -22,16 +22,16 @@ namespace SudokuWeb
                 lblUserName.Visible = false;
                 btnCerrarSesion.Visible = false;
             }
-            if (dropIdioma.Items.Count == 0)
-            {
-                dropIdioma.Items.Add("English");
-                dropIdioma.Items.Add("Español");
-                dropIdioma.Items.Add("Português");
-            }
+            //if (dropIdioma.Items.Count == 0)
+            //{
+                // dropIdioma.Items.Add("English");
+                // dropIdioma.Items.Add("Español");
+                // dropIdioma.Items.Add("Português");
+            //}
             if (!IsPostBack)
             {
-                Engine.EngineUtil Funcion = new Engine.EngineUtil();
-                dropIdioma = Funcion.DropDownListIdioma(dropIdioma);
+                // Engine.EngineUtil Funcion = new Engine.EngineUtil();
+               // dropIdioma = Funcion.DropDownListIdioma(dropIdioma);
             }
 
         }
@@ -57,10 +57,10 @@ namespace SudokuWeb
 
         protected void dropIdioma_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (dropIdioma.SelectedIndex != 0)
-            {
-                Session["Idioma"] = dropIdioma.SelectedItem.ToString();
-            }
+           // if (dropIdioma.SelectedIndex != 0)
+            //{
+              //  Session["Idioma"] = dropIdioma.SelectedItem.ToString();
+            //}
         }
     
     }

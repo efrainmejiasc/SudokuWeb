@@ -30,15 +30,15 @@
 
             <ul class="menu-list">
               <li class="menu-list-item">
-                <asp:HiperLink ID="btnLogin" class="button" runat="server" Text="iniciar sesión" OnClick="BtnInit_Click" data-text/>
+                <asp:HyperLink ID="btnLogin" class="button" runat="server" Text="iniciar sesión" OnClick="BtnInit_Click" data-text />
                 <!-- <Button class="button">iniciar sesión</Button> -->
               </li>
               <li class="menu-list-item">
-                <asp:HiperLink ID="btnCerrarSesion" class="button" runat="server" Text="cerrar sesión" OnClick="BtnInit_Click" data-text/>
+                <asp:HyperLink ID="btnCerrarSesion" class="button" runat="server" Text="cerrar sesión" OnClick="BtnInit_Click" data-text />
                 <!-- <Button class="button">cerrar sesión</Button> -->
               </li>
               <li class="menu-list-item">
-                <asp:HiperLink ID="btnRegistro" class="button" runat="server" Text="regístrate" OnClick="BtnInit_Click" data-text/>
+                <asp:HyperLink ID="btnRegistro" class="button" runat="server" Text="regístrate" OnClick="BtnInit_Click" data-text />
                 <!-- <button class="button">regístrate</button> -->
               </li>
             </ul>
