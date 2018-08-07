@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
          <div>
-           <asp:Image ID="imgLogo" runat="server"  ImageUrl="~/images/logo.png" Width="121px" Height="95px" />
+           <asp:Image ID="imgLogo" runat="server"  ImageUrl="~/public/images/logo.png" Width="121px" Height="95px" />
              <asp:Label ID="Label1" runat="server" Text="Nombre Completo"></asp:Label>
              <asp:TextBox ID="txtNombreCompleto" runat="server"></asp:TextBox>
              <asp:Label ID="Label2" runat="server" Text="Correo Electronico"></asp:Label>

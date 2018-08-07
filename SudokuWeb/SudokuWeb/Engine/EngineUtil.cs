@@ -53,30 +53,6 @@ namespace SudokuWeb.Engine
             return r;
         }
 
-        public DropDownList DropDownListIdioma(DropDownList dropIdioma)
-        {
-            if (HttpContext.Current.Session["Idioma"] == null)
-            {
-                dropIdioma.SelectedIndex = 1;
-            }
-            else
-            {
-                if (HttpContext.Current.Session["Idioma"].ToString() == "English")
-                {
-                    dropIdioma.SelectedIndex = 0;
-                }
-                else if (HttpContext.Current.Session["Idioma"].ToString() == "Español")
-                {
-                    dropIdioma.SelectedIndex = 1;
-                }
-                else if (HttpContext.Current.Session["Idioma"].ToString() == "Português")
-                {
-                    dropIdioma.SelectedIndex = 2;
-                }
-            }
-            return dropIdioma;
-        }
-
         // ************************************************************************************************************************************************
 
         [System.Web.Services.WebMethod]

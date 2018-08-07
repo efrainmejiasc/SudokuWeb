@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
          <div>
-             <asp:Image ID="imgLogo" runat="server"  ImageUrl="~/images/logo.png" Width="121px" Height="95px" />
+             <asp:Image ID="imgLogo" runat="server"  ImageUrl="~/public/images/logo.png" Width="121px" Height="95px" />
              <asp:Label ID="Label1" runat="server" Text="Activar Cuenta Sudoku Para Todos"></asp:Label>
             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" />
             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" />

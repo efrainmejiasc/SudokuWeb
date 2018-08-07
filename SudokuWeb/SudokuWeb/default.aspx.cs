@@ -22,23 +22,13 @@ namespace SudokuWeb
                 lblUserName.Visible = false;
                 btnCerrarSesion.Visible = false;
             }
-            //if (dropIdioma.Items.Count == 0)
-            //{
-                // dropIdioma.Items.Add("English");
-                // dropIdioma.Items.Add("Español");
-                // dropIdioma.Items.Add("Português");
-            //}
-            if (!IsPostBack)
-            {
-                // Engine.EngineUtil Funcion = new Engine.EngineUtil();
-               // dropIdioma = Funcion.DropDownListIdioma(dropIdioma);
-            }
+          
 
         }
 
         protected void BtnInit_Click(object sender, EventArgs e)
         {
-            Button btn = sender as Button;
+            LinkButton btn = sender as LinkButton;
             switch (btn.ID)
             {
                 case ("btnLogin"):
@@ -55,13 +45,6 @@ namespace SudokuWeb
             }
         }
 
-        protected void dropIdioma_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           // if (dropIdioma.SelectedIndex != 0)
-            //{
-              //  Session["Idioma"] = dropIdioma.SelectedItem.ToString();
-            //}
-        }
-    
+     
     }
 }

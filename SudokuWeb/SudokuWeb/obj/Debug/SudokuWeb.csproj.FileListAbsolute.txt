@@ -8,3 +8,12 @@ C:\Users\franklin\Documents\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.cs
 C:\Users\franklin\Documents\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csproj.CopyComplete
 C:\Users\franklin\Documents\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.dll
 C:\Users\franklin\Documents\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.pdb
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\bin\SudokuWeb.dll.config
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\bin\SudokuWeb.dll
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\bin\SudokuWeb.pdb
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csprojResolveAssemblyReference.cache
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csproj.CoreCompileInputs.cache
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.dll
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.pdb
