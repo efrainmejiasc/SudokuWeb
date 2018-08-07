@@ -30,28 +30,22 @@
 
             <ul class="menu-list">
               <li class="menu-list-item">
-                <asp:Button ID="btnLogin" class="button" runat="server" Text="INICIAR SESION" OnClick="BtnInit_Click" />
+                <asp:HiperLink ID="btnLogin" class="button" runat="server" Text="iniciar sesión" OnClick="BtnInit_Click" data-text/>
                 <!-- <Button class="button">iniciar sesión</Button> -->
               </li>
               <li class="menu-list-item">
-                <asp:Button ID="btnCerrarSesion" class="button" runat="server" Text="CERRAR SESION" OnClick="BtnInit_Click" />
+                <asp:HiperLink ID="btnCerrarSesion" class="button" runat="server" Text="cerrar sesión" OnClick="BtnInit_Click" data-text/>
                 <!-- <Button class="button">cerrar sesión</Button> -->
               </li>
               <li class="menu-list-item">
-                <asp:Button ID="btnRegistro" class="button" runat="server" Text="REGISTRATE" OnClick="BtnInit_Click" />
+                <asp:HiperLink ID="btnRegistro" class="button" runat="server" Text="regístrate" OnClick="BtnInit_Click" data-text/>
                 <!-- <button class="button">regístrate</button> -->
               </li>
             </ul>
 
 
-            <asp:DropDownList ID="dropIdioma" class="language-selector" runat="server" OnSelectedIndexChanged="dropIdioma_SelectedIndexChanged"
-              AutoPostBack="True">
-            </asp:DropDownList>
-            <!-- <select class="language-selector">
-              <option value="espanol">espanol</option>
-              <option value="ingles">ingles</option>
-              <option value="portugues">portugues</option>
-            </select> -->
+            <select name="language" class="languagepicker" id="languagepicker">
+            </select>
           </div>
 
         </div>
@@ -59,6 +53,7 @@
 
       <section class="video">
         <div class="inner-container">
+          <h1 class="title" data-text>sudoku para todos</h1>
           <div class="video-container">
             <iframe id="videoInit" class="video" src="https://www.youtube.com/embed/SkRyiELVpO4?autoplay=1"></iframe>
           </div>
