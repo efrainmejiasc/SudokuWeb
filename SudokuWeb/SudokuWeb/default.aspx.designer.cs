@@ -46,7 +46,7 @@ namespace SudokuWeb {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink btnLogin;
+        protected global::System.Web.UI.WebControls.LinkButton btnLogin;
         
         /// <summary>
         /// Control btnCerrarSesion.
@@ -55,7 +55,7 @@ namespace SudokuWeb {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink btnCerrarSesion;
+        protected global::System.Web.UI.WebControls.LinkButton btnCerrarSesion;
         
         /// <summary>
         /// Control btnRegistro.
@@ -64,6 +64,6 @@ namespace SudokuWeb {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink btnRegistro;
+        protected global::System.Web.UI.WebControls.LinkButton btnRegistro;
     }
 }

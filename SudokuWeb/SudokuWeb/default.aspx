@@ -19,10 +19,8 @@
 
           <div class="column-alfa">
             <asp:Image ID="imgLogo" class="logo" runat="server" ImageUrl="/public/images/logo.png" Width="203px" />
-            <!-- <img class="logo" src="public/images/logo.png" alt="logo"> -->
-
+        
             <asp:Label ID="lblUserName" class="username" runat="server" Text="NombreUsuario"></asp:Label>
-            <!-- <label class="username" class="">usuario</label> -->
           </div>
 
 
@@ -30,16 +28,13 @@
 
             <ul class="menu-list">
               <li class="menu-list-item">
-                <asp:HyperLink ID="btnLogin" class="button" runat="server" Text="iniciar sesión" OnClick="BtnInit_Click" data-text />
-                <!-- <Button class="button">iniciar sesión</Button> -->
+                <asp:LinkButton ID="btnLogin" class="anchor" runat="server" OnClick="BtnInit_Click" data-text>iniciar sesión</asp:LinkButton>
               </li>
               <li class="menu-list-item">
-                <asp:HyperLink ID="btnCerrarSesion" class="button" runat="server" Text="cerrar sesión" OnClick="BtnInit_Click" data-text />
-                <!-- <Button class="button">cerrar sesión</Button> -->
+                <asp:LinkButton ID="btnCerrarSesion" class="anchor" runat="server" OnClick="BtnInit_Click" data-text>cerrar sesión</asp:LinkButton>
               </li>
               <li class="menu-list-item">
-                <asp:HyperLink ID="btnRegistro" class="button" runat="server" Text="regístrate" OnClick="BtnInit_Click" data-text />
-                <!-- <button class="button">regístrate</button> -->
+                <asp:LinkButton ID="btnRegistro" class="anchor" runat="server" OnClick="BtnInit_Click" data-text>regístrate</asp:LinkButton>
               </li>
             </ul>
 
