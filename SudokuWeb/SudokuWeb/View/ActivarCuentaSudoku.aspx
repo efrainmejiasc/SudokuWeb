@@ -21,7 +21,7 @@
         </div>
 
          <div id ='msj' align="center" style="position: fixed; width: auto; height: auto; top:30%; left:20%; right:20%; background-color:silver; opacity:0.8; z-index: 99; border: 1px solid DimGray; padding: 10px; text-align: center; display: none;" >  
-           <asp:Image ID="Image1" runat="server"  ImageUrl="~/images/logo.png" Width="96px" Height="73px" />
+           <asp:Image ID="Image1" runat="server"  ImageUrl="~/public/images/logo.png" Width="96px" Height="73px" />
 	       <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
 	       <asp:Button ID="btnAceptarMensaje" runat="server" Text="Aceptar" OnClick="BtnAceptarMensaje_Click" />
         </div>

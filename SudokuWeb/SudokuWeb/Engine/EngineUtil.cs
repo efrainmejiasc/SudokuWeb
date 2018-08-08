@@ -153,7 +153,7 @@ namespace SudokuWeb.Engine
         {
             bool resultado = false;
             int r = ModeloDb.SeleccionHorasActivar(MAIL, ESTADO);
-            if (r >= 0 && r <= 3)
+            if (r >= 0 && r <= 2)
             {
                 resultado = true;
             }
@@ -222,6 +222,31 @@ namespace SudokuWeb.Engine
             return resultado;
         }
 
+
+        [System.Web.Services.WebMethod]
+        public static string NuevoEmailCliente (string MAIL,string USUARIO, string ESTADO)
+        {
+            Models.EngineModel Funcion = new Models.EngineModel();
+            string resultado = string.Empty;
+            int n = Funcion.ActualizarHoraRegistroCliente(MAIL);
+            if (n == -1)
+            {
+                bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + ConstruirUrlEstadoCliiente(MAIL, USUARIO, "ACTIVO"), MAIL);
+                if (k)
+                {
+                    resultado = "Transaccion Exitosa";
+                }
+                else
+                {
+                    resultado = "Transaccion Fallida";
+                }
+            }
+            else
+            {
+                resultado = "Transaccion Fallida";
+            }
+            return resultado;
+        }
 
     }
 }

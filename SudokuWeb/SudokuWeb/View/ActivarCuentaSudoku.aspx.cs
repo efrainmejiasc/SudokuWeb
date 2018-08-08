@@ -30,19 +30,23 @@ namespace SudokuWeb.View
                     break;
                 case ("btnAceptar"):
                     string script = "MostrarVentana('msj');";
-                   /* if (Session["Estado"].ToString() == "INACTIVO" || Session["Estado"].ToString() == "DESACTIVADO")
+                    if (Session["Estado"].ToString() == "INACTIVO" || Session["Estado"].ToString() == "DESACTIVADO")
                     {
                         bool k = Engine.EngineUtil.SeleccionHorasActivar(Session["Mail"].ToString(), Session["Estado"].ToString());
                         if (!k)
                         {
-                            lblMensaje.Text = "El Tiempo para Activar su Cuenta a Lxpirado, Volveremos a Enviar un Link a su cuenta de Correo";
+                            string r = Engine.EngineUtil.NuevoEmailCliente(Session["Mail"].ToString(), Session["Usuario"].ToString(),Session["Estado"].ToString());
+
+                            lblMensaje.Text = "El Tiempo para Activar su Cuenta a Expirado, Volveremos a Enviar un Link a su cuenta de Correo";
                             ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
                             return;
                         }
-                    }*/
-
-                    lblMensaje.Text = Engine.EngineUtil.ActivarInactivarDesactivarCliente(Session["Mail"].ToString(), Session["Estado"].ToString());
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
+                    }
+                    else
+                    {
+                        lblMensaje.Text = Engine.EngineUtil.ActivarInactivarDesactivarCliente(Session["Mail"].ToString(), Session["Estado"].ToString());
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
+                    }
                     break;
             }
         }

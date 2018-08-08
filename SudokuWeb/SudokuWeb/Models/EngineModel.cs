@@ -78,6 +78,25 @@ namespace SudokuWeb.Models
             return resultado;
         }
 
+
+        public int ActualizarHoraRegistroCliente(string MAIL)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarHoraRegistroCliente", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@FECHA", DateTime.Now);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
         public int ActivarInactivarDesactivarCliente(string MAIL , string ESTADO)
         {
             SqlConnection Conexion = new SqlConnection(cadenaConexion);
