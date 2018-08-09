@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Sudoku Para Todos</title>
     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
-    <link rel="stylesheet" href="public/main.css" />
+    <link rel="stylesheet" href="/public/main.css" />
   </head>
 
   <body class="home">

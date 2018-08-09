@@ -13,7 +13,10 @@ namespace SudokuWeb.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) { LimpiarTexto(); }
+            if (!IsPostBack)
+            {
+                LimpiarTexto();
+            }
         }
 
         protected void BtnLogin_Click(object sender, EventArgs e)

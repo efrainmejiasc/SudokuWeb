@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI.WebControls;
+using System.Web.UI;
 
 namespace SudokuWeb.Engine
 {
@@ -136,7 +137,7 @@ namespace SudokuWeb.Engine
                 int r = ModeloDb.InsertarCliente(MAIL, NOMBRE, USUARIO, PASSWORD);
                 if (r == -1)
                 {
-                    bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + ConstruirUrlEstadoCliiente(MAIL,USUARIO,"ACTIVO") , MAIL);
+                    bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + " <br> <br/> " + ConstruirUrlEstadoCliiente(MAIL,USUARIO,"INACTIVO") , MAIL);
                     resultado = Models.EngineData.CuentaRegistradaExitosamente;//200
                 }
                 else
@@ -162,13 +163,14 @@ namespace SudokuWeb.Engine
         }
 
         [System.Web.Services.WebMethod]
-        public static string ActivarInactivarDesactivarCliente(string MAIL, string ESTADO)
+        public static string ActivarCliente(string MAIL, string ESTADO)
         {
             string resultado = string.Empty;
             int r = ModeloDb.ActivarInactivarDesactivarCliente(MAIL, ESTADO);
             if (r == -1)
             {
                 resultado = Models.EngineData.activacionExitosa + HttpContext.Current.Session["Usuario"].ToString();
+                HttpContext.Current.Session["Estado"] = "ACTIVO";
             }
             else
             {

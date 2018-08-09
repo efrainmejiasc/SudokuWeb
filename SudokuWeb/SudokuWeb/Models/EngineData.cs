@@ -23,8 +23,8 @@ namespace SudokuWeb.Models
         public static string mail = "mail=";
         public static string usuario = "usuario=";
         public static string estado = "estado=";
-        // public static string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
-        public static string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
+        public static string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
+        //public static string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
 
         public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar el Estado de Su Cuenta";
         public static string asuntoActivacion =  "Activacion de Cuenta Sudoku Para Todos";

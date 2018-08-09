@@ -29,23 +29,28 @@ namespace SudokuWeb.View
                     Response.Redirect("~/default.aspx");
                     break;
                 case ("btnAceptar"):
-                    string script = "MostrarVentana('msj');";
-                    if (Session["Estado"].ToString() == "INACTIVO" || Session["Estado"].ToString() == "DESACTIVADO")
+                    if (chkRobot.Checked)
                     {
+                        string script = "MostrarVentana('msj');";
                         bool k = Engine.EngineUtil.SeleccionHorasActivar(Session["Mail"].ToString(), Session["Estado"].ToString());
                         if (!k)
                         {
-                            string r = Engine.EngineUtil.NuevoEmailCliente(Session["Mail"].ToString(), Session["Usuario"].ToString(),Session["Estado"].ToString());
+                            string r = Engine.EngineUtil.NuevoEmailCliente(Session["Mail"].ToString(), Session["Usuario"].ToString(), Session["Estado"].ToString());
 
                             lblMensaje.Text = "El Tiempo para Activar su Cuenta a Expirado, Volveremos a Enviar un Link a su cuenta de Correo";
                             ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
                             return;
                         }
+                        else
+                        {
+                            lblMensaje.Text = Engine.EngineUtil.ActivarCliente(Session["Mail"].ToString(), "ACTIVO");
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
+                        }
                     }
                     else
                     {
-                        lblMensaje.Text = Engine.EngineUtil.ActivarInactivarDesactivarCliente(Session["Mail"].ToString(), Session["Estado"].ToString());
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
+                        string scripting = "PareceRobot();";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "PareceRobot();", scripting, true);
                     }
                     break;
             }
@@ -56,6 +61,8 @@ namespace SudokuWeb.View
             string script = "OcultarVentana('msj');";
             lblMensaje.Text = string.Empty;
             ScriptManager.RegisterStartupScript(this, typeof(Page), "OcultarVentana('msj')", script, true);
+
+            Response.Redirect("~/default.aspx");
         }
 
     }
