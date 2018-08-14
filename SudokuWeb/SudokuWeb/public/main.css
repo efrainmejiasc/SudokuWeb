@@ -1,4 +1,85 @@
-@font-face {
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.video {
+    -ms-flex-align: center;
+    -ms-flex-direction: column;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+    .video .inner-container {
+        margin: 0 auto;
+        max-width: 87.5rem;
+        padding: .5rem 0
+    }
+
+@media screen and (min-width:40em) {
+    .video .inner-container {
+        width: 50%
+    }
+}
+
+.video .inner-container .title {
+    font-family: Oswald;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.video .inner-container .video-container {
+    padding-top: 56.25%;
+    position: relative
+}
+
+    .video .inner-container .video-container .video {
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%
+    }
+body {
+    background: #FFFFFF;
+}
+.navbar-gris {
+    background-color: #3F3F3F;
+}
+/* change the background color */
+.navbar-custom {
+    background-color: #3F3F3F;
+}
+    /* change the brand and text color */
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: rgba(255,255,255,.8);
+    }
+    /* change the link color */
+    .navbar-custom .navbar-nav .nav-link {
+        color: rgba(255,255,255,.5);
+    }
+    /* change the color of active or hovered links */
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+        color: #ffffff;
+    }
+
+/*@font-face {
     font-family: Open Sans;
     font-style: normal;
     font-weight: 300;
@@ -117,7 +198,7 @@ a {
 
 .background {
     -webkit-filter: opacity(.2);
-    background-image: url(images/main-background.jpg);
+    background-image:  url(images/main-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     filter: opacity(.2);
@@ -128,10 +209,7 @@ a {
     z-index: -1
 }
 
-.navbar {
-    -webkit-box-shadow: 2px 2px 5px 0 rgba(79,79,79,.3);
-    box-shadow: 2px 2px 5px 0 rgba(79,79,79,.3)
-}
+
 
     .navbar .inner-container {
         -ms-flex-align: center;
@@ -186,59 +264,9 @@ a {
                 width: 184px
             }
 
-.video {
-    -ms-flex-align: center;
-    -ms-flex-direction: column;
-    -ms-flex-pack: center;
-    -webkit-box-align: center;
-    -webkit-box-direction: normal;
-    -webkit-box-orient: vertical;
-    -webkit-box-pack: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    justify-content: center
-}
 
-    .video .inner-container {
-        margin: 0 auto;
-        max-width: 87.5rem;
-        padding: .5rem 0
-    }
-
-@media screen and (min-width:40em) {
-    .video .inner-container {
-        width: 50%
-    }
-}
-
-.video .inner-container .title {
-    font-family: Oswald;
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    text-align: center;
-    text-transform: uppercase
-}
-
-.video .inner-container .video-container {
-    padding-top: 56.25%;
-    position: relative
-}
-
-    .video .inner-container .video-container .video {
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%
-    }
 
 .is-hidden {
     display: none !important
-}
+}*/
 /*# sourceMappingURL=main.css.map */

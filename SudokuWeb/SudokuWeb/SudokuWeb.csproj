@@ -67,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
+    <Content Include="public\css\bootstrap-grid.css" />
+    <Content Include="public\css\bootstrap-grid.min.css" />
+    <Content Include="public\css\bootstrap-reboot.css" />
+    <Content Include="public\css\bootstrap-reboot.min.css" />
+    <Content Include="public\css\bootstrap.css" />
+    <Content Include="public\css\bootstrap.min.css" />
     <Content Include="public\fonts\open-sans-v15-latin-300.woff" />
     <Content Include="public\fonts\open-sans-v15-latin-300.woff2" />
     <Content Include="public\fonts\open-sans-v15-latin-800.woff" />
@@ -83,8 +89,23 @@
     <Content Include="public\images\main-background.jpg" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <Content Include="public\app.js.map" />
+    <Content Include="public\js\bootstrap.bundle.js" />
+    <Content Include="public\js\bootstrap.bundle.min.js" />
+    <Content Include="public\js\bootstrap.js" />
+    <Content Include="public\js\bootstrap.min.js" />
     <Content Include="public\main.css.map" />
     <Content Include="src\styles\main.scss" />
+    <Content Include="public\css\.DS_Store" />
+    <Content Include="public\css\bootstrap-grid.css.map" />
+    <Content Include="public\css\bootstrap-grid.min.css.map" />
+    <Content Include="public\css\bootstrap-reboot.css.map" />
+    <Content Include="public\css\bootstrap-reboot.min.css.map" />
+    <Content Include="public\css\bootstrap.css.map" />
+    <Content Include="public\css\bootstrap.min.css.map" />
+    <Content Include="public\js\bootstrap.bundle.js.map" />
+    <Content Include="public\js\bootstrap.bundle.min.js.map" />
+    <Content Include="public\js\bootstrap.js.map" />
+    <Content Include="public\js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
