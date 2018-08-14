@@ -85,6 +85,7 @@
     <Content Include="public\app.js.map" />
     <Content Include="public\main.css.map" />
     <Content Include="src\styles\main.scss" />
+    <Content Include="js\TerminosCondiciones.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -100,6 +101,7 @@
     <Content Include="public\main.css" />
     <Content Include="src\js\main.js" />
     <Content Include="View\ActivarCuentaSudoku.aspx" />
+    <Content Include="View\Contrato.aspx" />
     <Content Include="View\RegistrarCuenta.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="Web.config">
@@ -128,6 +130,13 @@
     </Compile>
     <Compile Include="View\ActivarCuentaSudoku.aspx.designer.cs">
       <DependentUpon>ActivarCuentaSudoku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Contrato.aspx.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Contrato.aspx.designer.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\RegistrarCuenta.aspx.cs">
       <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
