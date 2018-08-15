@@ -14,12 +14,12 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="~/public/js/bootstrap.js"></script>
-    <script src="~/public/js/bootstrap.bundle.js"></script>
+    <script src="../public/js/bootstrap.js"></script>
+    <script src="../public/js/bootstrap.bundle.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom" >
             <div class="container-fluid">
                 <a href="../default.aspx">
                     <asp:Image ID="Image2" class="logo" runat="server" ImageUrl="/public/images/logo.png" />
@@ -27,7 +27,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="../default.aspx" class="nav-link mr-sm-2">Inicio</a>
