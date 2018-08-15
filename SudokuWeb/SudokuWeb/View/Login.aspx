@@ -4,10 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Sudoku Para Todos</title>
-     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
+    <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
 
     <link href="~/public/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="/public/main.css" />
@@ -29,22 +29,35 @@
                 </button>
             </nav>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <asp:Label ID="Label1" runat="server" Text="Nombre de Usuario"></asp:Label>
-                        <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label>
-                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                <div class="col-md-6 offset-md-3 my-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Inicio de sesión</h5>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <asp:Label ID="Label1" runat="server" Text="Nombre de Usuario"></asp:Label>
+                                    <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label>
+                                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <asp:CheckBox ID="chkRobot" runat="server" Text="No Soy un Robot" />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group text-center">
+                                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnLogin_Click" CssClass="btn btn-outline-secondary" />
+                                    <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnLogin_Click" CssClass="btn btn-outline-secondary"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
-                        <asp:CheckBox ID="chkRobot" runat="server" Text="No Soy un Robot" />
-                    </div>
-                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnLogin_Click" />
-                    <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnLogin_Click" />
                 </div>
             </div>
 
@@ -53,7 +66,7 @@
                 <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
                 <asp:Button ID="btnAceptarMensaje" runat="server" Text="Aceptar" OnClick="BtnAceptarMensaje_Click" />
             </div>
-        </div> 
+        </div>
     </form>
 </body>
 </html>
