@@ -3,7 +3,12 @@
     height: 80px;
 }
 
+.centralizar-objeto {
+  margin: auto 0;
+}
+
 .video {
+    margin: 40px auto;
     -ms-flex-align: center;
     -ms-flex-direction: column;
     -ms-flex-pack: center;

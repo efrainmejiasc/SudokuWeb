@@ -11,7 +11,7 @@
 
     <link href="~/public/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="/public/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="~/public/js/bootstrap.js"></script>
@@ -20,16 +20,29 @@
 <body>
     <form id="form1" runat="server">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-            <a href="../default.aspx">
-                <asp:Image ID="Image2" class="logo" runat="server" ImageUrl="/public/images/logo.png" /></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="container-fluid">
+                <a href="../default.aspx">
+                    <asp:Image ID="Image2" class="logo" runat="server" ImageUrl="/public/images/logo.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="../default.aspx" class="nav-link mr-sm-2">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Login.aspx" class="nav-link mr-sm-2">Iniciar Sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <div class="container-fluid">
             <!-- navbar -->
             <div class="row">
-                <div class="col-md-6 offset-md-3 mt-5">
+                <div class="col-md-6 offset-md-3 my-5">
                     <div class="card">
                         <div class="card-body">
                             <h2 class="card-title text-center text-custom">Registrarse</h2>
@@ -68,14 +81,14 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:CheckBox ID="chkRobot" runat="server" Text=" No Soy un Robot" CssClass="font-weight-bold" />
+                                    <asp:CheckBox ID="chkRobot" runat="server" Text=" No Soy un Robot" />
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnRegistro_Click" CssClass="btn btn-primary" />
-                                    <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnRegistro_Click" CssClass="btn btn-primary"/>
+                                    <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnRegistro_Click" CssClass="btn btn-primary" />
                                 </div>
                             </div>
                         </div>

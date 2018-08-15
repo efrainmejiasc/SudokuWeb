@@ -35,13 +35,13 @@
                             <asp:Label ID="lblUserName" class="username" runat="server" Text="NombreUsuario"></asp:Label>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton ID="btnLogin" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>iniciar sesión</asp:LinkButton>
+                            <asp:LinkButton ID="btnLogin" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Iniciar Sesión</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton ID="btnCerrarSesion" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>cerrar sesión</asp:LinkButton>
+                            <asp:LinkButton ID="btnCerrarSesion" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Cerrar Sesión</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton ID="btnRegistro" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>regístrate</asp:LinkButton>
+                            <asp:LinkButton ID="btnRegistro" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Regístrate</asp:LinkButton>
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
@@ -64,6 +64,8 @@
                             </div>
                         </div>
                     </section>
+                </div>
+                <div class="">
                 </div>
             </div>
         </div>
