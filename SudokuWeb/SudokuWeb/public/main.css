@@ -32,7 +32,7 @@
 }
 
 .video .inner-container .title {
-    font-family: Oswald;
+    font-family: 'PT Sans', sans-serif;
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 2rem;
@@ -54,30 +54,59 @@
         top: 0;
         width: 100%
     }
-body {
-    background: #FFFFFF;
+.text-custom {
+    color: #18BC9C;
 }
+body {
+    background: #F4F4F4;
+    font-family: 'PT Sans', sans-serif;
+}
+
 .navbar-gris {
-    background-color: #3F3F3F;
+    /*background-color: #3F3F3F;*/
 }
 /* change the background color */
 .navbar-custom {
-    background-color: #3F3F3F;
+    background-color: #2C3E50;
 }
     /* change the brand and text color */
     .navbar-custom .navbar-brand,
     .navbar-custom .navbar-text {
-        color: rgba(255,255,255,.8);
+        /*color: rgba(255,255,255,.8);*/
+        color: #fff;
     }
     /* change the link color */
     .navbar-custom .navbar-nav .nav-link {
-        color: rgba(255,255,255,.5);
+        /*color: rgba(255,255,255,.5);*/
+        color: #fff;
     }
     /* change the color of active or hovered links */
     .navbar-custom .nav-item.active .nav-link,
     .navbar-custom .nav-item:hover .nav-link {
-        color: #ffffff;
+        color: #18BC9C;
     }
+
+.footer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #2C3E50;
+    color: #fff;
+}
+
+.copyright {
+    background-color: #1a252f;
+}
+
+.btn-primary {
+    background-color: #18BC9C;
+    border-color: #18BC9C;
+}
+
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+        background-color: #128f76;
+        border-color: #128f76;
+    }
+
 
 /*@font-face {
     font-family: Open Sans;

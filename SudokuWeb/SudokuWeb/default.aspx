@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Sudoku Para Todos</title>
     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
-
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
     <link href="~/public/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="/public/main.css" />
 
@@ -21,9 +21,10 @@
 
 <body>
     <form id="form1" runat="server">
-        <div class="container-fluid">
-            <!-- navbar -->
-            <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container-fluid">
                 <asp:Image ID="imgLogo" class="logo" runat="server" ImageUrl="/public/images/logo.png" />
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -48,18 +49,30 @@
                         </select>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
+
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <section class="video">
                         <div class="inner-container">
-                            <h1 class="title" data-text>sudoku para todos</h1>
+                            <h1 class="title text-custom" data-text>sudoku para todos</h1>
                             <div class="video-container">
                                 <iframe id="videoInit" class="video" src="https://www.youtube.com/embed/SkRyiELVpO4?autoplay=1"></iframe>
                             </div>
                         </div>
                     </section>
+                </div>
+            </div>
+        </div>
+
+        <%--Foolder--%>
+        <div class="fixed-bottom">
+            <div class="copyright py-4 text-center text-white">
+                <div class="container">
+                    <small>Copyright Todo los derechos reservados a</small>
                 </div>
             </div>
         </div>
