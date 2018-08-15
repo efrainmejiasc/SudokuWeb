@@ -15,7 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="~/public/js/bootstrap.js"></script>
-    <script src="public/js/bootstrap.bundle.js"></script>
+    <script src="~/public/js/bootstrap.bundle.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -86,7 +86,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <div class="form-group">
+                                <div class="form-group text-center">
                                     <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnRegistro_Click" CssClass="btn btn-primary" />
                                     <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnRegistro_Click" CssClass="btn btn-primary" />
                                 </div>
