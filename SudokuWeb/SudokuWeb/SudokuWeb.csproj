@@ -95,7 +95,7 @@
     <Content Include="public\js\bootstrap.min.js" />
     <Content Include="public\main.css.map" />
     <Content Include="src\styles\main.scss" />
-<<<<<<< HEAD
+
     <Content Include="public\css\.DS_Store" />
     <Content Include="public\css\bootstrap-grid.css.map" />
     <Content Include="public\css\bootstrap-grid.min.css.map" />
@@ -107,9 +107,7 @@
     <Content Include="public\js\bootstrap.bundle.min.js.map" />
     <Content Include="public\js\bootstrap.js.map" />
     <Content Include="public\js\bootstrap.min.js.map" />
-=======
     <Content Include="js\TerminosCondiciones.pdf" />
->>>>>>> InitW_Sudoku
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
