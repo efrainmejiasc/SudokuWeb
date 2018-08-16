@@ -95,6 +95,7 @@
     <Content Include="public\js\bootstrap.min.js" />
     <Content Include="public\main.css.map" />
     <Content Include="src\styles\main.scss" />
+<<<<<<< HEAD
     <Content Include="public\css\.DS_Store" />
     <Content Include="public\css\bootstrap-grid.css.map" />
     <Content Include="public\css\bootstrap-grid.min.css.map" />
@@ -106,6 +107,9 @@
     <Content Include="public\js\bootstrap.bundle.min.js.map" />
     <Content Include="public\js\bootstrap.js.map" />
     <Content Include="public\js\bootstrap.min.js.map" />
+=======
+    <Content Include="js\TerminosCondiciones.pdf" />
+>>>>>>> InitW_Sudoku
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -121,6 +125,7 @@
     <Content Include="public\main.css" />
     <Content Include="src\js\main.js" />
     <Content Include="View\ActivarCuentaSudoku.aspx" />
+    <Content Include="View\Contrato.aspx" />
     <Content Include="View\RegistrarCuenta.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="Web.config">
@@ -149,6 +154,13 @@
     </Compile>
     <Compile Include="View\ActivarCuentaSudoku.aspx.designer.cs">
       <DependentUpon>ActivarCuentaSudoku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Contrato.aspx.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Contrato.aspx.designer.cs">
+      <DependentUpon>Contrato.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\RegistrarCuenta.aspx.cs">
       <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
