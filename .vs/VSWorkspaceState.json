@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     ""
   ],
+=======
+    "",
+    "\\SudokuWeb"
+  ],
+  "SelectedNode": "\\SudokuWeb\\SudokuWeb.sln",
+>>>>>>> Willians
   "PreviewInSolutionExplorer": false
 }

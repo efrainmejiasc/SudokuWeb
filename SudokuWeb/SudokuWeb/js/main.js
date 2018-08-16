@@ -12,5 +12,5 @@ function OcultarVentana(idDiv)
 
 function PareceRobot()
 {
-    return = alert('Debe Activar la casilla no soy un robot');
+    return alert('Debe Activar la casilla no soy un robot');
 }
