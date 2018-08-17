@@ -15,3 +15,4 @@ C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\Sudo
 C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csproj.CopyComplete
 C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.dll
 C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.pdb
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyectos\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csprojResolveAssemblyReference.cache
