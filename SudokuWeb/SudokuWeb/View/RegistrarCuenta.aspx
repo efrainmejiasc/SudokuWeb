@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Sudoku Para Todos</title>
     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
-
     <link href="~/public/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="/public/main.css" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
@@ -16,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="../public/js/bootstrap.js"></script>
     <script src="../public/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">

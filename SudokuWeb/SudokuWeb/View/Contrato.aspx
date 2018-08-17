@@ -36,8 +36,8 @@
              <div class="centrado">
                  <iframe src="http://docs.google.com/gview?url=http://www.bbvacomtinental.com/js/TerminosCondiciones.pdf&embedded=true" style="width:1000px; height: 700px;" frameborder="5"></iframe>
                     <asp:CheckBox ID="chkRobot" runat="server" Text="No Soy un Robot" />
-                   <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnContrato_Click" />
                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnContrato_Click" />
+                   <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnContrato_Click" />
              </div>
            
         </div>
