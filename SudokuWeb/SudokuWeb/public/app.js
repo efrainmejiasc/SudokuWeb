@@ -27,24 +27,24 @@
             Object.defineProperty(n, "__esModule", { value: !0 });
             n.default = function () {
                 var h = [{
-                    Spanish: "sudoku para todos",
-                    English: "sudoku for all",
-                    portuguese: "sudoku para todos"
+                    Spanish: "Sudoku para Todos",
+                    English: "Sudoku For All",
+                    portuguese: "Sudoku para Todos"
                 },
                 {
-                    Spanish: "iniciar sesión",
-                    English: "login",
-                    portuguese: "iniciar sessão"
+                    Spanish: "Iniciar Sesión",
+                    English: "Login",
+                    portuguese: "Iniciar Sessão"
                 },
                 {
-                    Spanish: "cerrar sesión",
-                    English: "logout",
-                    portuguese: "fechar Sessão"
+                    Spanish: "Cerrar Sesión",
+                    English: "Logout",
+                    portuguese: "Fechar Sessão"
                 },
                 {
-                    Spanish: "regístrate",
-                    English: "register",
-                    portuguese: "registrar"
+                    Spanish: "Regístrate",
+                    English: "Register",
+                    portuguese: "Registrar"
                 }],
                     m = void 0; !function () {
                         var r, e = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : {},

@@ -17,23 +17,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="/public/js/bootstrap.js"></script>
     <script src="/public/js/bootstrap.bundle.js"></script>
-
-
-    <style type="text/css">
-        .centrado {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            -webkit-transform: translate(-50%, -50%);
-            font-size: 18px;
-            color: whitesmoke;
-            background-color: gray;
-            display: table-cell;
-            vertical-align: middle;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -49,6 +32,7 @@
             <div class="col-md-12 text-center">
                 <div class="card">
                     <div class="card-body">
+                        <h2 class="card-title text-center text-custom">Terminos y Condiciones Sudoku Para Todos</h2>
                         <iframe src="http://docs.google.com/gview?url=http://www.bbvacomtinental.com/js/TerminosCondiciones.pdf&embedded=true" style="width: 1000px; height: 700px;" frameborder="5"></iframe>
 
                     </div>
