@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="~/public/js/bootstrap.js"></script>
     <script src="~/public/js/bootstrap.bundle.js"></script>
+    <script src="/js/main.js" language="javascript" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">

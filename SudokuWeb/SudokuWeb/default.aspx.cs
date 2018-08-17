@@ -35,7 +35,7 @@ namespace SudokuWeb
                     Response.Redirect("View/Login.aspx");
                     break;
                 case ("btnRegistro"):
-                    Response.Redirect("View/RegistrarCuenta.aspx");
+                    Response.Redirect("View/Contrato.aspx");
                     break;
                 case ("btncerrarSesion"):
                     lblUserName.Text = string.Empty;

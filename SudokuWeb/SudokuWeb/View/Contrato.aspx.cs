@@ -13,5 +13,22 @@ namespace SudokuWeb.View
         {
 
         }
+
+        protected void BtnContrato_Click(object sender, EventArgs e)
+        {
+            LinkButton btn = sender as LinkButton;
+            switch (btn.ID)
+            {
+                case ("btnAceptar"):
+                    if (chkRobot.Checked)
+                    {
+                        Response.Redirect("View/Login.aspx");
+                    } 
+                    break;
+                case ("btnCancelar"):
+                    Response.Redirect("View/Contrato.aspx");
+                    break;
+            }
+        }
     }
 }
