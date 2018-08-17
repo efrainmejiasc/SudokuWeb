@@ -1,13 +1,11 @@
 ﻿function MostrarVentana(idDiv)
 {
-    var ventana = document.getElementById(idDiv);
-    ventana.style.display = 'block';
+    $('#' + idDiv).modal('toggle');
 }
 
 function OcultarVentana(idDiv)
 {
-    var ventana = document.getElementById(idDiv);
-    ventana.style.display = 'none';
+    $('#' + idDiv).modal('hide');
 }
 
 function PareceRobot()

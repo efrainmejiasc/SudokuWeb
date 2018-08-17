@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="~/public/js/bootstrap.js"></script>
     <script src="~/public/js/bootstrap.bundle.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -50,7 +51,7 @@
                             <h2 class="card-title text-center text-custom">Activar Cuenta Sudoku Para Todos</h2>
                             <%--<asp:Label ID="Label1" runat="server" Text="Activar Cuenta Sudoku Para Todos"></asp:Label>--%>
                             <div class="col-md-12 my-3">
-                                <div class="form-group">
+                                <div class="form-group text-center">
                                     <asp:CheckBox ID="chkRobot" runat="server" Text="No Soy un Robot" />
                                 </div>
                             </div>
@@ -73,11 +74,34 @@
                 </div>
             </div>
         </div>
-        <div id='msj' align="center" style="position: fixed; width: auto; height: auto; top: 30%; left: 20%; right: 20%; background-color: silver; opacity: 0.8; z-index: 99; border: 1px solid DimGray; padding: 10px; text-align: center; display: none;">
+
+        <div class="modal fade" id="msj" tabindex="-1" role="dialog" aria-labelledby="msj-label">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="msj-label">Sudoku para todos</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <asp:Button ID="btnAceptarMensaje" runat="server" Text="Aceptar" OnClick="BtnAceptarMensaje_Click" CssClass="btn btn-primary"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <%--<div id='msj' align="center" style="position: fixed; width: auto; height: auto; top: 30%; left: 20%; right: 20%; background-color: silver; opacity: 0.8; z-index: 99; border: 1px solid DimGray; padding: 10px; text-align: center; display: none;">
             <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="96px" Height="73px" />
             <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
             <asp:Button ID="btnAceptarMensaje" runat="server" Text="Aceptar" OnClick="BtnAceptarMensaje_Click" />
-        </div>
+        </div>--%>
 
     </form>
 </body>
