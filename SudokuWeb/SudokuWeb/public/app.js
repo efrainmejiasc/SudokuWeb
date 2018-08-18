@@ -14,7 +14,8 @@
                 return c(u[t][1][e] || e)
             },
                 o,
-                o.exports, i, u, s, a)
+                o.exports, i, u, s, a
+            )
         }
         return s[t].exports
     }
@@ -27,23 +28,23 @@
             Object.defineProperty(n, "__esModule", { value: !0 });
             n.default = function () {
                 var h = [{
-                    Spanish: "Sudoku para Todos",
                     English: "Sudoku For All",
+                    Spanish: "Sudoku para Todos",
                     portuguese: "Sudoku para Todos"
                 },
                 {
-                    Spanish: "Iniciar Sesión",
                     English: "Login",
+                    Spanish: "Iniciar Sesión",
                     portuguese: "Iniciar Sessão"
                 },
                 {
-                    Spanish: "Cerrar Sesión",
                     English: "Logout",
+                    Spanish: "Cerrar Sesión",
                     portuguese: "Fechar Sessão"
                 },
                 {
-                    Spanish: "Regístrate",
                     English: "Register",
+                    Spanish: "Regístrate",
                     portuguese: "Registrar"
                 }],
                     m = void 0; !function () {
@@ -56,7 +57,37 @@
                             s = void 0 === u ? "Spanish" : u,
                             a = e.mLstrings,
                             c = void 0 === a ? h : a,
-                            l = e.countryCodes, d = void 0 !== l && l, g = e.countryCodeData, f = void 0 === g ? [] : g, p = document.documentElement, v = Object.keys(c[0]); m = s, (r = document.getElementById(n)).innerHTML = "", v.forEach(function (e, t) { var n = document.createElement("option"); n.value = e, n.textContent = e, r.appendChild(n), e === s && (r.value = e) }), r.addEventListener("change", function (e) { if (m = r[r.selectedIndex].value, document.querySelectorAll("[" + i + "]").forEach(function (e) { var n, t, r = e.textContent, o = (n = r, (t = c.find(function (e) { var t = Object.values(e); return t.includes(n) })) ? t[m] : n); e.textContent = o }), !0 === d) { if (!Array.isArray(f) || !f.length) return void console.warn("Cannot access strings for language codes"); p.setAttribute("lang", f.find(function (e) { return e.name === m }).code) } })
+                            l = e.countryCodes,
+                            d = void 0 !== l && l,
+                            g = e.countryCodeData,
+                            f = void 0 === g ? [] : g,
+                            p = document.documentElement,
+                            v = Object.keys(c[0]);
+                        m = s,
+                            (
+                                r = document.getElementById(n)).innerHTML = "",
+                            v.forEach(function (e, t) {
+                                var n = document.createElement("option");
+                                n.value = e,
+                                    n.textContent = e,
+                                    r.appendChild(n),
+                                    e === s && (r.value = e)
+                            }),
+                            r.addEventListener("change", function (e) {
+                                if (m = r[r.selectedIndex].value, document.querySelectorAll("[" + i + "]").forEach(function (e) {
+                                    var n,
+                                        t,
+                                        r = e.textContent,
+                                        o = (n = r, (t = c.find(function (e) {
+                                            var t = Object.values(e);
+                                            return t.includes(n)
+                                        })) ? t[m] : n); e.textContent = o
+                                }), !0 === d) {
+                                    if (!Array.isArray(f) || !f.length)
+                                        return void console.warn("Cannot access strings for language codes");
+                                    p.setAttribute("lang", f.find(function (e) { return e.name === m }).code)
+                                }
+                            })
                     }
                         ({
                             dropID: "languagepicker",
@@ -64,18 +95,19 @@
                             chosenLang: "Spanish",
                             mLstrings: h,
                             countryCodes: !0,
-                            countryCodeData: [{
-                                code: "es",
-                                name: "Spanish"
-                            },
-                            {
-                                code: "en",
-                                name: "English"
-                            },
-                            {
-                                code: "pt",
-                                name: "Portuguese"
-                            }]
+                            countryCodeData: [
+                                {
+                                    code: "en",
+                                    name: "English"
+                                },
+                                {
+                                    code: "es",
+                                    name: "Spanish"
+                                },
+                                {
+                                    code: "pt",
+                                    name: "Portuguese"
+                                }]
                         })
             }
         },
