@@ -26,11 +26,11 @@ namespace SudokuWeb.Models
         public const string campo = "campo=";
         public const string dateFormatUtc = "yyyy-MM-ddTHH:mm:ss+hh:mm";
 
-        public const string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
-        //public const  string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
+        //public const string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
+        public const  string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
 
-        public const string urlRestablecer = "http://localhost:51828/View/NuevoUserPassword.aspx";
-        //public const  string urlRestablecer = "http://joselelu-001-site1.etempurl.com/View/NuevoUserPassword.aspx";
+        //public const string urlRestablecer = "http://localhost:51828/View/NuevoUserPassword.aspx";
+        public const  string urlRestablecer = "http://joselelu-001-site1.etempurl.com/View/NuevoUserPassword.aspx";
 
         public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar su Cuenta";
         public static string asuntoActivacion =  "Activacion de Cuenta Sudoku Para Todos";
