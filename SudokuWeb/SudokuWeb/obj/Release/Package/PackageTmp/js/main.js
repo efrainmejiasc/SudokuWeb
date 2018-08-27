@@ -1,11 +1,14 @@
 ﻿function MostrarVentana(idDiv)
 {
-    var ventana = document.getElementById(idDiv);
-    ventana.style.display = 'block';
+    $('#' + idDiv).modal('toggle');
 }
 
-function OcultarVentana()
+function OcultarVentana(idDiv)
 {
-    var ventana = document.getElementById(idDiv);
-    ventana.style.display = 'none';
+    $('#' + idDiv).modal('hide');
+}
+
+function PareceRobot()
+{
+    return alert('Debe Activar la casilla no soy un robot');
 }

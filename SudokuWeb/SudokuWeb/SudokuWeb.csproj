@@ -95,7 +95,6 @@
     <Content Include="public\js\bootstrap.min.js" />
     <Content Include="public\main.css.map" />
     <Content Include="src\styles\main.scss" />
-
     <Content Include="public\css\.DS_Store" />
     <Content Include="public\css\bootstrap-grid.css.map" />
     <Content Include="public\css\bootstrap-grid.min.css.map" />
@@ -124,8 +123,13 @@
     <Content Include="src\js\main.js" />
     <Content Include="View\ActivarCuentaSudoku.aspx" />
     <Content Include="View\Contrato.aspx" />
+    <Content Include="View\InitGame.aspx" />
+    <Content Include="View\NegocioAutentificacion.aspx" />
+    <Content Include="View\NuevoUserPassword.aspx" />
+    <Content Include="View\PaySudoku.aspx" />
     <Content Include="View\RegistrarCuenta.aspx" />
     <Content Include="View\Login.aspx" />
+    <Content Include="View\RestablecerDataCliente.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -143,6 +147,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ConexionUsuario.cs" />
     <Compile Include="Models\EngineData.cs" />
     <Compile Include="Models\EngineModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,6 +165,34 @@
     <Compile Include="View\Contrato.aspx.designer.cs">
       <DependentUpon>Contrato.aspx</DependentUpon>
     </Compile>
+    <Compile Include="View\InitGame.aspx.cs">
+      <DependentUpon>InitGame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\InitGame.aspx.designer.cs">
+      <DependentUpon>InitGame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\NegocioAutentificacion.aspx.cs">
+      <DependentUpon>NegocioAutentificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\NegocioAutentificacion.aspx.designer.cs">
+      <DependentUpon>NegocioAutentificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\NuevoUserPassword.aspx.cs">
+      <DependentUpon>NuevoUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\NuevoUserPassword.aspx.designer.cs">
+      <DependentUpon>NuevoUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaySudoku.aspx.cs">
+      <DependentUpon>PaySudoku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\PaySudoku.aspx.designer.cs">
+      <DependentUpon>PaySudoku.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\RegistrarCuenta.aspx.cs">
       <DependentUpon>RegistrarCuenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,6 +206,13 @@
     </Compile>
     <Compile Include="View\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\RestablecerDataCliente.aspx.cs">
+      <DependentUpon>RestablecerDataCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\RestablecerDataCliente.aspx.designer.cs">
+      <DependentUpon>RestablecerDataCliente.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

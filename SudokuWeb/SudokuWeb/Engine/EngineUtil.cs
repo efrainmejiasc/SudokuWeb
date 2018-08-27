@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI.WebControls;
 using System.Web.UI;
+using SudokuWeb.Models;
 
 namespace SudokuWeb.Engine
 {
@@ -54,6 +55,39 @@ namespace SudokuWeb.Engine
             return r;
         }
 
+        public bool CompareString (string a , string b)
+        {
+            bool resultado = false;
+            if ( a == b)
+            {
+                resultado = true;
+            }
+            return resultado;
+        }
+
+        public string GetIpAddress(System.Web.HttpRequest request)
+        {
+            // Recuperamos la IP de la máquina del cliente
+            // Primero comprobamos si se accede desde un proxy
+            string ipAddress1 = request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            // Acceso desde una máquina particular
+            string ipAddress2 = request.ServerVariables["REMOTE_ADDR"];
+            string ipAddress = string.IsNullOrEmpty(ipAddress1) ? ipAddress2 : ipAddress1;
+            // Devolvemos la ip
+            return ipAddress;
+        }
+
+        private bool SessionValida()
+        {
+            bool resultado = true;
+            if (HttpContext.Current.Session["Usuario"] == null)
+            {
+                resultado = false;
+            }
+            return resultado;
+        }
+
+
         // ************************************************************************************************************************************************
 
         [System.Web.Services.WebMethod]
@@ -64,85 +98,85 @@ namespace SudokuWeb.Engine
 
             if (NOMBRE == string.Empty)
             {
-                resultado = "El Campo Nombre No Puede Estar Vacio";
+                resultado = Models.EngineData.campoNombreNoVacio;
                 return resultado;
             }
             else if (MAIL == string.Empty)
             {
-                resultado = "El Campo Correo Electronico No Puede Estar Vacio";
+                resultado = Models.EngineData.campoCorreoElectronicoNoVacio;
                 return resultado;
             }
             else if (USUARIO == string.Empty)
             {
-              resultado = "El Campo Nombre de Usuario No Puede Estar Vacio";
+              resultado = Models.EngineData.campoNombreUsuarioNoVacio;
               return resultado;
             }
             else if (USUARIO.Contains(" "))
             {
-                resultado = "El Campo Nombre de Usuario No Puede Contener Espacios en Blanco";
+                resultado = Models.EngineData.nombreUsuarioConEspacios;
                 return resultado;
             }
             else if (PASSWORD == string.Empty)
             {
-                resultado = "El Campo Contraseña No Puede Estar Vacio";
+                resultado = Models.EngineData.campoContraseñaNoVacio;
                 return resultado;
             }
             else if (PASSWORD.Contains(" "))
             {
-                resultado = "El Campo Contraseña No Puede Contener Espacios en Blanco";
+                resultado = Models.EngineData.campoContraseñaConEspacios;
                 return resultado;
             }
             else if (PASSWORD2 == string.Empty)
             {
-                resultado = "El Campo Confirmar Contraseña No Puede Estar Vacio";
+                resultado = Models.EngineData.campoConfirmarContraseñaNoVacio;
                 return resultado;
             }
             else if (PASSWORD.Contains(" "))
             {
-                resultado = "El Campo Confirmar Contraseña No Puede Contener Espacios en Blanco";
+                resultado = Models.EngineData.campoConfirmarContraseñaConEspacios;
                 return resultado;
             }
             else if (PASSWORD != PASSWORD2)
             {
-                resultado = "Las Contrasñas deben ser Iguales";
+                resultado = Models.EngineData.contraseñasNoIguales;
                 return resultado;
             }
             else if (!Funcion.EmailEsValido(MAIL))
             {
-                resultado = "Debe Ingresar una Direccion de Correo Valida";
+                resultado = Models.EngineData.emailNoValido;
                 return resultado;
             }
             else if (ROBOT == false)
             {
-                resultado = "Seleccione la Casilla No Soy un Robot";
+                resultado = Models.EngineData.seleccionCasillaNoSoyRobot;
                 return resultado;
             }
 
-            string existeMail = ModeloDb.SeleccionMail(MAIL);
-            string existeUsuario = ModeloDb.SeleccionUsuario(USUARIO);
-            if (existeMail != string.Empty && existeUsuario != string.Empty)
+            int existeMail = ModeloDb.SeleccionMail(MAIL);
+            int existeUsuario = ModeloDb.SeleccionUsuario(USUARIO);
+            if (existeMail > 0 && existeUsuario > 0)
             {
-                 resultado = "La Direccion de Correo Electronico y el Usuario ya se Encuentran Registrados"; 
+                 resultado = Models.EngineData.mailUsuarioRegistrado; 
             }
-            else if (existeMail != string.Empty && existeUsuario == string.Empty)
+            else if (existeMail > 0  && existeUsuario == 0)
             {
-                 resultado = "La Direccion de Correo Electronico ya se Encuentra Registrada";
+                 resultado = Models.EngineData.mailRegistrado;
             }
-            else if (existeMail == string.Empty && existeUsuario != string.Empty)
+            else if (existeMail == 0 && existeUsuario != 0)
             {
-                resultado = "El Nombre de Usuario ya se Encuentra Registrado";
+                resultado = Models.EngineData.usuarioExiste;
             }
-            else if (existeMail == string.Empty && existeUsuario == string.Empty)
+            else if (existeMail == 0 && existeUsuario == 0)
             {
                 int r = ModeloDb.InsertarCliente(MAIL, NOMBRE, USUARIO, PASSWORD);
                 if (r == -1)
                 {
-                    bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + " <br> <br/> " + ConstruirUrlEstadoCliiente(MAIL,USUARIO,"INACTIVO") , MAIL);
+                    bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + " <br/> <br/> " + ConstruirUrlEstadoCliente(MAIL,USUARIO,"INACTIVO") , MAIL);
                     resultado = Models.EngineData.CuentaRegistradaExitosamente;//200
                 }
                 else
                 {
-                    resultado = "La Cuenta No Pudo ser Registrada Exitosamente, Intentelo mas Tarde";
+                    resultado = Models.EngineData.cuentaNoRegistrada;
                 }
             }
 
@@ -174,13 +208,13 @@ namespace SudokuWeb.Engine
             }
             else
             {
-                resultado = "La Cuenta No Pudo ser Activada, Intentelo mas Tarde"; 
+                resultado = Models.EngineData.cuentaNoActivada;
             }
             return resultado;
         }
 
         [System.Web.Services.WebMethod]
-        public static string ConstruirUrlEstadoCliiente (string MAIL , string USUARIO , string ESTADO)
+        public static string ConstruirUrlEstadoCliente (string MAIL , string USUARIO , string ESTADO)
         {
             string urlEstadoCliente = string.Empty;
             EngineUtil Funcion = new EngineUtil();
@@ -191,34 +225,59 @@ namespace SudokuWeb.Engine
             return urlEstadoCliente;
         }
 
+
+        [System.Web.Services.WebMethod]
+        public static bool RestablecerData(string MAIL, string CAMPO)
+        {
+            bool resultado = false;
+            Engine.MailNotificacion FuncionMail = new Engine.MailNotificacion();
+            FuncionMail.EnviarMail(Models.EngineData.asuntoRestablecer, Models.EngineData.cuerpoRestablecer + ConstruirUrlRestablecerData (MAIL, CAMPO),MAIL);
+
+            return resultado;
+        }
+
+        [System.Web.Services.WebMethod]
+        public static string ConstruirUrlRestablecerData(string MAIL , string CAMPO)
+        {
+            string urlRestablecerData = string.Empty;
+            EngineUtil Funcion = new EngineUtil();
+            string MAIL64 = Funcion.ConvertirBase64(MAIL);
+            urlRestablecerData= Models.EngineData.urlRestablecer + Models.EngineData.interrogacion + Models.EngineData.mail + MAIL64 + Models.EngineData.y + Models.EngineData.campo + CAMPO;
+
+            return urlRestablecerData;
+        }
+
         [System.Web.Services.WebMethod]
         public static string Login (string USUARIO, string PASSWORD,bool ROBOT)
         {
             string resultado = string.Empty;
             if (USUARIO == string.Empty)
             {
-                resultado = "El Campo Usuario No Puede Estar Vacio";
+                resultado = Models.EngineData.campoNombreUsuarioNoVacio;
                 return resultado;
             }
             else if (PASSWORD == string.Empty)
             {
-                resultado = "El Campo Contraseña No Puede Estar Vacio";
+                resultado = Models.EngineData.campoContraseñaNoVacio;
                 return resultado;
             }
             else if (ROBOT == false)
             {
-                resultado = "Seleccione la Casilla No Soy un Robot";
+                resultado = Models.EngineData.seleccionCasillaNoSoyRobot;
                 return resultado;
             }
 
             string existeUsuarioPassword = ModeloDb.LogeoCliente(USUARIO,PASSWORD,"ACTIVO");
             if (existeUsuarioPassword == string.Empty)
             {
-                resultado = "El Usuario con el Password Ingresado no Existe o se Encuentra Inactivo"; 
+                resultado = Models.EngineData.UsuarioPassworInactivoNoExiste;
             }
             else
             {
-                resultado = Models.EngineData.loginExitoso;// 500
+                EngineUtil Funcion = new EngineUtil();
+                HttpContext.Current.Session["Identificador"] = Funcion.ConvertirBase64(USUARIO + PASSWORD);
+                HttpContext.Current.Session["Usuario"] = USUARIO;
+                resultado = Models.EngineData.loginExitoso;
             }
 
             return resultado;
@@ -233,22 +292,92 @@ namespace SudokuWeb.Engine
             int n = Funcion.ActualizarHoraRegistroCliente(MAIL);
             if (n == -1)
             {
-                bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + ConstruirUrlEstadoCliiente(MAIL, USUARIO, "ACTIVO"), MAIL);
+                bool k = FuncionMail.EnviarMail(Models.EngineData.asuntoActivacion, Models.EngineData.cuerpoActivacion + ConstruirUrlEstadoCliente(MAIL, USUARIO, "ACTIVO"), MAIL);
                 if (k)
                 {
-                    resultado = "Transaccion Exitosa";
+                    resultado = Models.EngineData.transaccionFallida;
                 }
                 else
                 {
-                    resultado = "Transaccion Fallida";
+                    resultado = Models.EngineData.transaccionFallida;
                 }
             }
             else
             {
-                resultado = "Transaccion Fallida";
+                resultado = Models.EngineData.transaccionFallida;
             }
             return resultado;
         }
+
+        [System.Web.Services.WebMethod]
+        public static string ActualizarUsuarioCliente(string MAIL, string USUARIO, string CONTRASEÑA)
+        {
+            Models.EngineModel Funcion = new Models.EngineModel();
+            string resultado = string.Empty;
+            int n = Funcion.ActualizarUsuarioCliente(MAIL, USUARIO, CONTRASEÑA);
+            if (n == -1)
+            {
+                resultado = Models.EngineData.usuarioClienteActualizado;
+            }
+            else
+            {
+                resultado = Models.EngineData.transaccionFallida;
+            }
+            return resultado;
+        }
+
+        [System.Web.Services.WebMethod]
+        public static string ActualizarPasswordCliente(string MAIL,string CONTRASEÑA)
+        {
+            string resultado = string.Empty;
+            int n = ModeloDb.ActualizarPasswordCliente(MAIL, CONTRASEÑA);
+            if (n == -1)
+            {
+                resultado = Models.EngineData.passwordClienteActualizado;
+            }
+            else
+            {
+                resultado = Models.EngineData.transaccionFallida;
+            }
+            return resultado;
+        }
+
+        [System.Web.Services.WebMethod]
+        public static bool ImpedirConexionesSimultaneas (string USUARIO, string IDENTIFICADOR,bool existeCookie)
+        {
+            bool  resultado = false ;
+            ConexionUsuario CnxUsuario = ModeloDb.SeleccionConexionUsuario(USUARIO, IDENTIFICADOR);
+            if (CnxUsuario.Id == 0)
+            {
+                ModeloDb.InsertarConexionUsuario(USUARIO, IDENTIFICADOR, HttpContext.Current.Session["Ip"].ToString()); // 1era CONEXION
+                resultado = true;
+            }
+            else if (CnxUsuario.Id > 0)
+            {
+                if (CnxUsuario.Ip == HttpContext.Current.Session["Ip"].ToString()) // CONECTADO MISMA IP
+                {
+                    ModeloDb.InsertarConexionUsuario(USUARIO, IDENTIFICADOR, HttpContext.Current.Session["Ip"].ToString());
+                    resultado = true;
+                }
+                else if (CnxUsuario.Ip != HttpContext.Current.Session["Ip"].ToString() && CnxUsuario .TiempoTrascurrido <= 20) // IP DIFERENTE TIEMPO < 20
+                {
+                    resultado = false;
+                }
+                else if (CnxUsuario.Ip != HttpContext.Current.Session["Ip"].ToString() && CnxUsuario.TiempoTrascurrido > 20 && existeCookie) // IP DIFERENTE EXISTE COOKIE TIEMPO < "=
+                {
+                    ModeloDb.InsertarConexionUsuario(USUARIO, IDENTIFICADOR, HttpContext.Current.Session["Ip"].ToString());
+                    resultado = true;
+                }
+                else if (CnxUsuario.Ip != HttpContext.Current.Session["Ip"].ToString() && CnxUsuario.TiempoTrascurrido < 20 && !existeCookie)// IP DIFERENTE NO EXISTE COOKIE TIEMPO < 20
+                {
+                    resultado = false;
+                }
+
+            }
+     
+            return resultado;
+        }
+
 
     }
 }

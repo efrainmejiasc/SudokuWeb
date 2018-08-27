@@ -12,3 +12,8 @@ function PareceRobot()
 {
     return alert('Debe Activar la casilla no soy un robot');
 }
+
+function CerrarVentana()
+{
+    window.close();
+}

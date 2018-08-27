@@ -37,7 +37,7 @@ namespace SudokuWeb.View
                         {
                             string r = Engine.EngineUtil.NuevoEmailCliente(Session["Mail"].ToString(), Session["Usuario"].ToString(), Session["Estado"].ToString());
 
-                            lblMensaje.Text = "El Tiempo para Activar su Cuenta a Expirado, Volveremos a Enviar un Link a su cuenta de Correo";
+                            lblMensaje.Text = Models.EngineData.tiempoActivarCuenta;
                             ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
                             return;
                         }

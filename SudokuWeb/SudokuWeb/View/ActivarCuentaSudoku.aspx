@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="~/public/js/bootstrap.js"></script>
     <script src="~/public/js/bootstrap.bundle.js"></script>
-    <script src="../js/main.js"></script>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -104,5 +104,7 @@
         </div>--%>
 
     </form>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../public/app.js"></script>
 </body>
 </html>

@@ -17,20 +17,54 @@ namespace SudokuWeb.Models
             return valor;
         }
 
-        public static string interrogacion = "?";
-        public static string y = "&";
-        public static string espacio = "%20";
-        public static string mail = "mail=";
-        public static string usuario = "usuario=";
-        public static string estado = "estado=";
-        public static string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
-        //public static string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
+        public const string interrogacion = "?";
+        public const string y = "&";
+        public const string espacio = "%20";
+        public const string mail = "mail=";
+        public const string usuario = "usuario=";
+        public const string estado = "estado=";
+        public const string campo = "campo=";
+        public const string dateFormatUtc = "yyyy-MM-ddTHH:mm:ss+hh:mm";
 
-        public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar el Estado de Su Cuenta";
+        public const string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
+        //public const  string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
+
+        public const string urlRestablecer = "http://localhost:51828/View/NuevoUserPassword.aspx";
+        //public const  string urlRestablecer = "http://joselelu-001-site1.etempurl.com/View/NuevoUserPassword.aspx";
+
+        public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar su Cuenta";
         public static string asuntoActivacion =  "Activacion de Cuenta Sudoku Para Todos";
-        public static string cuerpoActivacion = "Bienvenido a Sudoku Para Todos , para activar su cuenta puede seguir el siguiente link o cortar y pegar en su navegador web</br></br>";  
+        public static string cuerpoActivacion = "Bienvenido a Sudoku Para Todos , para activar su cuenta puede seguir el siguiente link o cortar y pegar en su navegador web <br/><br/><br/> ";  
         public static string loginExitoso = "Auntentificacion Exitosa";
         public static string activacionExitosa = "Cuenta Activada Exitosamente, ";
+        public static string emailNoValido = "Ingrese una cuenta de correo electronico valida";
+        public static string emailNoExiste = "El correo electronico ingresado no esta registrado";
+        public static string restablecerData = "Revise su bandeja de correo electronico hemos enviado un link para restablecer sus datos";
+        public static string asuntoRestablecer = "Restablecer Datos en Sudoku Para Todos";
+        public static string cuerpoRestablecer = "Respuesta peticion restablecer datos en Sudoku Para Todos , para restablecer sus datos puede seguir el siguiente link o cortar y pegar en su navegador web <br/><br/><br/>";
+        public static string tiempoActivarCuenta = "El Tiempo para Activar su Cuenta a Expirado, Volveremos a Enviar un Link a su cuenta de Correo";
+        public static string emailDiferente = "La direccion de correo electronico debe ser la misma donde se envio el link";
+        public static string nombreUsuarioConEspacios = "El campo nombre de usuario no puede contener espacios en blanco";
+        public static string usuarioClienteActualizado = "Usuario actualizado satisfactoriamente";
+        public static string contraseñasNoIguales = "Las contraseñas deben ser iguales";
+        public static string passwordClienteActualizado = "Contraseña actualizada satisfactoriamente";
+        public static string transaccionFallida = "Transaccion Fallida";
+        public static string usuarioExiste = "El Nombre de usuario ya se encuentra registrado";
+        public static string multipleConexionUsuario = "Se detecto multiples conexiones de su nombre de usuario, debe cerrar todas las conexiones y esperar un minimo de 20 minutos para volver a conectarse";
+        public static string campoNombreNoVacio = "El Campo Nombre No Puede Estar Vacio";
+        public static string campoCorreoElectronicoNoVacio = "El Campo Correo Electronico No Puede Estar Vacio";
+        public static string campoNombreUsuarioNoVacio = "El Campo Nombre de Usuario No Puede Estar Vacio";
+        public static string campoContraseñaNoVacio = "El Campo Contraseña No Puede Estar Vacio";
+        public static string campoContraseñaConEspacios = "El Campo Contraseña No Puede Contener Espacios en Blanco";
+        public static string campoConfirmarContraseñaNoVacio = "El Campo Confirmar Contraseña No Puede Estar Vacio";
+        public static string campoConfirmarContraseñaConEspacios = "El Campo Confirmar Contraseña No Puede Contener Espacios en Blanco";
+        public static string seleccionCasillaNoSoyRobot = "Seleccione la Casilla No Soy un Robot";
+        public static string mailUsuarioRegistrado = "La Direccion de Correo Electronico y el Usuario ya se Encuentran Registrados";
+        public static string mailRegistrado = "La Direccion de Correo Electronico ya se Encuentra Registrada";
+        public static string cuentaNoRegistrada = "La Cuenta No Pudo ser Registrada Exitosamente, Intentelo mas Tarde";
+        public static string cuentaNoActivada = "La Cuenta No Pudo ser Activada, Intentelo mas Tarde";
+        public static string UsuarioPassworInactivoNoExiste = "El Usuario con el Password Ingresado no Existe o se Encuentra Inactivo"; 
+
 
     }
 }

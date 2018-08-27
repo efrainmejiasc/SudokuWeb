@@ -10,94 +10,94 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
-      <publishTime>08/15/2017 13:12:32</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe.config">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/csc.rsp">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/csi.exe">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/csi.rsp">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.AppContext.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Collections.Immutable.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/System.Reflection.Metadata.dll">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.exe.config">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/vbc.rsp">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
-      <publishTime>06/27/2016 14:50:24</publishTime>
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="bin/SudokuWeb.dll">
-      <publishTime>08/03/2018 19:20:02</publishTime>
+      <publishTime>08/20/2018 17:35:55</publishTime>
     </File>
     <File Include="bin/SudokuWeb.pdb">
-      <publishTime>08/03/2018 19:20:02</publishTime>
+      <publishTime>08/20/2018 17:35:55</publishTime>
     </File>
     <File Include="default.aspx">
-      <publishTime>08/03/2018 09:22:45</publishTime>
+      <publishTime>08/20/2018 09:01:38</publishTime>
     </File>
     <File Include="fonts/open-sans-v15-latin-300.woff">
       <publishTime>08/01/2018 15:15:28</publishTime>
@@ -130,7 +130,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/01/2018 15:15:28</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>07/30/2018 09:51:40</publishTime>
+      <publishTime>08/10/2018 10:52:16</publishTime>
     </File>
     <File Include="images/front.png">
       <publishTime>08/01/2018 15:15:28</publishTime>
@@ -148,7 +148,133 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/01/2018 15:15:28</publishTime>
     </File>
     <File Include="js/main.js">
-      <publishTime>08/02/2018 17:47:24</publishTime>
+      <publishTime>08/20/2018 09:01:38</publishTime>
+    </File>
+    <File Include="js/TerminosCondiciones.pdf">
+      <publishTime>08/16/2018 12:15:27</publishTime>
+    </File>
+    <File Include="public/app.js">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/app.js.map">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/css/.DS_Store">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap-grid.css">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap-grid.css.map">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap-grid.min.css">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap-grid.min.css.map">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap-reboot.css">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap-reboot.css.map">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap-reboot.min.css">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap-reboot.min.css.map">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap.css">
+      <publishTime>08/20/2018 09:01:39</publishTime>
+    </File>
+    <File Include="public/css/bootstrap.css.map">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/css/bootstrap.min.css">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/css/bootstrap.min.css.map">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/fonts/open-sans-v15-latin-300.woff">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/open-sans-v15-latin-300.woff2">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/open-sans-v15-latin-800.woff">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/open-sans-v15-latin-800.woff2">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/open-sans-v15-latin-regular.woff">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/open-sans-v15-latin-regular.woff2">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/oswald-v16-latin-600.woff">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/oswald-v16-latin-600.woff2">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/oswald-v16-latin-regular.woff">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/fonts/oswald-v16-latin-regular.woff2">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/images/front.png">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/images/logo.png">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/images/main-background.jpg">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/images/SudokuEnCasa.ico">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="public/js/bootstrap.bundle.js">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/js/bootstrap.bundle.js.map">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/js/bootstrap.bundle.min.js">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/js/bootstrap.bundle.min.js.map">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/js/bootstrap.js">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/js/bootstrap.js.map">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/js/bootstrap.min.js">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/js/bootstrap.min.js.map">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/main.css">
+      <publishTime>08/20/2018 09:01:40</publishTime>
+    </File>
+    <File Include="public/main.css.map">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="src/js/main.js">
+      <publishTime>08/10/2018 10:52:18</publishTime>
+    </File>
+    <File Include="src/styles/main.scss">
+      <publishTime>08/10/2018 10:52:18</publishTime>
     </File>
     <File Include="static/css/main.fef15ef4.css">
       <publishTime>08/01/2018 15:15:28</publishTime>
@@ -211,19 +337,25 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/01/2018 15:15:28</publishTime>
     </File>
     <File Include="View/ActivarCuentaSudoku.aspx">
-      <publishTime>08/03/2018 08:10:27</publishTime>
+      <publishTime>08/20/2018 09:01:37</publishTime>
     </File>
     <File Include="View/ActSudoku.aspx">
       <publishTime>07/31/2018 18:45:37</publishTime>
     </File>
+    <File Include="View/Contrato.aspx">
+      <publishTime>08/20/2018 09:01:37</publishTime>
+    </File>
     <File Include="View/Login.aspx">
-      <publishTime>08/02/2018 21:06:59</publishTime>
+      <publishTime>08/20/2018 09:01:37</publishTime>
+    </File>
+    <File Include="View/PaySudoku.aspx">
+      <publishTime>08/20/2018 17:14:41</publishTime>
     </File>
     <File Include="View/RegistrarCuenta.aspx">
-      <publishTime>08/02/2018 20:29:49</publishTime>
+      <publishTime>08/20/2018 09:01:37</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/01/2018 16:05:04</publishTime>
+      <publishTime>08/20/2018 17:35:57</publishTime>
     </File>
   </ItemGroup>
 </Project>

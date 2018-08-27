@@ -42,6 +42,7 @@ namespace SudokuWeb.View
             if (lblMensaje.Text == Models.EngineData.CuentaRegistradaExitosamente)
             {
                 LimpiarTexto();
+                Response.Redirect("~/default.aspx");
             } else
             {
                 lblMensaje.Text = string.Empty;

@@ -11,6 +11,12 @@ namespace SudokuWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Request.RequestType.Equals("POST")|| Request.RequestType.Equals("GET"))
+            {
+                Engine.EngineUtil Funcion = new Engine.EngineUtil();
+                string k = Funcion.GetIpAddress(Request);
+            }
             if (Session["UserName"] != null)
             {
                 lblUserName.Text = Session["UserName"].ToString();
@@ -36,6 +42,9 @@ namespace SudokuWeb
                     break;
                 case ("btnRegistro"):
                     Response.Redirect("View/Contrato.aspx");
+                    break;
+                case ("btnOlvido"):
+                    Response.Redirect("View/RestablecerDataCliente.aspx");
                     break;
                 case ("btncerrarSesion"):
                     lblUserName.Text = string.Empty;

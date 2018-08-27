@@ -14,10 +14,10 @@ namespace SudokuWeb.Models
         private Engine.EngineUtil FuncionUtil = new Engine.EngineUtil();
 
 
-        public string  SeleccionMail (string MAIL)
+        public int SeleccionMail (string MAIL)
         {
             object obj = new object();
-            string resultado = string.Empty;
+            int resultado = 0;
             SqlConnection Conexion = new SqlConnection(cadenaConexion);
             using (Conexion)
             {
@@ -30,15 +30,15 @@ namespace SudokuWeb.Models
             }
             if (obj != null)
             {
-                resultado = obj.ToString();
+                resultado = Convert.ToInt32(obj);
             }
             return resultado;
         }
 
-        public string SeleccionUsuario(string USUARIO)
+        public int SeleccionUsuario(string USUARIO)
         {
             object obj = new object();
-            string resultado = string.Empty;
+            int resultado = 0;
             SqlConnection Conexion = new SqlConnection(cadenaConexion);
             using (Conexion)
             {
@@ -51,7 +51,7 @@ namespace SudokuWeb.Models
             }
             if (obj != null)
             {
-                resultado = obj.ToString();
+               resultado = Convert.ToInt32(obj);
             }
             return resultado;
         }
@@ -70,7 +70,45 @@ namespace SudokuWeb.Models
                 command.Parameters.AddWithValue("@USUARIO", USUARIO);
                 command.Parameters.AddWithValue("@PASSWORD",FuncionUtil.ConvertirBase64(PASSWORD));
                 command.Parameters.AddWithValue("@FECHA", DateTime.Now);
+                command.Parameters.AddWithValue("@FECHAUTC", DateTime.UtcNow.ToString(Models.EngineData.dateFormatUtc));
                 command.Parameters.AddWithValue("@ESTADO", "INACTIVO");
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+        public int ActualizarUsuarioCliente(string MAIL, string USUARIO, string PASSWORD)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarUsuarioCliente", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@USUARIO", USUARIO);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+        public int ActualizarPasswordCliente(string MAIL, string PASSWORD)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarPasswordCliente", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
                 resultado = command.ExecuteNonQuery();
                 Conexion.Close();
             }
@@ -161,6 +199,64 @@ namespace SudokuWeb.Models
                 resultado = obj.ToString();
             }
             return resultado;
+        }
+
+        public int InsertarConexionUsuario(string USUARIO, string IDENTIFICADOR, string IP)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_InsertarConexionUsuario", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@USUARIO", USUARIO);
+                command.Parameters.AddWithValue("@IDENTIFICADOR", IDENTIFICADOR);
+                command.Parameters.AddWithValue("@FECHA", DateTime.Now);
+                command.Parameters.AddWithValue("@FECHAUTC", DateTime.UtcNow.ToString(Models.EngineData.dateFormatUtc));
+                command.Parameters.AddWithValue("@IP", IP);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+        public ConexionUsuario SeleccionConexionUsuario(string USUARIO, string IDENTIFICADOR)
+        {
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            ConexionUsuario CnxUsuario = new ConexionUsuario();
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_SeleccionConexionUsuario", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@USUARIO", USUARIO);
+                command.Parameters.AddWithValue("@IDENTIFICADOR", IDENTIFICADOR);
+                SqlDataReader lector = lector = command.ExecuteReader();
+                while ((lector.Read()))
+                {
+                    try
+                    {
+                        CnxUsuario = new ConexionUsuario
+                        {
+                            Id = Convert.ToInt64(lector[0]),
+                            Usuario = lector[1].ToString(),
+                            Identificador = lector[2].ToString(),
+                            FechaConexion = Convert.ToDateTime(lector[3]),
+                            FechaConexionUtc = lector[4].ToString(),
+                            Ip = lector[5].ToString(),
+                            TiempoTrascurrido = Convert.ToInt64(lector[6])
+                        };
+                    }
+                    catch { } 
+                }
+                lector.Close();
+                command.Connection.Close();
+                Conexion.Close();
+            }
+            return  CnxUsuario;
         }
 
     }

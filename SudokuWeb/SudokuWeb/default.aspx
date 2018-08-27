@@ -42,6 +42,9 @@
                         <li class="nav-item">
                             <asp:LinkButton ID="btnRegistro" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Regístrate</asp:LinkButton>
                         </li>
+                           <li class="nav-item">
+                            <asp:LinkButton ID="btnOlvido" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Olvidaste Usuario o Contraseña</asp:LinkButton>
+                        </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
                         <select name="language" class="form-control mr-sm-2" id="languagepicker">

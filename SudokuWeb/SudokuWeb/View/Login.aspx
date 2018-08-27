@@ -37,6 +37,9 @@
                         <li class="nav-item">
                             <a href="RegistrarCuenta.aspx" class="nav-link mr-sm-2">Regístrate</a>
                         </li>
+                         <li class="nav-item">
+                            <a href="RestablecerDataCliente.aspx" class="nav-link mr-sm-2">Olvidaste Usuario o Contraseña</a>
+                        </li>
                     </ul>
                 </div>
             </div>
