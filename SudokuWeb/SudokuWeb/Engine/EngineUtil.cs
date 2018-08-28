@@ -89,6 +89,7 @@ namespace SudokuWeb.Engine
 
 
         // ************************************************************************************************************************************************
+        //METODOS SUDOKU AUTENTIFICACION & PERFIL CLIENTE
 
         [System.Web.Services.WebMethod]
         public static string  CrearPerfilCliente(string MAIL, string NOMBRE, string USUARIO, string PASSWORD,string PASSWORD2,bool ROBOT)
@@ -248,6 +249,17 @@ namespace SudokuWeb.Engine
         }
 
         [System.Web.Services.WebMethod]
+        public static string ConstruirUrlCreateAdmin(string MAIL)
+        {
+            string urlRestablecerData = string.Empty;
+            EngineUtil Funcion = new EngineUtil();
+            string MAIL64 = Funcion.ConvertirBase64(MAIL);
+            urlRestablecerData = Models.EngineData.urlRestablecer + Models.EngineData.interrogacion + Models.EngineData.mail + MAIL64 ;
+
+            return urlRestablecerData;
+        }
+
+        [System.Web.Services.WebMethod]
         public static string Login (string USUARIO, string PASSWORD,bool ROBOT)
         {
             string resultado = string.Empty;
@@ -377,6 +389,82 @@ namespace SudokuWeb.Engine
      
             return resultado;
         }
+
+        //********************************************************************************************************************************************************************************************
+        // METODO AUTENTIFICACION PERFIL ADMINISTRADOR
+
+        [System.Web.Services.WebMethod]
+        public static string AutentificacionAdministrador(string administrador , string password)
+        {
+           string resultado = string.Empty ;
+           if (administrador == string.Empty)
+           {
+                return resultado = "Ingrese nombre de admistrador";
+           }
+           else if (password == string.Empty)
+           {
+                return resultado = "Ingrese contraseña de administrador";
+           }
+
+            int n = ModeloDb.SeleccionIdAdministrador(administrador, password);
+            if (n > 0)
+            {
+                resultado = "Autentificacion Exitosa";
+            }
+            else if (n == 0)
+            {
+                resultado = "Autetificacion Fallida";
+            }
+
+            return resultado;
+        }
+
+
+        [System.Web.Services.WebMethod]
+        public static string CreateAdministrador (string mail, string administrador,string password1,string password2)
+        {
+            string resultado = string.Empty;
+            EngineUtil Funcion = new EngineUtil();
+            if (administrador == string.Empty)
+            {
+                return resultado = "Ingrese nombre de admistrador";
+            }
+            else if (mail == string.Empty)
+            {
+                return resultado = "El campo correo electronico no puede ser vacio";
+            }
+            else if (password1 == string.Empty || password2 == string.Empty )
+            {
+                return resultado = "Las contraseñas no pueden ser vacias";
+            }
+            else if (!Funcion.CompareString(password1, password2))
+            {
+                return resultado = "Las contraseñas deben ser iguales";
+            }
+            else if (!Funcion.EmailEsValido(mail))
+            {
+                return resultado = "El correo electronico debe ser valido";
+            }
+
+            int n = ModeloDb.SeleccionMailAdministrador(mail);
+            if (n > 0)
+            {
+                return resultado = "la cuenta de correo electronico ya se encuentra registrada";
+            }
+
+            n = ModeloDb.InsertarAdministrador(mail, administrador, password1);
+            if (n == -1)
+            {
+                resultado = "Administrador creado satisfactoriamente,en poco tiempo activaremos su cuenta";
+                
+            }
+            else
+            {
+                resultado = "El Administrador no pudo ser creado satisfactoriamente";
+            }
+            return resultado;
+        }
+
 
 
     }

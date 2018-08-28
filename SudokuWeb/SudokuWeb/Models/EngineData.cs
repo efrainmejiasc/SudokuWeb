@@ -26,6 +26,10 @@ namespace SudokuWeb.Models
         public const string campo = "campo=";
         public const string dateFormatUtc = "yyyy-MM-ddTHH:mm:ss+hh:mm";
 
+        public const string asuntoCreateAdmin = "Administrador de  Sudoku Para Todos esperando Activacion";
+        public const string cuerpoCreateAdmin = "Siga el link o corte y pegue en su navegador para activar el nuevo administrador <br/><br/><br/>";
+
+
         public const string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
         //public const  string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
 

@@ -121,6 +121,8 @@
     <Content Include="public\app.js" />
     <Content Include="public\main.css" />
     <Content Include="src\js\main.js" />
+    <Content Include="ViewBusiness\Entry.aspx" />
+    <Content Include="ViewBusiness\ProfileAdministrador.aspx" />
     <Content Include="View\ActivarCuentaSudoku.aspx" />
     <Content Include="View\Contrato.aspx" />
     <Content Include="View\InitGame.aspx" />
@@ -151,6 +153,20 @@
     <Compile Include="Models\EngineData.cs" />
     <Compile Include="Models\EngineModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewBusiness\Entry.aspx.cs">
+      <DependentUpon>Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBusiness\Entry.aspx.designer.cs">
+      <DependentUpon>Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBusiness\ProfileAdministrador.aspx.cs">
+      <DependentUpon>ProfileAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBusiness\ProfileAdministrador.aspx.designer.cs">
+      <DependentUpon>ProfileAdministrador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\ActivarCuentaSudoku.aspx.cs">
       <DependentUpon>ActivarCuentaSudoku.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

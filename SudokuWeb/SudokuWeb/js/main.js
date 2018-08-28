@@ -13,7 +13,29 @@ function PareceRobot()
     return alert('Debe Activar la casilla no soy un robot');
 }
 
-function CerrarVentana()
+function OpenProfileAdministrador1()
 {
-    window.close();
+    window.location = 'ProfileAdministrador.aspx?div=CreateAdmin';  
 }
+
+function OpenProfileAdministrador2()
+{
+    window.location = 'ProfileAdministrador.aspx?div=OlvidoUsuario';
+}
+
+function OpenProfileAdministrador3()
+{
+    window.location = 'ProfileAdministrador.aspx?div=OlvidoPassword';
+}
+
+function CerrarPestana()
+{
+    window.open('', '_parent', ''); 
+    window.close('Entry.aspx');
+}
+
+function MoverseA(idDelElemento)
+{
+    location.hash = "#" + idDelElemento;
+}
+

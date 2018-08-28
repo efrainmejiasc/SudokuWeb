@@ -137,7 +137,6 @@ namespace SudokuWeb.View
                 string script = "OcultarVentana('msj');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "OcultarVentana('msj')", script, true);
             }
-            int K = 0;
         }
     }
 }
