@@ -108,10 +108,9 @@ namespace SudokuWeb.ViewBusiness
                     {
                         string resultado = string.Empty;
                         string mail = txtEmail.Text;
-                        string password3 = txtPassword3.Text;
-                        string password4 = txtPassword4.Text;
-
-
+                        string password1 = txtPassword3.Text;
+                        string password2 = txtPassword4.Text;
+                        resultado = Engine.EngineUtil.ActualizarPasswordAdministrador(mail, password1, password2);
                         lblMensaje.Text = resultado;
                         string script = "MostrarVentana('msj');";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
@@ -129,7 +128,7 @@ namespace SudokuWeb.ViewBusiness
         protected void BtnAceptarMensaje_Click(object sender, EventArgs e)
         {
             string script = "OcultarVentana('msj');";
-            if (lblMensaje.Text == Models.EngineData.administradorCreadoExito || lblMensaje.Text == Models.EngineData.nombreAdminUpdateExito )
+            if (lblMensaje.Text == Models.EngineData.administradorCreadoExito || lblMensaje.Text == Models.EngineData.nombreAdminUpdateExito || lblMensaje.Text == Models.EngineData.nombreAdminUpdateExito)
             {
                 Response.Redirect("Entry.aspx");
             }

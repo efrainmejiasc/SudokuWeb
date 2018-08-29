@@ -506,7 +506,6 @@ namespace SudokuWeb.Engine
             }
 
             n = ModeloDb.ActualizarNombreAdministrador(MAIL ,ADMINISTRADOR, PASSWORD, "ACTIVO");
-
             if (n == -1)
             {
                 resultado = Models.EngineData.nombreAdminUpdateExito;
@@ -554,7 +553,6 @@ namespace SudokuWeb.Engine
             }
 
             n = ModeloDb.ActualizarPasswordAdministrador(MAIL, PASSWORD1, "ACTIVO");
-
             if (n == -1)
             {
                 resultado = Models.EngineData.passwordAdminUpdateExito;
