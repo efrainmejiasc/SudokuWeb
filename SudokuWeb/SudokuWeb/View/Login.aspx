@@ -89,7 +89,7 @@
             </div>
 
             <div class="modal fade" id="msj" tabindex="-1" role="dialog" aria-labelledby="msj-label">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog ModalCenter" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h4 class="modal-title" id="msj-label">Sudoku para todos</h4>
@@ -98,6 +98,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="12%" Height="12%" />
                                         <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
                                     </div>
                                 </div>
