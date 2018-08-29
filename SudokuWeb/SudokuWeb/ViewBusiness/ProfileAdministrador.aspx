@@ -60,7 +60,7 @@
                       <asp:TextBox ID="txtPassword3" runat="server" TextMode="Password"></asp:TextBox>
                       <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña"></asp:Label>
                       <asp:TextBox ID="txtPassword4" runat="server" TextMode="Password"></asp:TextBox>
-                      <asp:CheckBox ID="chkRobotPass" runat="server" Text="No Soy un Robot" />
+                      <asp:CheckBox ID="chkRobot3" runat="server" Text="No Soy un Robot" />
                       <asp:Button ID="btnCancelarPass" runat="server" Text="Cancelar"/>
                       <asp:Button ID="btnAceptarPass" runat="server" Text="Aceptar" />
              </div>

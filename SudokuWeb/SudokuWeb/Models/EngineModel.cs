@@ -336,5 +336,25 @@ namespace SudokuWeb.Models
             return resultado;
         }
 
+        public int ActualizarEstadoAdministrador(string MAIL, string PASSWORD, string ESTADO)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarEstadoAdministrador", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
     }
 }

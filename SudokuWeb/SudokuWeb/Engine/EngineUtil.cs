@@ -249,14 +249,15 @@ namespace SudokuWeb.Engine
         }
 
         [System.Web.Services.WebMethod]
-        public static string ConstruirUrlCreateAdmin(string MAIL)
+        public static string ConstruirUrlCreateAdmin(string MAIL, string ADMINISTRADOR , string PASSWORD)
         {
-            string urlRestablecerData = string.Empty;
+            string urlActivarAdministrador= string.Empty;
             EngineUtil Funcion = new EngineUtil();
             string MAIL64 = Funcion.ConvertirBase64(MAIL);
-            urlRestablecerData = Models.EngineData.urlRestablecer + Models.EngineData.interrogacion + Models.EngineData.mail + MAIL64 ;
+            string PASSWORD64 = Funcion.ConvertirBase64(PASSWORD);
+            urlActivarAdministrador = Models.EngineData.urlActivarAdministrador + Models.EngineData.interrogacion + Models.EngineData.mail + MAIL64 + Models.EngineData.y + Models.EngineData.password + PASSWORD64 + Models.EngineData.y + Models.EngineData.administrador + ADMINISTRADOR;
 
-            return urlRestablecerData;
+            return urlActivarAdministrador;
         }
 
         [System.Web.Services.WebMethod]
@@ -455,16 +456,26 @@ namespace SudokuWeb.Engine
             n = ModeloDb.InsertarAdministrador(mail, administrador, password1);
             if (n == -1)
             {
-                resultado = "Administrador creado satisfactoriamente,en poco tiempo activaremos su cuenta";
-                
+                resultado = Models.EngineData.administradorCreadoExito;
+                bool result = FuncionMail.EnviarMail(administrador + Models.EngineData.asuntoCreateAdmin, "<br/> Nombre de Administrador: " + administrador + "<br/>" + 
+                                       "E-Mail: " + mail + Models.EngineData.cuerpoCreateAdmin + "<br/><br/>" + EngineUtil.ConstruirUrlCreateAdmin(mail,administrador,password1), mail);
             }
             else
             {
-                resultado = "El Administrador no pudo ser creado satisfactoriamente";
+                resultado = Models.EngineData.administradorCreadoFallido;
             }
             return resultado;
         }
 
+        [System.Web.Services.WebMethod]
+        public static void ActivarCuentaAdministrador(string MAIL , string PASSWORD , string ADMINISTRADOR)
+        {
+            int n = ModeloDb.ActualizarEstadoAdministrador(MAIL, PASSWORD,"ACTIVO");
+            if (n == -1)
+            {
+                FuncionMail.EnviarMail(ADMINISTRADOR + " Sudoku Para Todos", "Felicitaciones! , su cuenta de Administrador ahora esta activada <br/><br/> visite: " + Models.EngineData.urlSite , MAIL);
+            }
+        }
 
 
     }

@@ -18,6 +18,10 @@ namespace SudokuWeb.View
                 Session["Usuario"] = Request.QueryString["usuario"];
                 Session["Estado"] = Request.QueryString["estado"];
             }
+            if (!IsPostBack)
+            {
+                chkRobot.Checked = false;
+            }
         }
 
         protected void BtnActivarCuenta_Click(object sender, EventArgs e)

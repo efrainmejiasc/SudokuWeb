@@ -31,7 +31,11 @@ namespace SudokuWeb.View
                     Pnl2.Visible = true;
                     Pnl1.Visible = false;
                 }
-
+            }
+            if (!IsPostBack)
+            {
+                chkRobotUser.Checked = false;
+                chkRobotPass.Checked = false;
             }
         }
 

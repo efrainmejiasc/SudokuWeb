@@ -11,7 +11,10 @@ namespace SudokuWeb.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           if (!IsPostBack)
+           {
+                chkRobot.Checked = false;
+           }
         }
 
         protected void BtnInicio_Click(object sender, EventArgs e)

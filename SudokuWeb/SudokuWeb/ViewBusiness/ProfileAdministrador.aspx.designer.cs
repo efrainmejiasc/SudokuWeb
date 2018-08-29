@@ -283,13 +283,13 @@ namespace SudokuWeb.ViewBusiness {
         protected global::System.Web.UI.WebControls.TextBox txtPassword4;
         
         /// <summary>
-        /// Control chkRobotPass.
+        /// Control chkRobot3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkRobotPass;
+        protected global::System.Web.UI.WebControls.CheckBox chkRobot3;
         
         /// <summary>
         /// Control btnCancelarPass.

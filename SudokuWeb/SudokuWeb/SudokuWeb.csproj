@@ -107,6 +107,7 @@
     <Content Include="public\js\bootstrap.js.map" />
     <Content Include="public\js\bootstrap.min.js.map" />
     <Content Include="js\TerminosCondiciones.pdf" />
+    <Content Include="ViewBusiness\ActivarAdministrador.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -122,6 +123,7 @@
     <Content Include="public\main.css" />
     <Content Include="src\js\main.js" />
     <Content Include="ViewBusiness\Entry.aspx" />
+    <Content Include="ViewBusiness\Manager.aspx" />
     <Content Include="ViewBusiness\ProfileAdministrador.aspx" />
     <Content Include="View\ActivarCuentaSudoku.aspx" />
     <Content Include="View\Contrato.aspx" />
@@ -153,12 +155,22 @@
     <Compile Include="Models\EngineData.cs" />
     <Compile Include="Models\EngineModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewBusiness\ActivarAdministrador.ashx.cs">
+      <DependentUpon>ActivarAdministrador.ashx</DependentUpon>
+    </Compile>
     <Compile Include="ViewBusiness\Entry.aspx.cs">
       <DependentUpon>Entry.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewBusiness\Entry.aspx.designer.cs">
       <DependentUpon>Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBusiness\Manager.aspx.cs">
+      <DependentUpon>Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBusiness\Manager.aspx.designer.cs">
+      <DependentUpon>Manager.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewBusiness\ProfileAdministrador.aspx.cs">
       <DependentUpon>ProfileAdministrador.aspx</DependentUpon>

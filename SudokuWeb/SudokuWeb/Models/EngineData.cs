@@ -24,17 +24,27 @@ namespace SudokuWeb.Models
         public const string usuario = "usuario=";
         public const string estado = "estado=";
         public const string campo = "campo=";
+        public const string administrador = "administrador=";
+        public const string password = "password=";
+
         public const string dateFormatUtc = "yyyy-MM-ddTHH:mm:ss+hh:mm";
 
         public const string asuntoCreateAdmin = "Administrador de  Sudoku Para Todos esperando Activacion";
         public const string cuerpoCreateAdmin = "Siga el link o corte y pegue en su navegador para activar el nuevo administrador <br/><br/><br/>";
+        public const string administradorCreadoExito = "Administrador creado satisfactoriamente,en poco tiempo activaremos su cuenta,notificaremos enviando un E-Mail";
+        public const string administradorCreadoFallido = "El Administrador no pudo ser creado satisfactoriamente";
 
+        public const string urlSite = "http://localhost:51828/";
+        //public const  string urlSite = "http://joselelu-001-site1.etempurl.com/";
 
         public const string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
         //public const  string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
 
         public const string urlRestablecer = "http://localhost:51828/View/NuevoUserPassword.aspx";
         //public const  string urlRestablecer = "http://joselelu-001-site1.etempurl.com/View/NuevoUserPassword.aspx";
+
+        public const string urlActivarAdministrador = "http://localhost:51828/ViewBisiness/ActivarAdministrador.ashx";
+        //public const string urlActivarAdministrador = "http://joselelu-001-site1.etempurl.com/ViewBisiness/ActivarAdministrador.ashx";
 
         public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar su Cuenta";
         public static string asuntoActivacion =  "Activacion de Cuenta Sudoku Para Todos";

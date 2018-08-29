@@ -35,7 +35,7 @@ namespace SudokuWeb.ViewBusiness
                         string resultado = Engine.EngineUtil.AutentificacionAdministrador(administrador, password);
                         if (resultado == "Autentificacion Exitosa")
                         {
-
+                            Response.Redirect("Manager.aspx");
                         }
                         else
                         {
@@ -49,7 +49,6 @@ namespace SudokuWeb.ViewBusiness
                         string script = "PareceRobot();";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "PareceRobot()", script, true);
                     }
-                   
                     break;
             }
         }
