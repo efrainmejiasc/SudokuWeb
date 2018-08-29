@@ -107,6 +107,7 @@
     <Content Include="public\js\bootstrap.js.map" />
     <Content Include="public\js\bootstrap.min.js.map" />
     <Content Include="js\TerminosCondiciones.pdf" />
+    <Content Include="ViewBusisness\ActivarAdministrador.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -121,10 +122,12 @@
     <Content Include="public\app.js" />
     <Content Include="public\main.css" />
     <Content Include="src\js\main.js" />
+    <Content Include="ViewBusisness\Entry.aspx" />
+    <Content Include="ViewBusisness\Manager.aspx" />
+    <Content Include="ViewBusisness\ProfileAdministrador.aspx" />
     <Content Include="View\ActivarCuentaSudoku.aspx" />
     <Content Include="View\Contrato.aspx" />
     <Content Include="View\InitGame.aspx" />
-    <Content Include="View\NegocioAutentificacion.aspx" />
     <Content Include="View\NuevoUserPassword.aspx" />
     <Content Include="View\PaySudoku.aspx" />
     <Content Include="View\RegistrarCuenta.aspx" />
@@ -151,6 +154,30 @@
     <Compile Include="Models\EngineData.cs" />
     <Compile Include="Models\EngineModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewBusisness\ActivarAdministrador.ashx.cs">
+      <DependentUpon>ActivarAdministrador.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBusisness\Entry.aspx.cs">
+      <DependentUpon>Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBusisness\Entry.aspx.designer.cs">
+      <DependentUpon>Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBusisness\Manager.aspx.cs">
+      <DependentUpon>Manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBusisness\Manager.aspx.designer.cs">
+      <DependentUpon>Manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBusisness\ProfileAdministrador.aspx.cs">
+      <DependentUpon>ProfileAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBusisness\ProfileAdministrador.aspx.designer.cs">
+      <DependentUpon>ProfileAdministrador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="View\ActivarCuentaSudoku.aspx.cs">
       <DependentUpon>ActivarCuentaSudoku.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,13 +198,6 @@
     </Compile>
     <Compile Include="View\InitGame.aspx.designer.cs">
       <DependentUpon>InitGame.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View\NegocioAutentificacion.aspx.cs">
-      <DependentUpon>NegocioAutentificacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View\NegocioAutentificacion.aspx.designer.cs">
-      <DependentUpon>NegocioAutentificacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\NuevoUserPassword.aspx.cs">
       <DependentUpon>NuevoUserPassword.aspx</DependentUpon>

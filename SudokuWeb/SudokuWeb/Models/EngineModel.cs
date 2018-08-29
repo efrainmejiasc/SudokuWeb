@@ -13,7 +13,6 @@ namespace SudokuWeb.Models
         private static string cadenaConexion = ConfigurationManager.ConnectionStrings["CnxSudoku"].ToString();
         private Engine.EngineUtil FuncionUtil = new Engine.EngineUtil();
 
-
         public int SeleccionMail (string MAIL)
         {
             object obj = new object();
@@ -24,6 +23,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_SeleccionMail", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);
                 obj = command.ExecuteScalar();
                 Conexion.Close();
@@ -45,6 +45,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_SeleccionUsuario", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@USUARIO", USUARIO);
                 obj = command.ExecuteScalar();
                 Conexion.Close();
@@ -65,6 +66,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_InsertarCliente", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);
                 command.Parameters.AddWithValue("@NOMBRE", NOMBRE);
                 command.Parameters.AddWithValue("@USUARIO", USUARIO);
@@ -88,6 +90,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_ActualizarUsuarioCliente", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);
                 command.Parameters.AddWithValue("@USUARIO", USUARIO);
                 command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
@@ -107,6 +110,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_ActualizarPasswordCliente", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);
                 command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
                 resultado = command.ExecuteNonQuery();
@@ -126,6 +130,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_ActualizarHoraRegistroCliente", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);
                 command.Parameters.AddWithValue("@FECHA", DateTime.Now);
                 resultado = command.ExecuteNonQuery();
@@ -144,6 +149,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_ActivarInactivarDesactivarCliente", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);
                 command.Parameters.AddWithValue("@ESTADO", ESTADO);
                 resultado = command.ExecuteNonQuery();
@@ -163,6 +169,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_SeleccionHorasActivar", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);
                 command.Parameters.AddWithValue("@ESTADO", ESTADO);
                 command.Parameters.AddWithValue("@FECHA", DateTime.Now);
@@ -188,6 +195,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_LogeoCliente", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@USUARIO", USUARIO);
                 command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
                 command.Parameters.AddWithValue("@ESTADO", ESTADO);
@@ -210,6 +218,7 @@ namespace SudokuWeb.Models
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_InsertarConexionUsuario", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
                 command.Parameters.AddWithValue("@USUARIO", USUARIO);
                 command.Parameters.AddWithValue("@IDENTIFICADOR", IDENTIFICADOR);
                 command.Parameters.AddWithValue("@FECHA", DateTime.Now);
@@ -257,6 +266,136 @@ namespace SudokuWeb.Models
                 Conexion.Close();
             }
             return  CnxUsuario;
+        }
+
+// NEGOCIO - ADMINISTRADOR 
+        public int SeleccionIdAdministrador(string ADMINISTRADOR , string PASSWORD)
+        {
+            object obj = new object();
+            int resultado = 0;
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_SeleccionIdAdministrador", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@ADMINISTRADOR", ADMINISTRADOR);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                obj = command.ExecuteScalar();
+                Conexion.Close();
+            }
+            if (obj != null)
+            {
+                resultado = Convert.ToInt32(obj);
+            }
+            return resultado;
+        }
+
+        public int SeleccionMailAdministrador(string MAIL)
+        {
+            object obj = new object();
+            int resultado = 0;
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_SeleccionMailAdministrador", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                obj = command.ExecuteScalar();
+                Conexion.Close();
+            }
+            if (obj != null)
+            {
+                resultado = Convert.ToInt32(obj);
+            }
+            return resultado;
+        }
+
+        public int InsertarAdministrador (string MAIL, string ADMINISTRADOR, string PASSWORD)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_InsertarConexionUsuario", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@ADMINISTRADOR", ADMINISTRADOR);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@FECHA", DateTime.Now);
+                command.Parameters.AddWithValue("@FECHAUTC", DateTime.UtcNow.ToString(Models.EngineData.dateFormatUtc));
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+        public int ActualizarEstadoAdministrador(string MAIL, string PASSWORD, string ESTADO)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarEstadoAdministrador", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+        public int ActualizarNombreAdministrador(string MAIL,string ADMINISTRADOR, string PASSWORD, string ESTADO)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarEstadoAdministrador", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@ADMINISTRADOR", ADMINISTRADOR);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+
+        public int ActualizarPasswordAdministrador(string MAIL, string PASSWORD, string ESTADO)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarPasswordAdministrador", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
         }
 
     }

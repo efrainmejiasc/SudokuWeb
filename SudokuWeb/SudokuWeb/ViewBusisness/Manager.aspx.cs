@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SudokuWeb.View
+namespace SudokuWeb.ViewBusiness
 {
-    public partial class NegocioAutentificacion : System.Web.UI.Page
+    public partial class Manager : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

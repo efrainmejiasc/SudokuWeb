@@ -31,7 +31,11 @@ namespace SudokuWeb.View
                     Pnl2.Visible = true;
                     Pnl1.Visible = false;
                 }
-
+            }
+            if (!IsPostBack)
+            {
+                chkRobotUser.Checked = false;
+                chkRobotPass.Checked = false;
             }
         }
 
@@ -137,7 +141,6 @@ namespace SudokuWeb.View
                 string script = "OcultarVentana('msj');";
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "OcultarVentana('msj')", script, true);
             }
-            int K = 0;
         }
     }
 }
