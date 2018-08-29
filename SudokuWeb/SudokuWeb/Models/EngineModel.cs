@@ -268,7 +268,7 @@ namespace SudokuWeb.Models
             return  CnxUsuario;
         }
 
-
+// NEGOCIO - ADMINISTRADOR 
         public int SeleccionIdAdministrador(string ADMINISTRADOR , string PASSWORD)
         {
             object obj = new object();
@@ -344,6 +344,48 @@ namespace SudokuWeb.Models
             {
                 Conexion.Open();
                 SqlCommand command = new SqlCommand("Sp_ActualizarEstadoAdministrador", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+        public int ActualizarNombreAdministrador(string MAIL,string ADMINISTRADOR, string PASSWORD, string ESTADO)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarEstadoAdministrador", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@MAIL", MAIL);
+                command.Parameters.AddWithValue("@ADMINISTRADOR", ADMINISTRADOR);
+                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+
+        public int ActualizarPasswordAdministrador(string MAIL, string PASSWORD, string ESTADO)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarPasswordAdministrador", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);

@@ -33,6 +33,10 @@ namespace SudokuWeb.Models
         public const string cuerpoCreateAdmin = "Siga el link o corte y pegue en su navegador para activar el nuevo administrador <br/><br/><br/>";
         public const string administradorCreadoExito = "Administrador creado satisfactoriamente,en poco tiempo activaremos su cuenta,notificaremos enviando un E-Mail";
         public const string administradorCreadoFallido = "El Administrador no pudo ser creado satisfactoriamente";
+        public const string nombreAdminUpdateExito = "El Nombre de administrador fue actualizado satisfactoriamente";
+        public const string nombreAdminUpdateFallido= "El Nombre de administrador fue actualizado satisfactoriamente";
+        public const string passwordAdminUpdateExito = "La contraseña de administrador fue actualizada satisfactoriamente";
+        public const string passwordAdminUpdateFallido = "La contraseña de administrador fue actualizada satisfactoriamente";
 
         public const string urlSite = "http://localhost:51828/";
         //public const  string urlSite = "http://joselelu-001-site1.etempurl.com/";

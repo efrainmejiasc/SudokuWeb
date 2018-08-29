@@ -325,9 +325,8 @@ namespace SudokuWeb.Engine
         [System.Web.Services.WebMethod]
         public static string ActualizarUsuarioCliente(string MAIL, string USUARIO, string CONTRASEÑA)
         {
-            Models.EngineModel Funcion = new Models.EngineModel();
             string resultado = string.Empty;
-            int n = Funcion.ActualizarUsuarioCliente(MAIL, USUARIO, CONTRASEÑA);
+            int n = ModeloDb.ActualizarUsuarioCliente(MAIL, USUARIO, CONTRASEÑA);
             if (n == -1)
             {
                 resultado = Models.EngineData.usuarioClienteActualizado;
@@ -475,6 +474,97 @@ namespace SudokuWeb.Engine
             {
                 FuncionMail.EnviarMail(ADMINISTRADOR + " Sudoku Para Todos", "Felicitaciones! , su cuenta de Administrador ahora esta activada <br/><br/> visite: " + Models.EngineData.urlSite , MAIL);
             }
+        }
+
+        [System.Web.Services.WebMethod]
+        public static string  ActualizarNombreAdministrador(string MAIL ,string ADMINISTRADOR,string PASSWORD)
+        {
+            string resultado = string.Empty;
+            EngineUtil Funcion = new EngineUtil();
+
+            if (ADMINISTRADOR == string.Empty)
+            {
+                return resultado = "Ingrese nombre de admistrador";
+            }
+            else if (PASSWORD == string.Empty)
+            {
+                return resultado = "Ingrese contraseña de admistrador";
+            }
+            else if (MAIL == string.Empty)
+            {
+                return resultado = "Ingrese correo electronico";
+            }
+            else if (!Funcion.EmailEsValido(MAIL))
+            {
+                return resultado = "El correo electronico debe ser valido";
+            }
+
+            int n = ModeloDb.SeleccionMailAdministrador(MAIL);
+            if (n == 0)
+            {
+                return resultado = "la cuenta de correo electronico no se encuentra registrada";
+            }
+
+            n = ModeloDb.ActualizarNombreAdministrador(MAIL ,ADMINISTRADOR, PASSWORD, "ACTIVO");
+
+            if (n == -1)
+            {
+                resultado = Models.EngineData.nombreAdminUpdateExito;
+            }
+            else
+            {
+                resultado = Models.EngineData.nombreAdminUpdateFallido;
+            }
+
+            return resultado;
+        }
+
+
+        [System.Web.Services.WebMethod]
+        public static string ActualizarPasswordAdministrador(string MAIL, string PASSWORD1, string PASSWORD2)
+        {
+            string resultado = string.Empty;
+            EngineUtil Funcion = new EngineUtil();
+
+            if (PASSWORD1 == string.Empty)
+            {
+                return resultado = "Ingrese contraseña de admistrador";
+            }
+            else if (PASSWORD2 == string.Empty)
+            {
+                return resultado = "Ingrese confirmar contraseña de admistrador";
+            }
+            else if (!Funcion.CompareString(PASSWORD1, PASSWORD2))
+            {
+                return resultado = "Las contraseñas deben ser iguales";
+            }
+            else if (MAIL == string.Empty)
+            {
+                return resultado = "Ingrese correo electronico";
+            }
+            else if (!Funcion.EmailEsValido(MAIL))
+            {
+                return resultado = "El correo electronico debe ser valido";
+            }
+
+            int n = ModeloDb.SeleccionMailAdministrador(MAIL);
+            if (n == 0)
+            {
+                return resultado = "la cuenta de correo electronico no se encuentra registrada";
+            }
+
+            n = ModeloDb.ActualizarPasswordAdministrador(MAIL, PASSWORD1, "ACTIVO");
+
+            if (n == -1)
+            {
+                resultado = Models.EngineData.passwordAdminUpdateExito;
+            }
+            else
+            {
+                resultado = Models.EngineData.passwordAdminUpdateFallido;
+            }
+
+            return resultado;
         }
 
 

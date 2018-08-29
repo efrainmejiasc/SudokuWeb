@@ -70,15 +70,48 @@ namespace SudokuWeb.ViewBusiness
             Button btn = sender as Button;
             switch (btn.ID)
             {
-                case ("btnCancelar"):
+                case ("btnCancelarUser"):
                     Response.Redirect("Entry.aspx");
                     break;
-                case ("btnAceptar"):
-                    if (chkRobot1.Checked)
+                case ("btnAceptarUser"):
+                    if (chkRobot2.Checked)
                     {
                         string resultado = string.Empty;
-                       
-                        resultado = "";
+                        string administrador = txtNombreAdmin.Text;
+                        string mail = txtMailAdmin.Text;
+                        string password = txtPasswordAdmin.Text;
+                        resultado = Engine.EngineUtil.ActualizarNombreAdministrador(mail,administrador,password);
+                        lblMensaje.Text = resultado;
+                        string script = "MostrarVentana('msj');";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
+                    }
+                    else
+                    {
+                        string script = "PareceRobot();";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "PareceRobot()", script, true);
+                    }
+
+                    break;
+            }
+        }
+
+        protected void BtnRestablecerPassword_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            switch (btn.ID)
+            { 
+                case ("btnCancelarPass"):
+                    Response.Redirect("Entry.aspx");
+                    break;
+                case ("btnAceptarPass"):
+                    if (chkRobot3.Checked)
+                    {
+                        string resultado = string.Empty;
+                        string mail = txtEmail.Text;
+                        string password3 = txtPassword3.Text;
+                        string password4 = txtPassword4.Text;
+
+
                         lblMensaje.Text = resultado;
                         string script = "MostrarVentana('msj');";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
@@ -96,14 +129,13 @@ namespace SudokuWeb.ViewBusiness
         protected void BtnAceptarMensaje_Click(object sender, EventArgs e)
         {
             string script = "OcultarVentana('msj');";
-            if (lblMensaje.Text == Models.EngineData.administradorCreadoExito)
+            if (lblMensaje.Text == Models.EngineData.administradorCreadoExito || lblMensaje.Text == Models.EngineData.nombreAdminUpdateExito )
             {
                 Response.Redirect("Entry.aspx");
             }
             else
             {
                 lblMensaje.Text = string.Empty;
-                txtMail.Text = string.Empty;
             }
             ScriptManager.RegisterStartupScript(this, typeof(Page), "OcultarVentana('msj')", script, true);
         }

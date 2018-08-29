@@ -32,7 +32,7 @@
                   <asp:Image ID="Image1" class="logo" runat="server" ImageUrl="/public/images/logo.png" Height="89px" Width="104px" />
                  <asp:LinkButton ID="lnkNuevoAdmin" runat="server" OnClick="LnkNavAdministracion_Click">Nuevo Administrador</asp:LinkButton>
                  <asp:LinkButton ID="lnkNombreAdmin" runat="server" OnClick="LnkNavAdministracion_Click">Olvido Nombre de Administrador</asp:LinkButton>
-                 <asp:LinkButton ID="lnkCotraseñaAdmin" runat="server" OnClick="LnkNavAdministracion_Click">Olvido Contraseña de Administrador</asp:LinkButton>
+                 <asp:LinkButton ID="lnkCotrasenaAdmin" runat="server" OnClick="LnkNavAdministracion_Click" >Olvido Contraseña de Administrador</asp:LinkButton>
              </div>
 
              <div id="Autentificacion">

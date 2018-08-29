@@ -66,7 +66,7 @@ namespace SudokuWeb.ViewBusiness
                     string script2 = "OpenProfileAdministrador2();";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "OpenProfileAdministrador2()", script2, true);
                     break;
-                case ("lnkContraseñaAdmin"):
+                case ("lnkCotrasenaAdmin"):
                     string script3 = "OpenProfileAdministrador3();";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "OpenProfileAdministrador3()", script3, true);
                     break;

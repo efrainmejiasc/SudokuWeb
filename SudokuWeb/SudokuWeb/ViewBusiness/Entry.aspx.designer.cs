@@ -49,13 +49,13 @@ namespace SudokuWeb.ViewBusiness {
         protected global::System.Web.UI.WebControls.LinkButton lnkNombreAdmin;
         
         /// <summary>
-        /// Control lnkCotraseñaAdmin.
+        /// Control lnkCotrasenaAdmin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkCotraseñaAdmin;
+        protected global::System.Web.UI.WebControls.LinkButton lnkCotrasenaAdmin;
         
         /// <summary>
         /// Control Label3.

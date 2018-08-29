@@ -166,13 +166,31 @@ namespace SudokuWeb.ViewBusiness {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// Control txtUsuario.
+        /// Control txtNombreAdmin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtNombreAdmin;
+        
+        /// <summary>
+        /// Control Label13.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label13;
+        
+        /// <summary>
+        /// Control txtMailAdmin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMailAdmin;
         
         /// <summary>
         /// Control Label8.
@@ -184,13 +202,13 @@ namespace SudokuWeb.ViewBusiness {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// Control txtPasswordUser.
+        /// Control txtPasswordAdmin.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPasswordUser;
+        protected global::System.Web.UI.WebControls.TextBox txtPasswordAdmin;
         
         /// <summary>
         /// Control chkRobot2.

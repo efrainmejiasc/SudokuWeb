@@ -42,12 +42,14 @@
                    <asp:Panel ID="Pnl1" runat="server">
                       <asp:Label ID="Label6" runat="server" Text="Restablecer Nombre de Aministrador"></asp:Label>
                       <asp:Label ID="Label7" runat="server" Text="Nuevo Nombre de Administrador"></asp:Label>
-                      <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
+                      <asp:TextBox ID="txtNombreAdmin" runat="server"></asp:TextBox>
+                      <asp:Label ID="Label13" runat="server" Text="Correo Electronico"></asp:Label>
+                      <asp:TextBox ID="txtMailAdmin" runat="server"></asp:TextBox>
                       <asp:Label ID="Label8" runat="server" Text="Ingrese su Contraseña" ></asp:Label>
-                      <asp:TextBox ID="txtPasswordUser" runat="server" TextMode="Password"></asp:TextBox>
+                      <asp:TextBox ID="txtPasswordAdmin" runat="server" TextMode="Password"></asp:TextBox>
                        <asp:CheckBox ID="chkRobot2"  runat="server" Text="No Soy un Robot" />
-                      <asp:Button ID="btnCancelarUser" runat="server" Text="Cancelar"  />
-                      <asp:Button ID="btnAceptarUser" runat="server" Text="Aceptar"  />
+                      <asp:Button ID="btnCancelarUser" runat="server" Text="Cancelar" OnClick="BtnRestablecerAdmin_Click"  />
+                      <asp:Button ID="btnAceptarUser" runat="server" Text="Aceptar" OnClick="BtnRestablecerAdmin_Click"  />
                  </asp:Panel>
              </div>
 
@@ -61,8 +63,8 @@
                       <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña"></asp:Label>
                       <asp:TextBox ID="txtPassword4" runat="server" TextMode="Password"></asp:TextBox>
                       <asp:CheckBox ID="chkRobot3" runat="server" Text="No Soy un Robot" />
-                      <asp:Button ID="btnCancelarPass" runat="server" Text="Cancelar"/>
-                      <asp:Button ID="btnAceptarPass" runat="server" Text="Aceptar" />
+                      <asp:Button ID="btnCancelarPass" runat="server" Text="Cancelar" OnClick="BtnRestablecerPassword_Click"/>
+                      <asp:Button ID="btnAceptarPass" runat="server" Text="Aceptar" OnClick="BtnRestablecerPassword_Click" />
              </div>
 
 
