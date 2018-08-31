@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 using SudokuWeb.Models;
+using System.Data;
 
 namespace SudokuWeb.Engine
 {
@@ -565,6 +566,43 @@ namespace SudokuWeb.Engine
             return resultado;
         }
 
+        //METODOS _ NEGOCIO
+
+        [System.Web.Services.WebMethod]
+        public static GridView MostrarProductos (GridView gvd)
+        {
+            DataTable dt = new DataTable();
+            dt = ModeloDb.SeleccionProductosAll();
+            HttpContext.Current.Session["DtProducto"] = dt;
+            gvd.DataSource = dt;
+            gvd.DataBind();
+            return gvd;
+        }
+
+        [System.Web.Services.WebMethod]
+        public static string  ActualizarProducto (int id, string producto,string descripcion,string moneda , string precio)
+        {
+            string resultado = string.Empty;
+            if ( producto == string.Empty || descripcion == string.Empty || moneda == string.Empty)
+            {
+                return resultado = "No puede existir valores vacios";
+            }
+            double price = 0;
+            try
+            {
+                price = Convert.ToDouble(precio.Replace (",","."));
+            }
+            catch
+            {
+                return resultado = "El valor precio debe ser numerico";
+            }
+            int n = ModeloDb.ActualizarProducto(id, producto, descripcion, moneda, price);
+            if (n == -1)
+            {
+                resultado = Models.EngineData.actualizacionProductoExito;
+            }
+            return resultado;
+        }
 
     }
 }

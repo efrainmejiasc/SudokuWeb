@@ -24,8 +24,8 @@ namespace SudokuWeb.ViewBusiness
             switch (btn.ID)
             {
                 case ("btnCancelar"):
-                    string scripti = "CerrarPestana();";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "CerrarPestana()", scripti, true);
+                    string script = "window.close();";
+                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "closewindows", script, true);
                     break;
                 case ("btnAceptar"):
                    if (chkRobotUser.Checked)
@@ -40,14 +40,14 @@ namespace SudokuWeb.ViewBusiness
                         else
                         {
                             lblMensaje.Text = resultado;
-                            string script = "MostrarVentana('msj');";
-                            ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
+                            string script2 = "MostrarVentana('msj');";
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script2, true);
                         }
                     }
                     else
                     {
-                        string script = "PareceRobot();";
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "PareceRobot()", script, true);
+                        string script3 = "PareceRobot();";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "PareceRobot()", script3, true);
                     }
                     break;
             }

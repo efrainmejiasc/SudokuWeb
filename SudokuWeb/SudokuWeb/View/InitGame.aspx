@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InitGame.aspx.cs" Inherits="SudokuWeb.View.InitGame" %>
+﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InitGame.aspx.cs" Inherits="SudokuWeb.View.InitGame" %>
 
 <!DOCTYPE html>
 

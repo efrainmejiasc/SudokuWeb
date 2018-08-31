@@ -13,6 +13,7 @@ namespace SudokuWeb.Models
         private static string cadenaConexion = ConfigurationManager.ConnectionStrings["CnxSudoku"].ToString();
         private Engine.EngineUtil FuncionUtil = new Engine.EngineUtil();
 
+//NEGOCIO _ CLIENTE 
         public int SeleccionMail (string MAIL)
         {
             object obj = new object();
@@ -119,7 +120,6 @@ namespace SudokuWeb.Models
 
             return resultado;
         }
-
 
         public int ActualizarHoraRegistroCliente(string MAIL)
         {
@@ -377,7 +377,6 @@ namespace SudokuWeb.Models
             return resultado;
         }
 
-
         public int ActualizarPasswordAdministrador(string MAIL, string PASSWORD, string ESTADO)
         {
             int resultado = new int();
@@ -391,6 +390,47 @@ namespace SudokuWeb.Models
                 command.Parameters.AddWithValue("@MAIL", MAIL);
                 command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
                 command.Parameters.AddWithValue("@ESTADO", ESTADO);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+        // NEGOCIO - VENTAS
+
+        public  DataTable SeleccionProductosAll ()
+        {
+            DataTable dataTabla = new DataTable();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_SeleccionProductosAll", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter dataAdaptador = new SqlDataAdapter(command);
+                dataAdaptador.Fill(dataTabla);
+                Conexion.Close();
+            }
+            return dataTabla;
+        }
+
+        public int ActualizarProducto(int ID, string PRODUCTO, string DESCRIPCION, string MONEDA, double PRECIO)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_ActualizarProducto", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@ID", ID);
+                command.Parameters.AddWithValue("@PRODUCTO", PRODUCTO);
+                command.Parameters.AddWithValue("@DESCRIPCION", DESCRIPCION);
+                command.Parameters.AddWithValue("@MONEDA", MONEDA);
+                command.Parameters.AddWithValue("@PRECIO", PRECIO);
+                command.Parameters.AddWithValue("@FECHAMODIFICACION", DateTime.Now);
                 resultado = command.ExecuteNonQuery();
                 Conexion.Close();
             }
