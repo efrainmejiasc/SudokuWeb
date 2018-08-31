@@ -18,6 +18,20 @@ namespace SudokuWeb.ViewBusiness
             }
         }
 
+
+        protected void BtnAgregarProductos_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            switch (btn.ID)
+            {
+                case ("btnCancelar"):
+                    Response.Redirect("Entry.aspx");
+                    break;
+                case ("btnAceptar"):
+                    break;
+            }
+        }
+
         protected void BtnProductos_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;

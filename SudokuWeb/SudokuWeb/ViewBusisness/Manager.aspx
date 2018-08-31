@@ -38,8 +38,8 @@
                    <asp:Label ID="Label6" runat="server" Text="Precio"></asp:Label>
                    <asp:TextBox ID="txtPrecio" runat="server"></asp:TextBox>
 
-                   <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" />
-                   <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" />
+                   <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnAgregarProductos_Click" />
+                   <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnAgregarProductos_Click" />
              </div>
 
           
