@@ -38,6 +38,7 @@ namespace SudokuWeb.Models
         public const string passwordAdminUpdateExito = "La contraseña de administrador fue actualizada satisfactoriamente";
         public const string passwordAdminUpdateFallido = "La contraseña de administrador fue actualizada satisfactoriamente";
         public const string actualizacionProductoExito = "Actualizacion de producto exitosa";
+        public const string agregarProductoExito = "El producto se agrego de forma exitosa";
 
         public const string urlSite = "http://localhost:51828/";
         //public const  string urlSite = "http://joselelu-001-site1.etempurl.com/";

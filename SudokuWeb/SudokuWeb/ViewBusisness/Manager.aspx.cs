@@ -12,6 +12,7 @@ namespace SudokuWeb.ViewBusiness
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            txtMoneda.Text = "$";
             if (!IsPostBack && Session ["DtProducto"] != null)
             {
                 GridView1 = Engine.EngineUtil.MostrarProductos(GridView1);
@@ -28,6 +29,15 @@ namespace SudokuWeb.ViewBusiness
                     Response.Redirect("Entry.aspx");
                     break;
                 case ("btnAceptar"):
+                    string producto = txtProducto.Text.ToUpper();
+                    string descripcion = txtDescripcion.Text.ToUpper();
+                    string moneda = txtMoneda.Text;
+                    string precio = txtPrecio.Text;
+                    string resultado = Engine.EngineUtil.InsertatProducto(producto, descripcion, moneda, precio); 
+                    GridView1 = Engine.EngineUtil.MostrarProductos(GridView1);
+                    lblMensaje.Text = resultado;
+                    string script = "MostrarVentana('msj');";
+                    ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
                     break;
             }
         }

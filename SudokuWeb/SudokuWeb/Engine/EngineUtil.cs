@@ -580,6 +580,32 @@ namespace SudokuWeb.Engine
         }
 
         [System.Web.Services.WebMethod]
+        public static string InsertatProducto( string producto, string descripcion, string moneda, string precio)
+        {
+            string resultado = string.Empty;
+            if (producto == string.Empty || descripcion == string.Empty || moneda == string.Empty)
+            {
+                return resultado = "No puede existir valores vacios";
+            }
+            double price = 0;
+            try
+            {
+                price = Convert.ToDouble(precio);
+            }
+            catch
+            {
+                return resultado = "El valor precio debe ser numerico";
+            }
+            int n = ModeloDb.InsertarProducto(producto, descripcion, moneda, price);
+            if (n == -1)
+            {
+                resultado = Models.EngineData.agregarProductoExito;
+            }
+            return resultado;
+        }
+
+
+        [System.Web.Services.WebMethod]
         public static string  ActualizarProducto (int id, string producto,string descripcion,string moneda , string precio)
         {
             string resultado = string.Empty;
@@ -590,7 +616,7 @@ namespace SudokuWeb.Engine
             double price = 0;
             try
             {
-                price = Convert.ToDouble(precio.Replace (",","."));
+                price = Convert.ToDouble(precio);
             }
             catch
             {

@@ -34,7 +34,7 @@
                    <asp:Label ID="Label4" runat="server" Text="Descripcion"></asp:Label>
                    <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
                    <asp:Label ID="Label5" runat="server" Text="Moneda"></asp:Label>
-                   <asp:TextBox ID="txtMoneda" runat="server"></asp:TextBox>
+                   <asp:TextBox ID="txtMoneda" runat="server" ReadOnly="True"></asp:TextBox>
                    <asp:Label ID="Label6" runat="server" Text="Precio"></asp:Label>
                    <asp:TextBox ID="txtPrecio" runat="server"></asp:TextBox>
 

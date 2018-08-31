@@ -414,6 +414,28 @@ namespace SudokuWeb.Models
             }
             return dataTabla;
         }
+        public int InsertarProducto(string PRODUCTO, string DESCRIPCION, string MONEDA, double PRECIO)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_InsertarProducto", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@PRODUCTO", PRODUCTO);
+                command.Parameters.AddWithValue("@DESCRIPCION", DESCRIPCION);
+                command.Parameters.AddWithValue("@MONEDA", MONEDA);
+                command.Parameters.AddWithValue("@PRECIO", PRECIO);
+                command.Parameters.AddWithValue("@FECHA", DateTime.Now);
+                command.Parameters.AddWithValue("@FECHAMODIFICACION", DateTime.Now);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
 
         public int ActualizarProducto(int ID, string PRODUCTO, string DESCRIPCION, string MONEDA, double PRECIO)
         {
