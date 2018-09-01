@@ -630,5 +630,17 @@ namespace SudokuWeb.Engine
             return resultado;
         }
 
+        [System.Web.Services.WebMethod]
+        public static bool  NotificacionAddUpdateProducto()
+        {
+            bool resultado = false;
+            string asunto = Models.EngineData.asuntoAddUpdateproducto;
+            string cuerpo = Models.EngineData.cuerpoAddUpdateproducto;
+            string mail = Models.EngineData.myEmail;
+            resultado = FuncionMail.EnviarMail("", "", "");
+          
+            return resultado;
+        }
+
     }
 }

@@ -33,9 +33,11 @@ namespace SudokuWeb.ViewBusiness
                     string descripcion = txtDescripcion.Text.ToUpper();
                     string moneda = txtMoneda.Text;
                     string precio = txtPrecio.Text;
-                    string resultado = Engine.EngineUtil.InsertatProducto(producto, descripcion, moneda, precio); 
-                    GridView1 = Engine.EngineUtil.MostrarProductos(GridView1);
+                    string resultado = Engine.EngineUtil.InsertatProducto(producto, descripcion, moneda, precio);
                     lblMensaje.Text = resultado;
+                    GridView1 = Engine.EngineUtil.MostrarProductos(GridView1);
+                    Engine.MailNotificacion EnviarMail = new Engine.MailNotificacion();
+                    bool r = EnviarMail.EnviarMail(Models.EngineData.asuntoAddUpdateproducto, Models.EngineData.cuerpoAddUpdateproducto, Models.EngineData.myEmail);
                     string script = "MostrarVentana('msj');";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
                     break;
@@ -90,6 +92,8 @@ namespace SudokuWeb.ViewBusiness
             GridView1.EditIndex = -1;
             GridView1 = Engine.EngineUtil.MostrarProductos(GridView1);
             lblMensaje.Text  = resultado;
+            Engine.MailNotificacion EnviarMail = new Engine.MailNotificacion();
+            bool r = EnviarMail.EnviarMail(Models.EngineData.asuntoAddUpdateproducto, Models.EngineData.cuerpoAddUpdateproducto, Models.EngineData.myEmail);
             string script = "MostrarVentana('msj');";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
         }
