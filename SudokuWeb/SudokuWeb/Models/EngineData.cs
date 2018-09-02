@@ -26,7 +26,6 @@ namespace SudokuWeb.Models
         public const string campo = "campo=";
         public const string administrador = "administrador=";
         public const string password = "password=";
-
         public const string dateFormatUtc = "yyyy-MM-ddTHH:mm:ss+hh:mm";
 
         public const string asuntoCreateAdmin = "Administrador de  Sudoku Para Todos esperando Activacion";
@@ -40,12 +39,12 @@ namespace SudokuWeb.Models
         public const string actualizacionProductoExito = "Actualizacion de producto exitosa";
         public const string agregarProductoExito = "El producto se agrego de forma exitosa";
         public const string myEmail= "sudokuparatodos@gmail.com";
-        public const string asuntoAddUpdateproducto = "AGREGAR ACTUALIZAR PRODUCTO EN SUDOKU PARA TODOS ";
-        public const string cuerpoAddUpdateproducto = "AGREGAR ACTUALIZAR PRODUCTO EN SUDOKU PARA TODOS ";
+        public const string asuntoAddUpdateproducto = "Agregar Actualizar Productos en Sudoku Para Todos ";
+        public const string cuerpoAddUpdateproducto = "Agregar Actualizar Productos en Sudoku Para Todos ";
         public const string actualizacionExitosa = "Activacion Exitosa";
 
-        public const string urlSite = "http://localhost:51828/";
-        //public const  string urlSite = "http://joselelu-001-site1.etempurl.com/";
+        public const string urlSite = "http://localhost:51828/ViewBusiness/Entry.aspx";
+        //public const  string urlSite = "http://joselelu-001-site1.etempurl.com/ViewBusiness/Entry.aspx";
 
         public const string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
         //public const  string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
@@ -53,8 +52,8 @@ namespace SudokuWeb.Models
         public const string urlRestablecer = "http://localhost:51828/View/NuevoUserPassword.aspx";
         //public const  string urlRestablecer = "http://joselelu-001-site1.etempurl.com/View/NuevoUserPassword.aspx";
 
-        public const string urlActivarAdministrador = "http://localhost:51828/ViewBusiness/ActivarAdministrador";
-        //public const string urlActivarAdministrador = "http://joselelu-001-site1.etempurl.com/ViewBusiness/ActivarAdministrador";
+        public const string urlActivarAdministrador = "http://localhost:51828/ViewBusiness/api/ActivarAdministrador";
+        //public const string urlActivarAdministrador = "http://joselelu-001-site1.etempurl.com/ViewBusiness/api/ActivarAdministrador";
 
         public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar su Cuenta";
         public static string asuntoActivacion =  "Activacion de Cuenta Sudoku Para Todos";

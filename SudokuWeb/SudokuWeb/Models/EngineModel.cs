@@ -347,7 +347,7 @@ namespace SudokuWeb.Models
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);
-                command.Parameters.AddWithValue("@PASSWORD", FuncionUtil.ConvertirBase64(PASSWORD));
+                command.Parameters.AddWithValue("@PASSWORD",PASSWORD);
                 command.Parameters.AddWithValue("@ESTADO", ESTADO);
                 resultado = command.ExecuteNonQuery();
                 Conexion.Close();

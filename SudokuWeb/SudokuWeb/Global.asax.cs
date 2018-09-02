@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Web.Http;
+using System.Web.Routing;
 
 namespace SudokuWeb
 {
@@ -11,6 +13,10 @@ namespace SudokuWeb
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            RouteTable.Routes.MapHttpRoute(
+            name: "DefaultApi",
+            routeTemplate: "ViewBusiness/api/{controller}/{id}",
+            defaults: new { id = System.Web.Http.RouteParameter.Optional });
         }
     }
 }
