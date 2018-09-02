@@ -457,8 +457,8 @@ namespace SudokuWeb.Engine
             if (n == -1)
             {
                 resultado = Models.EngineData.administradorCreadoExito;
-                bool result = FuncionMail.EnviarMail(administrador + Models.EngineData.asuntoCreateAdmin, "<br/> Nombre de Administrador: " + administrador + "<br/>" +
-                                       "E-Mail: " + mail + Models.EngineData.cuerpoCreateAdmin + "<br/><br/>" + EngineUtil.ConstruirUrlCreateAdmin(mail, administrador, password1), mail);
+                bool result = FuncionMail.EnviarMail(administrador + " - "+ Models.EngineData.asuntoCreateAdmin, "<br/> Nombre de Administrador: " + administrador + "<br/>" +
+                                       "E-Mail: " + mail + " " + Models.EngineData.cuerpoCreateAdmin + "<br/><br/>" + EngineUtil.ConstruirUrlCreateAdmin(mail, administrador, password1), Models.EngineData.myEmail);
             }
             else
             {
@@ -468,13 +468,20 @@ namespace SudokuWeb.Engine
         }
 
         [System.Web.Services.WebMethod]
-        public static void ActivarCuentaAdministrador(string MAIL, string PASSWORD, string ADMINISTRADOR)
+        public static string  ActivarCuentaAdministrador(string MAIL, string PASSWORD, string ADMINISTRADOR)
         {
+            string resultado = "Activacion Fallida";
             int n = ModeloDb.ActualizarEstadoAdministrador(MAIL, PASSWORD, "ACTIVO");
             if (n == -1)
             {
                 FuncionMail.EnviarMail(ADMINISTRADOR + " Sudoku Para Todos", "Felicitaciones! , su cuenta de Administrador ahora esta activada <br/><br/> visite: " + Models.EngineData.urlSite, MAIL);
+                resultado = Models.EngineData.actualizacionExitosa;
             }
+            else
+            {
+                FuncionMail.EnviarMail("Administrador Sudoku Para Todos No Activado", "Su usuario no pudo ser activado correctamente", MAIL);
+            }
+            return resultado;
         }
 
         [System.Web.Services.WebMethod]
@@ -637,7 +644,7 @@ namespace SudokuWeb.Engine
             string asunto = Models.EngineData.asuntoAddUpdateproducto;
             string cuerpo = Models.EngineData.cuerpoAddUpdateproducto;
             string mail = Models.EngineData.myEmail;
-            resultado = FuncionMail.EnviarMail("", "", "");
+            resultado = FuncionMail.EnviarMail(asunto, cuerpo, mail);
           
             return resultado;
         }

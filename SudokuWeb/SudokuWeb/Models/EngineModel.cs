@@ -321,7 +321,7 @@ namespace SudokuWeb.Models
             using (Conexion)
             {
                 Conexion.Open();
-                SqlCommand command = new SqlCommand("Sp_InsertarConexionUsuario", Conexion);
+                SqlCommand command = new SqlCommand("Sp_InsertarAdministrador", Conexion);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("@MAIL", MAIL);

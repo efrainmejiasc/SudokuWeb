@@ -5,9 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Sudoku Para Todos</title>
+     <title>Sudoku Para Todos</title>
     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
     <script src="../js/main.js"></script>
+     <script type="text/javaScript">
+         function MostrarVentana(idDiv) {
+             var ventana = document.getElementById(idDiv);
+             ventana.style.display = 'block';
+         }
+
+         function OcultarVentana(idDiv) {
+             var ventana = document.getElementById(idDiv);
+             ventana.style.display = 'none';
+         }
+
+      </script> 
 </head>
 <body>
     <form id="form1" runat="server">

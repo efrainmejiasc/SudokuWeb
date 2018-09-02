@@ -42,6 +42,7 @@ namespace SudokuWeb.Models
         public const string myEmail= "sudokuparatodos@gmail.com";
         public const string asuntoAddUpdateproducto = "AGREGAR ACTUALIZAR PRODUCTO EN SUDOKU PARA TODOS ";
         public const string cuerpoAddUpdateproducto = "AGREGAR ACTUALIZAR PRODUCTO EN SUDOKU PARA TODOS ";
+        public const string actualizacionExitosa = "Activacion Exitosa";
 
         public const string urlSite = "http://localhost:51828/";
         //public const  string urlSite = "http://joselelu-001-site1.etempurl.com/";
@@ -52,8 +53,8 @@ namespace SudokuWeb.Models
         public const string urlRestablecer = "http://localhost:51828/View/NuevoUserPassword.aspx";
         //public const  string urlRestablecer = "http://joselelu-001-site1.etempurl.com/View/NuevoUserPassword.aspx";
 
-        public const string urlActivarAdministrador = "http://localhost:51828/ViewBisiness/ActivarAdministrador.ashx";
-        //public const string urlActivarAdministrador = "http://joselelu-001-site1.etempurl.com/ViewBisiness/ActivarAdministrador.ashx";
+        public const string urlActivarAdministrador = "http://localhost:51828/ViewBusiness/ActivarAdministrador";
+        //public const string urlActivarAdministrador = "http://joselelu-001-site1.etempurl.com/ViewBusiness/ActivarAdministrador";
 
         public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar su Cuenta";
         public static string asuntoActivacion =  "Activacion de Cuenta Sudoku Para Todos";
