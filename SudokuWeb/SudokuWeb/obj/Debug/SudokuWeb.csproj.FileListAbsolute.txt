@@ -35,7 +35,6 @@ C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyects\WebSudoku\SudokuWeb
 C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyects\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.dll
 C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyects\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.pdb
 C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csprojAssemblyReference.cache
-C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyects\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csproj.CoreCompileInputs.cache
 C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyects\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\bin\Newtonsoft.Json.dll
 C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyects\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\bin\System.Net.Http.Formatting.dll
 C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyects\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\bin\System.Web.Http.dll

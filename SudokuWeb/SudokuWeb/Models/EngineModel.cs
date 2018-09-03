@@ -397,6 +397,22 @@ namespace SudokuWeb.Models
             return resultado;
         }
         // NEGOCIO - VENTAS
+        public DataTable SeleccionProductosVenta()
+        {
+            DataTable dataTabla = new DataTable();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_SeleccionProductosVenta", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter dataAdaptador = new SqlDataAdapter(command);
+                dataAdaptador.Fill(dataTabla);
+                Conexion.Close();
+            }
+            return dataTabla;
+        }
 
         public  DataTable SeleccionProductosAll ()
         {

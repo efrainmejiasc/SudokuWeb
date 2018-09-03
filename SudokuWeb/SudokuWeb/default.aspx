@@ -40,7 +40,7 @@
                             <asp:LinkButton ID="btnCerrarSesion" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Cerrar Sesión</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton ID="btnRegistro" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Regístrate</asp:LinkButton>
+                            <asp:LinkButton ID="btnRegistro" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Comprar y Regístrarse</asp:LinkButton>
                         </li>
                            <li class="nav-item">
                             <asp:LinkButton ID="btnOlvido" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Olvidaste Usuario o Contraseña</asp:LinkButton>

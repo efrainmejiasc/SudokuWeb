@@ -78,7 +78,7 @@ namespace SudokuWeb.Engine
             return ipAddress;
         }
 
-        private bool SessionValida()
+        public bool SessionValida()
         {
             bool resultado = true;
             if (HttpContext.Current.Session["Usuario"] == null)
@@ -88,6 +88,18 @@ namespace SudokuWeb.Engine
             return resultado;
         }
 
+        public  DataTable AddColumnFechas(DataTable dt)
+        {
+            dt.Columns.Add("FechaCompra");
+            dt.Columns.Add("FechaExpiracion");
+            DateTime fecha = DateTime.UtcNow.Date;
+            foreach (DataRow row in dt.Rows)
+            {
+                row["FechaCompra"] = fecha.ToString ("dd/MM/yyyy");
+                row["FechaExpiracion"] = fecha.AddDays(30).ToString("dd/MM/yyyy");
+            }
+            return dt;
+        }
 
         // ************************************************************************************************************************************************
         //METODOS SUDOKU AUTENTIFICACION & PERFIL CLIENTE
@@ -574,6 +586,18 @@ namespace SudokuWeb.Engine
         }
 
         //METODOS _ NEGOCIO
+        [System.Web.Services.WebMethod]
+        public static GridView MostrarProductosVenta(GridView gvd)
+        {
+            DataTable dt = new DataTable();
+            dt = ModeloDb.SeleccionProductosVenta();
+            Engine.EngineUtil Funcion = new Engine.EngineUtil();
+            dt = Funcion.AddColumnFechas(dt);
+            HttpContext.Current.Session["DtProductoVenta"] = dt;
+            gvd.DataSource = dt;
+            gvd.DataBind();
+            return gvd;
+        }
 
         [System.Web.Services.WebMethod]
         public static GridView MostrarProductos (GridView gvd)
