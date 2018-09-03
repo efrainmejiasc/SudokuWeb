@@ -29,7 +29,7 @@
       <div>
            <asp:Label ID="Label1" runat="server" Text="Planes y Servicios Sudoku Para Todos"></asp:Label>
            <div>
-             <asp:GridView ID="GridView1" runat="server"  
+           <asp:GridView ID="GridView1" runat="server"  
             DataKeyNames="ID" 
             AutoGenerateColumns="False" 
             onrowcommand="GridView1_RowCommand"

@@ -55,7 +55,7 @@
             OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="3" CellSpacing="3"
             CssClass=" table-striped table-hover table-condensed small-top-margin" >
 
-            <HeaderStyle BackColor="DimGray" Font-Bold="True" ForeColor="White"  Wrap="False" BorderColor="DimGray" BorderStyle="Solid" BorderWidth="3px" Font-Size="15pt"  HorizontalAlign="Center" />
+            <HeaderStyle BackColor="DimGray" Font-Bold="True" ForeColor="White"  Wrap="False" BorderColor="DimGray" BorderStyle="Solid" BorderWidth="3px" Font-Size="15pt"  HorizontalAlign="Center"/>
             <EditRowStyle BackColor="DimGray" ForeColor="White" Wrap="False" Font-Size="15pt" Font-Bold="True" HorizontalAlign="Center"/>
             <AlternatingRowStyle BackColor="White" ForeColor="DimGray" Wrap="False" Font-Size="12pt" HorizontalAlign="Center" />
             <RowStyle BackColor="White"   Wrap="False"  ForeColor="DimGray" Font-Size="12pt" HorizontalAlign="Center"/>
