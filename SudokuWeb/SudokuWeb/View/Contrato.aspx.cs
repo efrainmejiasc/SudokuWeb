@@ -38,5 +38,14 @@ namespace SudokuWeb.View
                     break;
             }
         }
+        protected override void InitializeCulture()
+        {
+            if (Request.Cookies["Cult"] != null)
+            {
+                Engine.Globalizacion globalizacion = new Engine.Globalizacion();
+                globalizacion.UICultureClobalizacion(this, Request.Cookies["Cult"].Value);
+            }
+            base.InitializeCulture();
+        }
     }
 }
