@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Sudoku Para Todos</title>
     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
     <link href="~/public/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="/public/main.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -34,21 +34,26 @@
                             <asp:Label ID="lblUserName" class="username" runat="server" Text="NombreUsuario"></asp:Label>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton ID="btnLogin" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Iniciar Sesión</asp:LinkButton>
+                            <asp:LinkButton ID="btnLogin" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text><%= Resources.@default.aspx.btnLogin %></asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton ID="btnCerrarSesion" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Cerrar Sesión</asp:LinkButton>
+                            <asp:LinkButton ID="btnCerrarSesion" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text><%= Resources.@default.aspx.btnCerrarSesion %></asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton ID="btnRegistro" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Comprar y Regístrarse</asp:LinkButton>
+                            <asp:LinkButton ID="btnRegistro" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text><%= Resources.@default.aspx.btnRegistro %></asp:LinkButton>
                         </li>
-                           <li class="nav-item">
-                            <asp:LinkButton ID="btnOlvido" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text>Olvidaste Usuario o Contraseña</asp:LinkButton>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="btnOlvido" class="nav-link mr-sm-2" runat="server" OnClick="BtnInit_Click" data-text><%= Resources.@default.aspx.btnOlvido %></asp:LinkButton>
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
-                        <select name="language" class="form-control mr-sm-2" id="languagepicker">
-                        </select>
+                        <%-- <select name="language" class="form-control mr-sm-2" id="languagepicker">
+                        </select>--%>
+                        <asp:DropDownList ID="ddlMultilenguaje" runat="server" AutoPostBack="True" CssClass="form-control mr-sm-2">
+                            <asp:ListItem Value="en-US">English</asp:ListItem>
+                            <asp:ListItem Value="es-ES">Spanish</asp:ListItem>
+                            <asp:ListItem Value="pt">Portuguese</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                 </div>
             </div>

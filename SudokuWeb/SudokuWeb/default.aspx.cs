@@ -53,7 +53,18 @@ namespace SudokuWeb
                     break;
             }
         }
+        protected override void InitializeCulture()
+        {
+            if (Request.Form["ddlMultilenguaje"] != null)
+            {
+                Engine.Globalizacion globalizacion = new Engine.Globalizacion();
+                HttpCookie cookie = new HttpCookie("Cult");
+                cookie.Value = Request.Form["ddlMultilenguaje"];
+                Response.Cookies.Add(cookie);
+                globalizacion.UICultureClobalizacion(this, Request.Form["ddlMultilenguaje"]);
+            }
+            base.InitializeCulture();
+        }
 
-     
     }
 }

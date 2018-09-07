@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="../default.aspx" class="nav-link mr-sm-2">Inicio</a>
+                            <a href="../default.aspx" class="nav-link mr-sm-2"><%= Resources.RegistrarCuenta.aspx.MenuInicio %></a>
                         </li>
                         <li class="nav-item">
                             <a href="Login.aspx" class="nav-link mr-sm-2">Iniciar Sesión</a>
