@@ -82,7 +82,11 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:CheckBox ID="chkRobot" runat="server" Text=" No Soy un Robot" />
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label" for="chkRobot">
+                                            <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input"/> No Soy un Robot
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 

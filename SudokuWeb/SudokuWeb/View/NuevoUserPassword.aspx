@@ -66,19 +66,24 @@
                             <%--<asp:Label ID="Label1" runat="server" Text="Restablecer Nombre de Usuario"></asp:Label>--%>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label2" runat="server" Text="Nuevo Nombre de Usuario"></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Text="Nuevo Nombre de Usuario" CssClass="font-weight-bold"></asp:Label>
                                     <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label3" runat="server" Text="Ingrese su Contraseña"></asp:Label>
+                                    <asp:Label ID="Label3" runat="server" Text="Ingrese su Contraseña" CssClass="font-weight-bold"></asp:Label>
                                     <asp:TextBox ID="txtPasswordUser" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:CheckBox ID="chkRobotUser" runat="server" Text="No Soy un Robot" />
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label" for="chkRobot">
+                                            <asp:CheckBox ID="chkRobotUser" runat="server" CssClass="form-check-input" />
+                                            No Soy un Robot
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -97,19 +102,24 @@
                             <h2 class="card-title text-center text-custom">Restablecer Contraseña</h2>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label6" runat="server" Text="Nueva Contraseña"></asp:Label>
+                                    <asp:Label ID="Label6" runat="server" Text="Nueva Contraseña" CssClass="font-weight-bold"></asp:Label>
                                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label7" runat="server" Text="Confirmar Contraseña"></asp:Label>
+                                    <asp:Label ID="Label7" runat="server" Text="Confirmar Contraseña" CssClass="font-weight-bold"></asp:Label>
                                     <asp:TextBox ID="txtPassword2" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:CheckBox ID="chkRobotPass" runat="server" Text="No Soy un Robot" />
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label" for="chkRobot">
+                                            <asp:CheckBox ID="chkRobotPass" runat="server" Text="No Soy un Robot" CssClass="form-check-input" />
+                                            No Soy un Robot
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">

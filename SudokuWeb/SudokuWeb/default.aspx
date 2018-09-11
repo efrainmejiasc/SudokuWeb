@@ -91,3 +91,26 @@
 </body>
 
 </html>
+
+
+<%--Panel--%>
+        <%--<div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 my-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center text-custom">Restablecer Nombre de Aministrador</h2>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group text-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>--%>
+        <%--/Panel--%>

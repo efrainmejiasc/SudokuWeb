@@ -52,7 +52,11 @@
                             <%--<asp:Label ID="Label1" runat="server" Text="Activar Cuenta Sudoku Para Todos"></asp:Label>--%>
                             <div class="col-md-12 my-3">
                                 <div class="form-group text-center">
-                                    <asp:CheckBox ID="chkRobot" runat="server" Text="No Soy un Robot" />
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label" for="chkRobot">
+                                            <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input"/> No Soy un Robot
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
