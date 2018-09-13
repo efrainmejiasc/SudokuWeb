@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="SudokuWeb.ViewBusiness.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Sudoku Para Todos</title>
+    <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
+    <link href="~/public/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/public/main.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="/public/js/bootstrap.js"></script>
+    <script src="/public/js/bootstrap.bundle.js"></script>
+    <script src="../js/main.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container-fluid">
+                <a href="../default.aspx">
+                    <asp:Image ID="Image3" class="logo" runat="server" ImageUrl="/public/images/logo.png" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <asp:LinkButton ID="lnkNuevoAdmin" runat="server" OnClick="LnkNavAdministracion_Click" CssClass="nav-link mr-sm-2">Nuevo Administrador</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="lnkNombreAdmin" runat="server" OnClick="LnkNavAdministracion_Click" CssClass="nav-link mr-sm-2">Olvido Nombre de Administrador</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="lnkCotrasenaAdmin" runat="server" OnClick="LnkNavAdministracion_Click" CssClass="nav-link mr-sm-2">Olvido Contraseña de Administrador</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <a href="Entry.aspx" class="nav-link mr-sm-2">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#OlvidoUsuario" onclick="MoverseA('OlvidoUsuario')" class="nav-link mr-sm-2">Cambiar Nombre de Administrador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#OlvidoPassword" onclick="MoverseA('OlvidoPassword')" class="nav-link mr-sm-2">Cambiar Contraseña de Administrador</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <%--/NavBar--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="container-fluid">
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

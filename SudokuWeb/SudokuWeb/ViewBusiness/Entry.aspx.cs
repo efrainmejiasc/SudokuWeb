@@ -53,26 +53,6 @@ namespace SudokuWeb.ViewBusiness
             }
         }
 
-        protected void LnkNavAdministracion_Click(object sender, EventArgs e)
-        {
-            LinkButton btn = sender as LinkButton;
-            switch (btn.ID)
-            {
-                case ("lnkNuevoAdmin"):
-                    string script1 = "OpenProfileAdministrador1();";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "OpenProfileAdministrador1()", script1, true);
-                    break;
-                case ("lnkNombreAdmin"):
-                    string script2 = "OpenProfileAdministrador2();";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "OpenProfileAdministrador2()", script2, true);
-                    break;
-                case ("lnkCotrasenaAdmin"):
-                    string script3 = "OpenProfileAdministrador3();";
-                    ScriptManager.RegisterStartupScript(this, typeof(Page), "OpenProfileAdministrador3()", script3, true);
-                    break;
-            }
-        }
-
 
         protected void BtnAceptarMensaje_Click(object sender, EventArgs e)
         {
