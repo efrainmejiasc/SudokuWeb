@@ -5,27 +5,263 @@
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Sudoku Para Todos</title>
     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
-    <link href="~/public/css/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/public/main.css" />
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="/public/js/bootstrap.js"></script>
-    <script src="/public/js/bootstrap.bundle.js"></script>
+    <%--CSS--%>
+    <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+    <link rel="stylesheet" href="assets/vendor/metisMenu/metisMenu.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel="stylesheet" href="assets/vendor/toastr/toastr.min.css">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <%--<link rel="stylesheet" href="/public/main.css" />--%>
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    <link rel="stylesheet" href="assets/css/demo.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
+
+     <%--JavaScript--%>
+    <%--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>--%>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendor/metisMenu/metisMenu.js"></script>
+    <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/vendor/jquery-sparkline/js/jquery.sparkline.min.js"></script>
+    <script src="assets/vendor/toastr/toastr.js"></script>
+    <script src="assets/scripts/common.js"></script>
+    
+    <%--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>--%>
     <script src="../js/main.js"></script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+
+        <!-- WRAPPER -->
+        <div id="wrapper">
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-btn">
+                        <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu"></i></button>
+                    </div>
+                    <!-- logo -->
+                    <div class="navbar-brand">
+                        <a href="Inicio.aspx">
+                            <img src="../public/images/logo.png" alt="Sudoku Para Todos Logo" class="img-responsive logo" width="50px" height="50px"></a>
+                    </div>
+                    <!-- end logo -->
+                    <div class="navbar-right">
+                        <!-- navbar menu -->
+                        <div id="navbar-menu">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                        <i class="lnr lnr-alarm"></i>
+                                        <span class="notification-dot"></span>
+                                    </a>
+                                    <ul class="dropdown-menu notifications">
+                                        <li class="header"><strong>You have 7 new notifications</strong></li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-fw fa-flag-checkered text-muted"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="text">Your campaign <strong>Holiday Sale</strong> is starting to engage potential customers.</p>
+                                                        <span class="timestamp">24 minutes ago</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-fw fa-exclamation-triangle text-warning"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                        <span class="timestamp">2 hours ago</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-fw fa-bar-chart text-muted"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="text">Website visits from Facebook is 27% higher than last week.</p>
+                                                        <span class="timestamp">Yesterday</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-fw fa-check-circle text-success"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="text">Your campaign <strong>Holiday Sale</strong> is approved.</p>
+                                                        <span class="timestamp">2 days ago</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="media">
+                                                    <div class="media-left">
+                                                        <i class="fa fa-fw fa-exclamation-circle text-danger"></i>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="text">Error on website analytics configurations</p>
+                                                        <span class="timestamp">3 days ago</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="footer"><a href="#" class="more">See all notifications</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                        <i class="lnr lnr-cog"></i>
+                                    </a>
+                                    <ul class="dropdown-menu user-menu menu-icon">
+                                        <li class="menu-heading">ACCOUNT SETTINGS</li>
+                                        <li><a href="#"><i class="fa fa-fw fa-edit"></i><span>Basic</span></a></li>
+                                        <li><a href="#"><i class="fa fa-fw fa-bell"></i><span>Notifications</span></a></li>
+                                        <li><a href="#"><i class="fa fa-fw fa-sliders"></i><span>Preferences</span></a></li>
+                                        <li><a href="#"><i class="fa fa-fw fa-lock"></i><span>Privacy</span></a></li>
+                                        <li class="menu-heading">BILLING</li>
+                                        <li><a href="#"><i class="fa fa-fw fa-file-text-o"></i><span>Invoices</span></a></li>
+                                        <li><a href="#"><i class="fa fa-fw fa-credit-card"></i><span>Payments</span></a></li>
+                                        <li><a href="#"><i class="fa fa-fw fa-refresh"></i><span>Renewals</span></a></li>
+                                        <li class="menu-button">
+                                            <a href="#" class="btn btn-primary"><i class="fa fa-rocket"></i>UPGRADE PLAN</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                        <i class="lnr lnr-question-circle"></i>
+                                    </a>
+                                    <ul class="dropdown-menu user-menu">
+                                        <li>
+                                            <%--<form class="search-form help-search-form">
+                                                <input value="" class="form-control" placeholder="How can we help?" type="text">
+                                                <button type="button" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                            </form>--%>
+                                        </li>
+                                        <li class="menu-heading">HOW-TO</li>
+                                        <li><a href="#">Setting up Campaign</a></li>
+                                        <li><a href="#">Understanding Website Analytics</a></li>
+                                        <li><a href="#">Boost Your Sales</a></li>
+                                        <li><a href="#">Knowing Your Audience</a></li>
+                                        <li class="menu-heading">ACCOUNT</li>
+                                        <li><a href="#">Change Password</a></li>
+                                        <li><a href="#">Privacy &amp; Security</a></li>
+                                        <li><a href="#">Membership</a></li>
+                                        <li class="menu-heading">BILLING</li>
+                                        <li><a href="#">Setup Payment</a></li>
+                                        <li><a href="#">Auto-Renewal Program</a></li>
+                                        <li><a href="#">Cancellation</a></li>
+                                        <li class="menu-button">
+                                            <a href="#" class="btn btn-primary"><i class="fa fa-question-circle"></i>HELP CENTER</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end navbar menu -->
+                    </div>
+                </div>
+            </nav>
+            <!-- END NAVBAR -->
+            <!-- LEFT SIDEBAR -->
+            <div id="left-sidebar" class="sidebar">
+                <button type="button" class="btn btn-xs btn-link btn-toggle-fullwidth">
+                    <span class="sr-only">Toggle Fullwidth</span>
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <div class="sidebar-scroll">
+                    <div class="user-account">
+                        <img src="assets/img/user.png" class="img-responsive img-circle user-photo" alt="User Profile Picture">
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle user-name" data-toggle="dropdown">Hello, <strong>Austin Hoffman</strong> <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right account">
+                                <li><a href="#">My Profile</a></li>
+                                <li><a href="#">Messages</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <nav id="left-sidebar-nav" class="sidebar-nav">
+                        <ul id="main-menu" class="metismenu">
+                            <li class="active">
+                                <a href="Entry.aspx">
+                                    <i class="lnr lnr-home"></i><span>Inicio</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a class="has-arrow" aria-expanded="false"><i class="lnr lnr-magic-wand"></i><span>Administrativo</span></a>
+                                <ul aria-expanded="true">
+                                    <li class="">
+                                        <a href="Manager.aspx">Agregar Producto</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#uiElements" class="has-arrow" aria-expanded="false"><i class="lnr lnr-magic-wand"></i><span>Configuración</span></a>
+                                <ul aria-expanded="true">
+                                    <li class="">
+                                        <asp:LinkButton ID="lnkNuevoAdmin" runat="server" OnClick="LnkNavAdministracion_Click">Nuevo Administrador</asp:LinkButton>
+                                    </li>
+                                    <li class="">
+                                        <asp:LinkButton ID="lnkNombreAdmin" runat="server" OnClick="LnkNavAdministracion_Click">Olvido Nombre de Administrador</asp:LinkButton>
+                                    </li>
+                                    <li class="">
+                                        <asp:LinkButton ID="lnkCotrasenaAdmin" runat="server" OnClick="LnkNavAdministracion_Click">Olvido Contraseña de Administrador</asp:LinkButton>
+                                    </li>
+                                    <li class="">
+
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- END LEFT SIDEBAR -->
+
+
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div id="main-content">
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <%-- <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container-fluid">
                 <a href="../default.aspx">
                     <asp:Image ID="Image3" class="logo" runat="server" ImageUrl="/public/images/logo.png" />
@@ -56,14 +292,10 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav>--%>
         <%--/NavBar--%>
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <div class="container-fluid">
-                </div>
-            </asp:ContentPlaceHolder>
-        </div>
     </form>
+
+   
 </body>
 </html>

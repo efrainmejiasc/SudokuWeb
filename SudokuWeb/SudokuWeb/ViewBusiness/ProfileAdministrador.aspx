@@ -1,11 +1,10 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/ViewBusiness/Admin.Master" AutoEventWireup="true" CodeBehind="ProfileAdministrador.aspx.cs" Inherits="SudokuWeb.ViewBusiness.ProfileAdministrador" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
-        <div class="col-md-6 offset-md-3 my-5">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
                     <h2 class="card-title text-center text-custom">Crear Nuevo Administrador</h2>
@@ -49,7 +48,7 @@
         </div>
 
         <%--Panel--%>
-        <div class="col-md-6 offset-md-3 my-5" id="OlvidoUsuario">
+        <div class="col-md-12" id="OlvidoUsuario">
             <asp:Panel ID="Pnl1" runat="server" CssClass="card">
                 <div class="card-body">
                     <h2 class="card-title text-center text-custom">Restablecer Nombre de Aministrador</h2>
@@ -86,7 +85,7 @@
             </asp:Panel>
         </div>
         <%--/Panel--%>
-        <div class="col-md-6 offset-md-3 my-5">
+        <div class="col-md-12">
             <div class="card" id="OlvidoPassword">
                 <div class="card-body">
                     <h2 class="card-title text-center text-custom">Restablecer Contraseña de Administrador</h2>
