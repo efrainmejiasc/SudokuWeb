@@ -37,7 +37,7 @@
                 <div class="col-md-12 my-5">
                     <div class="card">
                         <div class="card-body">
-                            <h2 class="card-title text-center text-custom">Planes y Servicios Sudoku Para Todos</h2>
+                            <h2 class="card-title text-center text-custom">Productos y Servicios Sudoku Para Todos</h2>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <asp:GridView ID="GridView1" runat="server"
