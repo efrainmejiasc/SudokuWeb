@@ -221,8 +221,8 @@ namespace SudokuWeb.Models
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("@USUARIO", USUARIO);
                 command.Parameters.AddWithValue("@IDENTIFICADOR", IDENTIFICADOR);
-                command.Parameters.AddWithValue("@FECHA", DateTime.Now);
-                command.Parameters.AddWithValue("@FECHAUTC", DateTime.UtcNow.ToString(Models.EngineData.dateFormatUtc));
+                command.Parameters.AddWithValue("@FECHACONEXION", DateTime.Now);
+                command.Parameters.AddWithValue("@FECHACONEXIONUTC", DateTime.UtcNow.ToString(Models.EngineData.dateFormatUtc));
                 command.Parameters.AddWithValue("@IP", IP);
                 resultado = command.ExecuteNonQuery();
                 Conexion.Close();
