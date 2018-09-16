@@ -31,7 +31,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="../default.aspx" class="nav-link mr-sm-2">Inicio</a>
+                            <a href="../default.aspx" class="nav-link mr-sm-2"><%= Resources.RegistrarCuenta.aspx.MenuInicio %></a>
                         </li>
                         <li class="nav-item">
                             <a href="Login.aspx" class="nav-link mr-sm-2">Iniciar Sesión</a>
@@ -82,7 +82,11 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:CheckBox ID="chkRobot" runat="server" Text=" No Soy un Robot" />
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label" for="chkRobot">
+                                            <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input"/> No Soy un Robot
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
@@ -107,16 +111,18 @@
             </div>
         </div>
 
+        <%--Modal--%>
         <div class="modal fade" id="msj" tabindex="-1" role="dialog" aria-labelledby="msj-label">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog ModalCenter" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="msj-label">Sudoku para todos</h4>
+                            <h4 class="modal-title" id="msj-label">Sudoku Para Todos</h4>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="12%" Height="12%" />
                                         <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
                                     </div>
                                 </div>

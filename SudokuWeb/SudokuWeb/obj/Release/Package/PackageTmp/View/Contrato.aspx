@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="/public/js/bootstrap.js"></script>
     <script src="/public/js/bootstrap.bundle.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,19 +34,26 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title text-center text-custom">Terminos y Condiciones Sudoku Para Todos</h2>
-                        <iframe src="http://docs.google.com/gview?url=http://www.bbvacomtinental.com/js/TerminosCondiciones.pdf&embedded=true" style="width: 1000px; height: 700px;" frameborder="5"></iframe>
+                        <iframe src="http://docs.google.com/gview?url=http://www.bbvacomtinental.com/js/TerminosCondiciones.pdf&embedded=true" style="width: 1000px; height: 550px;" frameborder="5"></iframe>
 
                     </div>
                     <%--<div class="card-footer text-muted">
                         2 days ago
                     </div>--%>
                     <div class="col-md-12 text-center">
-                        <asp:CheckBox ID="chkRobot" runat="server" Text="No Soy un Robot" />
+                        <div class="form-group">
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="chkRobot">
+                                    <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input" />
+                                    No Soy un Robot
+                                </label>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="form-group text-center">
-                            <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary" OnClick="BtnContrato_Click" />
                             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" OnClick="BtnContrato_Click" />
+                            <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary" OnClick="BtnContrato_Click" />
                         </div>
                     </div>
                 </div>

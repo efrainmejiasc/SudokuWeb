@@ -167,10 +167,6 @@
     <Content Include="src\js\main.js" />
     <Content Include="ViewBusiness\assets\css\demo.css" />
     <Content Include="ViewBusiness\assets\css\main.css" />
-    <Content Include="ViewBusiness\assets\img\apple-icon.png" />
-    <Content Include="ViewBusiness\assets\img\favicon.png" />
-    <Content Include="ViewBusiness\assets\img\klorofilpro.png" />
-    <Content Include="ViewBusiness\assets\img\logo-minimal.png" />
     <Content Include="ViewBusiness\assets\img\logo.png" />
     <Content Include="ViewBusiness\assets\img\uploaded-file.jpg" />
     <Content Include="ViewBusiness\assets\img\user-small.png" />

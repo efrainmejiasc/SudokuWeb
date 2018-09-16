@@ -46,17 +46,17 @@ namespace SudokuWeb.Models
         public const string transaccionFallida2 = " Transaccion Fallida";
 
 
-        public const string urlSite = "http://localhost:51828/ViewBusiness/Entry.aspx";
-        //public const  string urlSite = "http://joselelu-001-site1.etempurl.com/ViewBusiness/Entry.aspx";
+        //public const string urlSite = "http://localhost:51828/ViewBusiness/Entry.aspx";
+        public const  string urlSite = "http://joselelu-001-site1.etempurl.com/ViewBusiness/Entry.aspx";
 
-        public const string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
-        //public const  string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
+        //public const string urlEstado = "http://localhost:51828/View/ActivarCuentaSudoku.aspx";
+        public const  string urlEstado = "http://joselelu-001-site1.etempurl.com/View/ActivarCuentaSudoku.aspx";
 
-        public const string urlRestablecer = "http://localhost:51828/View/NuevoUserPassword.aspx";
-        //public const  string urlRestablecer = "http://joselelu-001-site1.etempurl.com/View/NuevoUserPassword.aspx";
+        //public const string urlRestablecer = "http://localhost:51828/View/NuevoUserPassword.aspx";
+        public const  string urlRestablecer = "http://joselelu-001-site1.etempurl.com/View/NuevoUserPassword.aspx";
 
-        public const string urlActivarAdministrador = "http://localhost:51828/ViewBusiness/api/ActivarAdministrador";
-        //public const string urlActivarAdministrador = "http://joselelu-001-site1.etempurl.com/ViewBusiness/api/ActivarAdministrador";
+        //public const string urlActivarAdministrador = "http://localhost:51828/ViewBusiness/api/ActivarAdministrador";
+        public const string urlActivarAdministrador = "http://joselelu-001-site1.etempurl.com/ViewBusiness/api/ActivarAdministrador";
 
         public static string CuentaRegistradaExitosamente = "Cuenta Registrada Exitosamente, Recibira un correo Electronico para Activar su Cuenta";
         public static string asuntoActivacion =  "Activacion de Cuenta Sudoku Para Todos";
@@ -90,7 +90,5 @@ namespace SudokuWeb.Models
         public static string cuentaNoRegistrada = "La Cuenta No Pudo ser Registrada Exitosamente, Intentelo mas Tarde";
         public static string cuentaNoActivada = "La Cuenta No Pudo ser Activada, Intentelo mas Tarde";
         public static string UsuarioPassworInactivoNoExiste = "El Usuario con el Password Ingresado no Existe o se Encuentra Inactivo"; 
-
-
     }
 }

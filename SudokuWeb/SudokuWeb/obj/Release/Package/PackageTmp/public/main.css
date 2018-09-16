@@ -113,6 +113,13 @@ body {
     }
 
 
+    /*Modal*/
+.ModalCenter{
+    top:50% !important;
+    transform:translateY(-50%) !important;
+}
+/*End Modal*/
+
 /*@font-face {
     font-family: Open Sans;
     font-style: normal;
