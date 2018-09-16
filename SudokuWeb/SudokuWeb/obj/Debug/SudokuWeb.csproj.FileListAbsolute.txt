@@ -57,3 +57,4 @@ C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\bin\System.Web
 C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\bin\es\System.Net.Http.Formatting.resources.dll
 C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\bin\es\System.Web.Http.resources.dll
 C:\Users\administrador\Source\Repos\SudokuWeb\SudokuWeb\SudokuWeb\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\EfrainMejiasC\Documents\Visual Studio 2017\Proyects\WebSudoku\SudokuWeb\SudokuWeb\SudokuWeb\obj\Debug\SudokuWeb.csprojResolveAssemblyReference.cache

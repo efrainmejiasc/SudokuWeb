@@ -243,6 +243,7 @@ namespace SudokuWeb.Models
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("@USUARIO", USUARIO);
                 command.Parameters.AddWithValue("@IDENTIFICADOR", IDENTIFICADOR);
+                command.Parameters.AddWithValue("@FECHACONEXION", DateTime.Now);
                 SqlDataReader lector = lector = command.ExecuteReader();
                 while ((lector.Read()))
                 {
@@ -469,6 +470,24 @@ namespace SudokuWeb.Models
                 command.Parameters.AddWithValue("@MONEDA", MONEDA);
                 command.Parameters.AddWithValue("@PRECIO", PRECIO);
                 command.Parameters.AddWithValue("@FECHAMODIFICACION", DateTime.Now);
+                resultado = command.ExecuteNonQuery();
+                Conexion.Close();
+            }
+
+            return resultado;
+        }
+
+        public int EliminarProducto(int ID)
+        {
+            int resultado = new int();
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_EliminarProducto", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@ID", ID);
                 resultado = command.ExecuteNonQuery();
                 Conexion.Close();
             }

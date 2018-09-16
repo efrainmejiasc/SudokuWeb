@@ -7,6 +7,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
+                   <asp:Panel ID="Pnl1"  runat="server" CssClass="card">
                     <h2 class="card-title text-center text-custom">Crear Nuevo Administrador</h2>
                     <div class="col-md-12">
                         <div class="form-group">
@@ -43,15 +44,16 @@
                             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnCreateAdmin_Click" CssClass="btn btn-primary" />
                         </div>
                     </div>
+                   </asp:Panel>
                 </div>
             </div>
         </div>
 
         <%--Panel--%>
         <div class="col-md-12" id="OlvidoUsuario">
-            <asp:Panel ID="Pnl1" runat="server" CssClass="card">
+            <asp:Panel ID="Pnl2" runat="server" CssClass="card">
                 <div class="card-body">
-                    <h2 class="card-title text-center text-custom">Restablecer Nombre de Aministrador</h2>
+                    <h2 class="card-title text-center text-custom">Restablecer Nombre de Administrador</h2>
                     <div class="col-md-12">
                         <div class="form-group">
                             <asp:Label ID="Label7" runat="server" Text="Nuevo Nombre de Administrador" CssClass="font-weight-bold"></asp:Label>
@@ -88,6 +90,7 @@
         <div class="col-md-12">
             <div class="card" id="OlvidoPassword">
                 <div class="card-body">
+                   <asp:Panel ID="Pnl3"  runat="server" CssClass="card">
                     <h2 class="card-title text-center text-custom">Restablecer Contraseña de Administrador</h2>
                     <div class="col-md-12">
                         <div class="form-group">
@@ -130,6 +133,7 @@
                             <asp:Button ID="btnAceptarPass" runat="server" Text="Aceptar" OnClick="BtnRestablecerPassword_Click" CssClass="btn btn-primary" />
                         </div>
                     </div>
+                   </asp:Panel>
                 </div>
             </div>
         </div>
@@ -140,7 +144,7 @@
         <div class="modal-dialog ModalCenter" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="msj-label">Sudoku para todos</h4>
+                    <h4 class="modal-title" id="msj-label">Sudoku Para Todos</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row">

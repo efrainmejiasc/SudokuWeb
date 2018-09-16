@@ -35,7 +35,7 @@
                             <div class="header">
                                 <div class="logo text-center">
                                     <img src="../public/images/logo.png" alt="Sudoku para todos" width="15%" height="15%"/></div>
-                                <p class="lead">Autentificacion Administrador</p>
+                                <p class="lead">Autentificacion de Administrador</p>
                             </div>
                             <div class="form-auth-small">
                                 <div class="col-md-12">
@@ -78,7 +78,7 @@
             <div class="modal-dialog ModalCenter" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="msj-label">Sudoku para todos</h4>
+                        <h4 class="modal-title" id="msj-label">Sudoku Para Todos</h4>
                     </div>
                     <div class="modal-body">
                         <div class="row">

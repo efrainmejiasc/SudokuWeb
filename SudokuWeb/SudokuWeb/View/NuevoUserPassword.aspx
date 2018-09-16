@@ -138,7 +138,7 @@
                 <div class="modal-dialog ModalCenter" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="msj-label">Sudoku para todos</h4>
+                            <h4 class="modal-title" id="msj-label">Sudoku Para Todos</h4>
                         </div>
                         <div class="modal-body">
                             <div class="row">

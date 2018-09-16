@@ -34,10 +34,14 @@ namespace SudokuWeb.ViewBusiness
                     string moneda = txtMoneda.Text;
                     string precio = txtPrecio.Text;
                     string resultado = Engine.EngineUtil.InsertatProducto(producto, descripcion, moneda, precio);
+                    GridView1.SelectedIndex = -1;
                     lblMensaje.Text = resultado;
                     GridView1 = Engine.EngineUtil.MostrarProductos(GridView1);
                     Engine.MailNotificacion EnviarMail = new Engine.MailNotificacion();
-                    bool r = EnviarMail.EnviarMail(Models.EngineData.asuntoAddUpdateproducto, Models.EngineData.cuerpoAddUpdateproducto, Models.EngineData.myEmail);
+                    txtProducto.Text = string.Empty;
+                    txtDescripcion.Text = string.Empty;
+                    txtPrecio.Text= string.Empty;
+                    bool r = EnviarMail.EnviarMail(Models.EngineData.asuntoAddUpdateDeleteProducto, Models.EngineData.asuntoAddUpdateDeleteProducto, Models.EngineData.myEmail);
                     string script = "MostrarVentana('msj');";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
                     break;
@@ -71,6 +75,17 @@ namespace SudokuWeb.ViewBusiness
             if (e.CommandName == "Select")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = GridView1.Rows[index];
+                int id = Convert.ToInt32(row.Cells[1].Text);
+                string resultado = Engine.EngineUtil.EliminarProducto(id);
+                GridView1 = Engine.EngineUtil.MostrarProductos(GridView1);
+                lblMensaje.Text = resultado;
+                GridView1.SelectedIndex = -1;
+                GridView1.EditIndex = -1;
+                Engine.MailNotificacion EnviarMail = new Engine.MailNotificacion();
+                bool r = EnviarMail.EnviarMail(Models.EngineData.asuntoAddUpdateDeleteProducto, Models.EngineData.asuntoAddUpdateDeleteProducto, Models.EngineData.myEmail);
+                string script = "MostrarVentana('msj');";
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
             }
         }
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
@@ -93,7 +108,7 @@ namespace SudokuWeb.ViewBusiness
             GridView1 = Engine.EngineUtil.MostrarProductos(GridView1);
             lblMensaje.Text  = resultado;
             Engine.MailNotificacion EnviarMail = new Engine.MailNotificacion();
-            bool r = EnviarMail.EnviarMail(Models.EngineData.asuntoAddUpdateproducto, Models.EngineData.cuerpoAddUpdateproducto, Models.EngineData.myEmail);
+            bool r = EnviarMail.EnviarMail(Models.EngineData.asuntoAddUpdateDeleteProducto, Models.EngineData.asuntoAddUpdateDeleteProducto, Models.EngineData.myEmail);
             string script = "MostrarVentana('msj');";
             ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
         }

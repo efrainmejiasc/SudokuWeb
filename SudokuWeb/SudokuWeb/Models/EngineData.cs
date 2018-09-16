@@ -37,11 +37,14 @@ namespace SudokuWeb.Models
         public const string passwordAdminUpdateExito = "La contraseña de administrador fue actualizada satisfactoriamente";
         public const string passwordAdminUpdateFallido = "La contraseña de administrador fue actualizada satisfactoriamente";
         public const string actualizacionProductoExito = "Actualizacion de producto exitosa";
+        public const string eliminacionProductoExito = "Eliminacion de producto exitosa";
         public const string agregarProductoExito = "El producto se agrego de forma exitosa";
         public const string myEmail= "sudokuparatodos@gmail.com";
-        public const string asuntoAddUpdateproducto = "Agregar Actualizar Productos en Sudoku Para Todos ";
-        public const string cuerpoAddUpdateproducto = "Agregar Actualizar Productos en Sudoku Para Todos ";
+        public const string asuntoAddUpdateDeleteProducto = "Agregar / Actualizar / Eliminar - Productos en Sudoku Para Todos ";
+        public const string cuerpoAddUpdateDeleteProducto = "Agregar / Actualizar / Eliminar - Productos en Sudoku Para Todos ";
         public const string actualizacionExitosa = "Activacion Exitosa";
+        public const string transaccionFallida2 = " Transaccion Fallida";
+
 
         public const string urlSite = "http://localhost:51828/ViewBusiness/Entry.aspx";
         //public const  string urlSite = "http://joselelu-001-site1.etempurl.com/ViewBusiness/Entry.aspx";

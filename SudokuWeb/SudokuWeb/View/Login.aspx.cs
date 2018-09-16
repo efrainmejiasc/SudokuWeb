@@ -13,11 +13,10 @@ namespace SudokuWeb.View
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.RequestType.Equals("POST") || Request.RequestType.Equals("GET"))
-            {
-                Engine.EngineUtil Funcion = new Engine.EngineUtil();
-                Session["Ip"] = Funcion.GetIpAddress(Request);
-            }
+
+           Engine.EngineUtil Funcion = new Engine.EngineUtil();
+           Session["Ip"] = Funcion.GetIpAddress(Request);
+
             if (!IsPostBack)
             {
                 LimpiarTexto();

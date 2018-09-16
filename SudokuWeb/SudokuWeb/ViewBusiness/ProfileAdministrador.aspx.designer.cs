@@ -13,6 +13,15 @@ namespace SudokuWeb.ViewBusiness {
     public partial class ProfileAdministrador {
         
         /// <summary>
+        /// Control Pnl1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Pnl1;
+        
+        /// <summary>
         /// Control Label2.
         /// </summary>
         /// <remarks>
@@ -112,13 +121,13 @@ namespace SudokuWeb.ViewBusiness {
         protected global::System.Web.UI.WebControls.Button btnAceptar;
         
         /// <summary>
-        /// Control Pnl1.
+        /// Control Pnl2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Pnl1;
+        protected global::System.Web.UI.WebControls.Panel Pnl2;
         
         /// <summary>
         /// Control Label7.
@@ -200,6 +209,15 @@ namespace SudokuWeb.ViewBusiness {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAceptarUser;
+        
+        /// <summary>
+        /// Control Pnl3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Pnl3;
         
         /// <summary>
         /// Control Label12.

@@ -371,6 +371,7 @@ namespace SudokuWeb.Engine
         public static bool ImpedirConexionesSimultaneas(string USUARIO, string IDENTIFICADOR, bool existeCookie)
         {
             bool resultado = false;
+            string ip = HttpContext.Current.Session["Ip"].ToString();
             ConexionUsuario CnxUsuario = ModeloDb.SeleccionConexionUsuario(USUARIO, IDENTIFICADOR);
             if (CnxUsuario.Id == 0)
             {
@@ -379,21 +380,21 @@ namespace SudokuWeb.Engine
             }
             else if (CnxUsuario.Id > 0)
             {
-                if (CnxUsuario.Ip == HttpContext.Current.Session["Ip"].ToString()) // CONECTADO MISMA IP
+                if (CnxUsuario.Ip == ip) // CONECTADO MISMA IP
                 {
-                    ModeloDb.InsertarConexionUsuario(USUARIO, IDENTIFICADOR, HttpContext.Current.Session["Ip"].ToString());
+                    ModeloDb.InsertarConexionUsuario(USUARIO, IDENTIFICADOR, ip);
                     resultado = true;
                 }
-                else if (CnxUsuario.Ip != HttpContext.Current.Session["Ip"].ToString() && CnxUsuario.TiempoTrascurrido <= 20) // IP DIFERENTE TIEMPO < 20
+                else if (CnxUsuario.Ip != ip && CnxUsuario.TiempoTrascurrido <= 20) // IP DIFERENTE TIEMPO < 20
                 {
                     resultado = false;
                 }
-                else if (CnxUsuario.Ip != HttpContext.Current.Session["Ip"].ToString() && CnxUsuario.TiempoTrascurrido > 20 && existeCookie) // IP DIFERENTE EXISTE COOKIE TIEMPO < "=
+                else if (CnxUsuario.Ip != ip && CnxUsuario.TiempoTrascurrido >= 20 && existeCookie) // IP DIFERENTE EXISTE COOKIE TIEMPO < "=
                 {
-                    ModeloDb.InsertarConexionUsuario(USUARIO, IDENTIFICADOR, HttpContext.Current.Session["Ip"].ToString());
+                    ModeloDb.InsertarConexionUsuario(USUARIO, IDENTIFICADOR, ip);
                     resultado = true;
                 }
-                else if (CnxUsuario.Ip != HttpContext.Current.Session["Ip"].ToString() && CnxUsuario.TiempoTrascurrido < 20 && !existeCookie)// IP DIFERENTE NO EXISTE COOKIE TIEMPO < 20
+                else if (CnxUsuario.Ip != ip && CnxUsuario.TiempoTrascurrido < 20 && !existeCookie)// IP DIFERENTE NO EXISTE COOKIE TIEMPO < 20
                 {
                     resultado = false;
                 }
@@ -658,20 +659,30 @@ namespace SudokuWeb.Engine
             {
                 resultado = Models.EngineData.actualizacionProductoExito;
             }
+            else
+            {
+                resultado = Models.EngineData.transaccionFallida2;
+            }
             return resultado;
         }
 
+
         [System.Web.Services.WebMethod]
-        public static bool  NotificacionAddUpdateProducto()
+        public static string EliminarProducto(int id)
         {
-            bool resultado = false;
-            string asunto = Models.EngineData.asuntoAddUpdateproducto;
-            string cuerpo = Models.EngineData.cuerpoAddUpdateproducto;
-            string mail = Models.EngineData.myEmail;
-            resultado = FuncionMail.EnviarMail(asunto, cuerpo, mail);
-          
+            string resultado = string.Empty;
+            int n = ModeloDb.EliminarProducto(id);
+            if (n == -1)
+            {
+                resultado = Models.EngineData.eliminacionProductoExito;
+            }
+            else
+            {
+                resultado = Models.EngineData.transaccionFallida2;
+            }
             return resultado;
         }
+
 
     }
 }

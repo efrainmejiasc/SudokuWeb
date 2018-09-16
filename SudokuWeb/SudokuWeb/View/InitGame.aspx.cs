@@ -31,9 +31,11 @@ namespace SudokuWeb.View
         private bool ObtenerCookie()
         {
             bool existeCookie = false;
+            Session["Cookie"] = false;
             if (Request.Cookies["Cookies"] != null)
             {
                 Session["Cookie"] = Request.Cookies["Cookie"].Value;
+                Session["Cookie"] = true;
                 existeCookie = true;
             }
             return existeCookie;
@@ -42,7 +44,7 @@ namespace SudokuWeb.View
         private bool AccesoUsuario(bool existeCookie)
         {
             bool resultado = false;
-            resultado = Engine.EngineUtil.ImpedirConexionesSimultaneas(Session["USUARIO"].ToString(), Session["Identificador"].ToString(), existeCookie);
+            resultado = Engine.EngineUtil.ImpedirConexionesSimultaneas(Session["USUARIO"].ToString(), Session["Identificador"].ToString(), (bool)Session["Cookie"]);
             return resultado;
         }
 
@@ -50,7 +52,7 @@ namespace SudokuWeb.View
         {
             HttpCookie cook = new HttpCookie("Cookie");
             cook.Value = Session["Identificador"].ToString();
-            cook.Expires = DateTime.Now.AddMinutes(20);
+            cook.Expires = DateTime.Now.AddMinutes(21);
             Response.Cookies.Add(cook);
         }
 
