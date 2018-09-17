@@ -37,6 +37,9 @@
                         <li class="nav-item">
                             <a href="RegistrarCuenta.aspx" class="nav-link mr-sm-2">Regístrate</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="RestablecerDataCliente.aspx" class="nav-link mr-sm-2">Olvidaste Usuario o Contraseña</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -62,7 +65,12 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:CheckBox ID="chkRobot" runat="server" Text="No Soy un Robot"/>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label" for="chkRobot">
+                                            <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input" />
+                                            No Soy un Robot
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -86,22 +94,23 @@
             </div>
 
             <div class="modal fade" id="msj" tabindex="-1" role="dialog" aria-labelledby="msj-label">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog ModalCenter" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="msj-label">Sudoku para todos</h4>
+                            <h4 class="modal-title" id="msj-label">Sudoku Para Todos</h4>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="12%" Height="12%" />
                                         <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <asp:Button ID="btnAceptarMensaje" runat="server" Text="Aceptar" OnClick="BtnAceptarMensaje_Click" CssClass="btn btn-primary"/>
+                            <asp:Button ID="btnAceptarMensaje" runat="server" Text="Aceptar" OnClick="BtnAceptarMensaje_Click" CssClass="btn btn-primary" />
                         </div>
                     </div>
                 </div>

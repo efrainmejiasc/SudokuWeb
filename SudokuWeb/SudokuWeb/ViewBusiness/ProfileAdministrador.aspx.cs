@@ -16,19 +16,36 @@ namespace SudokuWeb.ViewBusiness
                 chkRobot1.Checked = false;
                 chkRobot2.Checked = false;
                 chkRobot3.Checked = false;
+                Pnl1.Visible = false;
+                Pnl2.Visible = false;
+                Pnl3.Visible = false;
                 if (Request.QueryString.Keys.Count > 0)
                 {
                     string nav = Request.QueryString["div"];
                     if (nav == "OlvidoUsuario")
                     {
+                        Pnl1.Visible = false;
+                        Pnl2.Visible = true;
+                        Pnl3.Visible = false;
                         string script1 = "NavegacionDiv('#OlvidoUsuario');";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "NavegacionDiv('#OlvidoUsuario')", script1, true);
                     }
                     else if (nav == "OlvidoPassword")
                     {
+                        Pnl1.Visible = false;
+                        Pnl2.Visible = false;
+                        Pnl3.Visible = true;
                         string script2 = "NavegacionDiv(#OlvidoPassword');";
                         ScriptManager.RegisterStartupScript(this, typeof(Page), "NavegacionDiv('#OlvidoPassword')", script2, true);
-                    } 
+                    }
+                    else if (nav == "CreateAdmin")
+                    {
+                        Pnl1.Visible = true;
+                        Pnl2.Visible = false;
+                        Pnl3.Visible = false;
+                        string script3 = "NavegacionDiv(#CreateAdmin');";
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "NavegacionDiv('#CreateAdmin')", script3, true);
+                    }
                 }
             }
         }

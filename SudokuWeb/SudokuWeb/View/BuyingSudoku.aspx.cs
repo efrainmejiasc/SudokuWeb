@@ -11,10 +11,9 @@ namespace SudokuWeb.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["DtProductoVenta"] == null)
-            {
-                GridView1 = Engine.EngineUtil.MostrarProductosVenta(GridView1);
-            }
+
+          GridView1 = Engine.EngineUtil.MostrarProductosVenta(GridView1);
+
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
