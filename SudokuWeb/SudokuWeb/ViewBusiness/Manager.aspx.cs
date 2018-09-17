@@ -106,5 +106,7 @@ namespace SudokuWeb.ViewBusiness
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
         }
+
+        
     }
 }

@@ -2,7 +2,10 @@
     width: 80px;
     height: 80px;
 }
-
+.logoModal {
+    width: 50px;
+    height: 50px;
+}
 .centralizar-objeto {
   margin: auto 0;
 }

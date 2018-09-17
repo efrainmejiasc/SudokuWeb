@@ -10,12 +10,15 @@
     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
 
     <%--CSS--%>
-    <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
-    <link rel="stylesheet" href="assets/vendor/metisMenu/metisMenu.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
-    <link rel="stylesheet" href="assets/vendor/toastr/toastr.min.css">
+<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="assets/vendor/metisMenu/metisMenu.css">
+	<link rel="stylesheet" href="assets/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css">
+	<link rel="stylesheet" href="assets/vendor/chartist/css/chartist.min.css">
+	<link rel="stylesheet" href="assets/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+	<link rel="stylesheet" href="assets/vendor/toastr/toastr.min.css">
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <%--<link rel="stylesheet" href="/public/main.css" />--%>
@@ -199,7 +202,8 @@
                 </button>
                 <div class="sidebar-scroll">
                     <div class="user-account">
-                        <img src="assets/img/user.png" class="img-responsive img-circle user-photo" alt="User Profile Picture">
+                        <%--Foto del Usuario--%>
+                        <%--<img src="assets/img/user.png" class="img-responsive img-circle user-photo" alt="User Profile Picture">--%>
                         <div class="dropdown">
                             <a href="#" class="dropdown-toggle user-name" data-toggle="dropdown">Hello, <strong>Austin Hoffman</strong> <i class="fa fa-caret-down"></i></a>
                             <ul class="dropdown-menu dropdown-menu-right account">

@@ -1,10 +1,10 @@
-﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InitGame.aspx.cs" Inherits="SudokuWeb.View.InitGame" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InitGame.aspx.cs" Inherits="SudokuWeb.View.InitGame" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Sudoku Para Todos</title>
     <link rel="shortcut icon" href="~/public/images/SudokuEnCasa.ico" />
@@ -29,10 +29,12 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-10 text-center">
+                                <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
+                            </div>
+                            <div class="col-md-2">
                                 <div class="form-group">
-                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="12%" Height="12%" />
-                                    <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" CssClass="logoModal" />
                                 </div>
                             </div>
                         </div>
@@ -43,7 +45,7 @@
                 </div>
             </div>
         </div>
-         <%--<div>
+        <%--<div>
             <div id='msj' align="center" style="position: fixed; width: auto; height: auto; top: 30%; left: 20%; right: 20%; background-color: silver; opacity: 0.8; z-index: 99; border: 1px solid DimGray; padding: 10px; text-align: center; display: none;">
             <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="96px" Height="73px" />
             <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
@@ -51,6 +53,6 @@
         </div>
         </div>--%>
     </form>
-    
+
 </body>
 </html>
