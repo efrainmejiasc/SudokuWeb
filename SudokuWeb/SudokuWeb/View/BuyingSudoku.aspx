@@ -44,7 +44,7 @@
                                         DataKeyNames="ID"
                                         AutoGenerateColumns="False"
                                         OnRowCommand="GridView1_RowCommand"
-                                        gridlines="None"
+                                        Gridlines="None"
                                         CssClass=" table-striped table-hover table-condensed small-top-margin" Width="100%">
 
                                         <HeaderStyle BackColor="#1abc9c" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="#1abc9c" BorderStyle="Solid" BorderWidth="0px" Font-Size="15pt" HorizontalAlign="Center" />

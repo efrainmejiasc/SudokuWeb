@@ -50,14 +50,14 @@
                             <div class="table-responsive">
                                 <asp:GridView ID="GridView1" runat="server"
                                     DataKeyNames="ID"
+                                    Gridlines="None"
                                     AutoGenerateEditButton="True"
                                     AutoGenerateColumns="False"
                                     OnRowEditing="GridView1_RowEditing"
                                     OnRowUpdating="GridView1_RowUpdating"
                                     OnRowDataBound="GridView1_RowDataBound"
                                     OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="3" CellSpacing="3"
-                                    CssClass="table table-striped no-margin"
-                                    Width="100%">
+                                    CssClass="table table-striped no-margin" Width="100%">
 
                                     <%--<HeaderStyle BackColor="DimGray" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="DimGray" BorderStyle="Solid" BorderWidth="3px" Font-Size="15pt" HorizontalAlign="Center" />
                                 <EditRowStyle BackColor="DimGray" ForeColor="White" Wrap="False" Font-Size="15pt" Font-Bold="True" HorizontalAlign="Center" />

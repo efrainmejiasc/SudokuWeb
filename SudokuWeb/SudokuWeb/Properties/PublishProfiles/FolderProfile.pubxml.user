@@ -34,7 +34,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/29/2018 14:49:47</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/03/2014 20:33:56</publishTime>
+      <publishTime>03/08/2014 20:33:56</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/29/2018 14:49:48</publishTime>
@@ -115,10 +115,10 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/29/2018 14:49:48</publishTime>
     </File>
     <File Include="bin/SudokuWeb.dll">
-      <publishTime>09/15/2018 20:35:52</publishTime>
+      <publishTime>09/19/2018 07:46:36</publishTime>
     </File>
     <File Include="bin/SudokuWeb.pdb">
-      <publishTime>09/15/2018 20:35:52</publishTime>
+      <publishTime>09/19/2018 07:46:36</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>01/28/2015 04:02:42</publishTime>
@@ -298,7 +298,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/29/2018 14:49:47</publishTime>
     </File>
     <File Include="public/main.css">
-      <publishTime>08/29/2018 14:49:47</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="public/main.css.map">
       <publishTime>08/29/2018 14:49:47</publishTime>
@@ -370,37 +370,37 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>08/01/2018 15:15:28</publishTime>
     </File>
     <File Include="View/ActivarCuentaSudoku.aspx">
-      <publishTime>09/15/2018 18:52:18</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="View/ActSudoku.aspx">
       <publishTime>07/31/2018 18:45:37</publishTime>
     </File>
     <File Include="View/BuyingSudoku.aspx">
-      <publishTime>09/15/2018 18:52:18</publishTime>
+      <publishTime>09/19/2018 07:17:42</publishTime>
     </File>
     <File Include="View/Contrato.aspx">
       <publishTime>09/14/2018 13:53:37</publishTime>
     </File>
     <File Include="View/InitGame.aspx">
-      <publishTime>09/15/2018 18:52:17</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="View/Login.aspx">
-      <publishTime>09/15/2018 18:52:17</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="View/NuevoUserPassword.aspx">
-      <publishTime>09/15/2018 18:52:18</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="View/PaySudoku.aspx">
       <publishTime>08/29/2018 14:49:45</publishTime>
     </File>
     <File Include="View/RegistrarCuenta.aspx">
-      <publishTime>09/15/2018 18:52:17</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="View/RestablecerDataCliente.aspx">
-      <publishTime>09/15/2018 18:52:17</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="ViewBusiness/Admin.Master">
-      <publishTime>09/14/2018 13:53:37</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="ViewBusiness/assets/css/demo.css">
       <publishTime>09/14/2018 13:53:37</publishTime>
@@ -409,7 +409,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/14/2018 13:53:37</publishTime>
     </File>
     <File Include="ViewBusiness/assets/css/main.css">
-      <publishTime>09/14/2018 13:53:37</publishTime>
+      <publishTime>09/17/2018 20:09:29</publishTime>
     </File>
     <File Include="ViewBusiness/assets/css/main.css.map">
       <publishTime>09/14/2018 13:53:37</publishTime>
@@ -1195,7 +1195,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
       <publishTime>09/14/2018 13:53:37</publishTime>
     </File>
     <File Include="ViewBusiness/Manager.aspx">
-      <publishTime>09/15/2018 20:00:31</publishTime>
+      <publishTime>09/19/2018 07:11:49</publishTime>
     </File>
     <File Include="ViewBusiness/ProfileAdministrador.aspx">
       <publishTime>09/15/2018 18:52:19</publishTime>

@@ -13,7 +13,7 @@ namespace SudokuWeb.View
         {
            if (!IsPostBack)
            {
-                bool r = ObtenerCookie();
+                /*bool r = ObtenerCookie();
                 r = AccesoUsuario(r);
                 if (r)
                 {
@@ -24,7 +24,7 @@ namespace SudokuWeb.View
                     lblMensaje.Text = Models.EngineData.multipleConexionUsuario;
                     string script = "MostrarVentana('msj');";
                     ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script, true);
-                }
+                }*/
             }
         }
 

@@ -44,7 +44,7 @@
                                         DataKeyNames="ID"
                                         AutoGenerateColumns="False"
                                         OnRowCommand="GridView1_RowCommand"
-                                        gridlines="None"
+                                        Gridlines="None"
                                         CssClass=" table-striped table-hover table-condensed small-top-margin" Width="100%">
 
                                         <HeaderStyle BackColor="#1abc9c" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="#1abc9c" BorderStyle="Solid" BorderWidth="0px" Font-Size="15pt" HorizontalAlign="Center" />
@@ -77,12 +77,12 @@
         <%--/Panel--%>
 
 
-            <%--<div id='msj' align="center" style="position: fixed; width: auto; height: auto; top: 30%; left: 20%; right: 20%; background-color: silver; opacity: 0.8; z-index: 99; border: 1px solid DimGray; padding: 10px; text-align: center; display: none;">
+        <%--<div id='msj' align="center" style="position: fixed; width: auto; height: auto; top: 30%; left: 20%; right: 20%; background-color: silver; opacity: 0.8; z-index: 99; border: 1px solid DimGray; padding: 10px; text-align: center; display: none;">
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="96px" Height="73px" />
                 <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
                 <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnAceptar_Click" />
             </div>--%>
-         <%--Modal--%>
+        <%--Modal--%>
         <div class="modal fade" id="msj" tabindex="-1" role="dialog" aria-labelledby="msj-label">
             <div class="modal-dialog ModalCenter" role="document">
                 <div class="modal-content">
@@ -91,10 +91,12 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-10 text-center">
+                                <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
+                            </div>
+                            <div class="col-md-2">
                                 <div class="form-group">
-                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="12%" Height="12%" />
-                                    <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" CssClass="logoModal" />
                                 </div>
                             </div>
                         </div>

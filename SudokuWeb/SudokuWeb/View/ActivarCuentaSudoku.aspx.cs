@@ -66,7 +66,7 @@ namespace SudokuWeb.View
             lblMensaje.Text = string.Empty;
             ScriptManager.RegisterStartupScript(this, typeof(Page), "OcultarVentana('msj')", script, true);
 
-            Response.Redirect("~/default.aspx");
+            Response.Redirect("Login.aspx");
         }
 
         protected override void InitializeCulture()

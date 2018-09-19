@@ -88,8 +88,8 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Button ID="btnCancelarUser" runat="server" Text="Cancelar" OnClick="BtnUsername_Click" />
-                                    <asp:Button ID="btnAceptarUser" runat="server" Text="Aceptar" OnClick="BtnUsername_Click" />
+                                    <asp:Button ID="btnCancelarUser" runat="server" Text="Cancelar" OnClick="BtnUsername_Click" CssClass="btn btn-primary"/>
+                                    <asp:Button ID="btnAceptarUser" runat="server" Text="Aceptar" OnClick="BtnUsername_Click" CssClass="btn btn-primary"/>
                                 </div>
                             </div>
                         </asp:Panel>
@@ -116,7 +116,7 @@
                                 <div class="form-group">
                                     <div class="form-check-inline">
                                         <label class="form-check-label" for="chkRobot">
-                                            <asp:CheckBox ID="chkRobotPass" runat="server" Text="No Soy un Robot" CssClass="form-check-input" />
+                                            <asp:CheckBox ID="chkRobotPass" runat="server" Text="" CssClass="form-check-input" />
                                             No Soy un Robot
                                         </label>
                                     </div>
@@ -124,8 +124,8 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Button ID="btnCancelarPass" runat="server" Text="Cancelar" OnClick="BtnPassword_Click" />
-                                    <asp:Button ID="btnAceptarPass" runat="server" Text="Aceptar" OnClick="BtnPassword_Click" />
+                                    <asp:Button ID="btnCancelarPass" runat="server" Text="Cancelar" OnClick="BtnPassword_Click" CssClass="btn btn-primary"/>
+                                    <asp:Button ID="btnAceptarPass" runat="server" Text="Aceptar" OnClick="BtnPassword_Click" CssClass="btn btn-primary"/>
                                 </div>
                             </div>
                         </asp:Panel>
@@ -142,10 +142,12 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-10 text-center">
+                                    <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
+                                </div>
+                                <div class="col-md-2">
                                     <div class="form-group">
-                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="12%" Height="12%" />
-                                        <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
+                                        <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" CssClass="logoModal" />
                                     </div>
                                 </div>
                             </div>
