@@ -42,28 +42,28 @@
 
                 </div>
             </div>
-            <div class="panel">
-                <div class="panel-body">
+            <div class="card">
+                <div class="card-body">
                     <h2 class=" card-title text-center text-custom">Actualizacion de Productos y Precios</h2>
                     <div class="col-md-12">
                         <div class="form-group">
-                            <div class="table-responsive">
                                 <asp:GridView ID="GridView1" runat="server"
                                     DataKeyNames="ID"
-                                    Gridlines="None"
+                                    GridLines="None"
                                     AutoGenerateEditButton="True"
                                     AutoGenerateColumns="False"
                                     OnRowEditing="GridView1_RowEditing"
                                     OnRowUpdating="GridView1_RowUpdating"
                                     OnRowDataBound="GridView1_RowDataBound"
-                                    OnRowCancelingEdit="GridView1_RowCancelingEdit" CellPadding="3" CellSpacing="3"
-                                    CssClass="table table-striped no-margin" Width="100%">
+                                    OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                                    
+                                    CssClass="table-striped table-hover table-condensed small-top-margin" Width="100%">
 
-                                    <%--<HeaderStyle BackColor="DimGray" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="DimGray" BorderStyle="Solid" BorderWidth="3px" Font-Size="15pt" HorizontalAlign="Center" />
-                                <EditRowStyle BackColor="DimGray" ForeColor="White" Wrap="False" Font-Size="15pt" Font-Bold="True" HorizontalAlign="Center" />
-                                <AlternatingRowStyle BackColor="White" ForeColor="DimGray" Wrap="False" Font-Size="12pt" HorizontalAlign="Center" />
-                                <RowStyle BackColor="White" Wrap="False" ForeColor="DimGray" Font-Size="12pt" HorizontalAlign="Center" />
-                                <SelectedRowStyle BackColor="Dimgray" Wrap="False" ForeColor="White" Font-Size="15pt" HorizontalAlign="Center" />--%>
+                                    <HeaderStyle BackColor="#2C3E50" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="#1abc9c" BorderStyle="Solid" BorderWidth="0px" Font-Size="12pt" HorizontalAlign="Center" />
+                                    <EditRowStyle BackColor="DimGray" ForeColor="White" Wrap="False" Font-Size="12pt" Font-Bold="True" HorizontalAlign="Center" />
+                                    <AlternatingRowStyle BackColor="White" ForeColor="DimGray" Wrap="False" Font-Size="9pt" HorizontalAlign="Center" />
+                                    <RowStyle BackColor="White" Wrap="False" ForeColor="DimGray" Font-Size="9pt" HorizontalAlign="Center" />
+                                    <SelectedRowStyle BackColor="#343a40" Wrap="False" ForeColor="White" BorderStyle="Solid" BorderWidth="3px" Font-Size="12pt" HorizontalAlign="Center" />
                                     <Columns>
                                         <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="true" />
                                         <asp:BoundField DataField="Producto" HeaderText="Producto" ReadOnly="false" />
@@ -74,7 +74,6 @@
                                         <asp:BoundField DataField="FechaModificacion" HeaderText="Fecha Actualizacion" ReadOnly="true" />
                                     </Columns>
                                 </asp:GridView>
-                            </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group text-center">
@@ -87,15 +86,6 @@
             </div>
         </div>
 
-        <%--Panel Grid Producto--%>
-        <%--<div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h2 class="card-title text-center text-custom">Actualizacion de Productos y Precios</h2>
-                        </div>
-                    </div>
-                </div>--%>
-        <%--/Panel Producto--%>
         <%--Modal--%>
         <div class="modal fade" id="msj" tabindex="-1" role="dialog" aria-labelledby="msj-label">
             <div class="modal-dialog ModalCenter" role="document">
@@ -105,11 +95,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-2">
                                 <div class="form-group">
-                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" Width="12%" Height="12%" />
-                                    <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
+                                    <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" CssClass="logoModal" />
                                 </div>
+                            </div>
+                            <div class="col-md-10 text-center">
+                                <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
                             </div>
                         </div>
                     </div>

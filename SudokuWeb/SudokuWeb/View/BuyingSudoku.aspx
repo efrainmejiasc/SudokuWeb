@@ -60,7 +60,7 @@
                                             <asp:BoundField DataField="Precio" HeaderText="Precio" ReadOnly="false" />
                                             <asp:BoundField DataField="FechaCompra" HeaderText="Fecha de Compra" ReadOnly="true" />
                                             <asp:BoundField DataField="FechaExpiracion" HeaderText="Fecha de Expiracion" ReadOnly="true" />
-                                            <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Comprar Ahora" ControlStyle-BackColor="#1abc9c"  ControlStyle-ForeColor = "White"/>
+                                            <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Comprar Ahora" ControlStyle-CssClass="btn btn-primary btn-sm"/>
                                         </Columns>
                                     </asp:GridView>
                                 </div>
@@ -91,13 +91,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-10 text-center">
-                                <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
-                            </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" CssClass="logoModal" />
                                 </div>
+                            </div>
+                            <div class="col-md-10 text-center">
+                                <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
                             </div>
                         </div>
                     </div>
