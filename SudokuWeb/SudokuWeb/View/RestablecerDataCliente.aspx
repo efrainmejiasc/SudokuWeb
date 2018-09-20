@@ -100,13 +100,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-10 text-center">
-                                <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
-                            </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <asp:Image ID="Image1" runat="server" ImageUrl="~/public/images/logo.png" CssClass="logoModal" />
                                 </div>
+                            </div>
+                            <div class="col-md-10 text-center">
+                                <asp:Label ID="lblMensaje" runat="server" Text="miMensaje" ForeColor="DimGray"></asp:Label>
                             </div>
                         </div>
                     </div>
