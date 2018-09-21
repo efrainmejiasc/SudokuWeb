@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-md-12">
-            <div class="panel">
-                <div class="panel-body">
+            <div class="card">
+                <div class="card-body">
                     <h2 class="card-title text-center text-custom">Agregar Producto</h2>
                     <div class="col-md-8 col-md-offset-2">
                         <div class="form-group">
@@ -38,10 +38,10 @@
                             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnAgregarProductos_Click" CssClass="btn btn-primary" />
                         </div>
                     </div>
-
-
                 </div>
+                
             </div>
+            <br />
             <div class="card">
                 <div class="card-body">
                     <h2 class=" card-title text-center text-custom">Actualizacion de Productos y Precios</h2>
@@ -59,7 +59,7 @@
                                     OnRowCommand="GridView1_RowCommand"
                                     CssClass="table-striped table-hover table-condensed small-top-margin" Width="100%">
 
-                                    <HeaderStyle BackColor="#2C3E50" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="#1abc9c" BorderStyle="Solid" BorderWidth="0px" Font-Size="12pt" HorizontalAlign="Center" />
+                                    <HeaderStyle BackColor="#18BC9C" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="#1abc9c" BorderStyle="Solid" BorderWidth="0px" Font-Size="12pt" HorizontalAlign="Center" />
                                     <EditRowStyle BackColor="Silver" ForeColor="DimGray" Wrap="False" Font-Size="10pt" Font-Bold="True" HorizontalAlign="Center" />
                                     <AlternatingRowStyle BackColor="White" ForeColor="DimGray" Wrap="False" Font-Size="9pt" HorizontalAlign="Center" />
                                     <RowStyle BackColor="White" Wrap="False" ForeColor="DimGray" Font-Size="9pt" HorizontalAlign="Center" />
