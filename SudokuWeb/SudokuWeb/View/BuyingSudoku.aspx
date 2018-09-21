@@ -47,11 +47,11 @@
                                         Gridlines="None"
                                         CssClass=" table-striped table-hover table-condensed small-top-margin" Width="100%">
 
-                                        <HeaderStyle BackColor="#1abc9c" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="#1abc9c" BorderStyle="Solid" BorderWidth="0px" Font-Size="15pt" HorizontalAlign="Center" />
-                                        <EditRowStyle BackColor="DimGray" ForeColor="White" Wrap="False" Font-Size="15pt" Font-Bold="True" HorizontalAlign="Center" />
-                                        <AlternatingRowStyle BackColor="White" ForeColor="DimGray" Wrap="False" Font-Size="12pt" HorizontalAlign="Center" />
-                                        <RowStyle BackColor="White" Wrap="False" ForeColor="DimGray" Font-Size="12pt" HorizontalAlign="Center" />
-                                        <SelectedRowStyle BackColor="#343a40" Wrap="False" ForeColor="White" BorderStyle="Solid" BorderWidth="3px" Font-Size="15pt" HorizontalAlign="Center" />
+                                        <HeaderStyle BackColor="#1abc9c" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="#1abc9c" BorderStyle="Solid" BorderWidth="0px" Font-Size="12pt" HorizontalAlign="Center" />
+                                        <EditRowStyle BackColor="DimGray" ForeColor="White" Wrap="False" Font-Size="10pt" Font-Bold="True" HorizontalAlign="Center" />
+                                        <AlternatingRowStyle BackColor="White" ForeColor="DimGray" Wrap="False" Font-Size="9pt" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="White" Wrap="False" ForeColor="DimGray" Font-Size="9pt" HorizontalAlign="Center" />
+                                        <SelectedRowStyle BackColor="Silver" Wrap="False" ForeColor="White" BorderStyle="Solid" BorderWidth="3px" Font-Size="10pt" HorizontalAlign="Center" />
                                         <Columns>
                                             <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="true" />
                                             <asp:BoundField DataField="Producto" HeaderText="Producto" ReadOnly="false" />
