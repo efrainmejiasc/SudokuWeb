@@ -7,44 +7,49 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                   <asp:Panel ID="Pnl1"  runat="server" CssClass="card">
-                    <h2 class="card-title text-center text-custom">Crear Nuevo Administrador</h2>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:Label ID="Label2" runat="server" Text="Correo Electronico" CssClass="font-weight-bold"></asp:Label>
-                            <asp:TextBox ID="txtMail" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:Panel ID="Pnl1" runat="server" CssClass="card">
+                        <h2 class="card-title text-center text-custom">Crear Nuevo Administrador</h2>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <asp:Label ID="Label2" runat="server" Text="Correo Electronico" CssClass="font-weight-bold"></asp:Label>
+                                <asp:TextBox ID="txtMail" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:Label ID="Label3" runat="server" Text="Nombre de Administrador" CssClass="font-weight-bold"></asp:Label>
-                            <asp:TextBox ID="txtAdministrador" runat="server" CssClass="form-control"></asp:TextBox>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <asp:Label ID="Label3" runat="server" Text="Nombre de Administrador" CssClass="font-weight-bold"></asp:Label>
+                                <asp:TextBox ID="txtAdministrador" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:Label ID="Label4" runat="server" Text="Contraseña" CssClass="font-weight-bold"></asp:Label>
-                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <asp:Label ID="Label4" runat="server" Text="Contraseña" CssClass="font-weight-bold"></asp:Label>
+                                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:Label ID="Label5" runat="server" Text="Confirmar Contraseña" CssClass="font-weight-bold"> </asp:Label>
-                            <asp:TextBox ID="txtPassword2" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <asp:Label ID="Label5" runat="server" Text="Confirmar Contraseña" CssClass="font-weight-bold"> </asp:Label>
+                                <asp:TextBox ID="txtPassword2" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:CheckBox ID="chkRobot1" runat="server" Text="No Soy un Robot" />
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label" for="chkRobot1">
+                                        <asp:CheckBox ID="chkRobot1" runat="server" Text="" CssClass="form-check-input"/>
+                                        No Soy un Robot
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group text-center">
-                            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnCreateAdmin_Click" CssClass="btn btn-primary" />
-                            <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnCreateAdmin_Click" CssClass="btn btn-primary" />
+                        <div class="col-md-12">
+                            <div class="form-group text-center">
+                                <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnCreateAdmin_Click" CssClass="btn btn-primary" />
+                                <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnCreateAdmin_Click" CssClass="btn btn-primary" />
+                            </div>
                         </div>
-                    </div>
-                   </asp:Panel>
+                    </asp:Panel>
                 </div>
             </div>
         </div>
@@ -54,27 +59,32 @@
             <asp:Panel ID="Pnl2" runat="server" CssClass="card">
                 <div class="card-body">
                     <h2 class="card-title text-center text-custom">Restablecer Nombre de Administrador</h2>
-                    <div class="col-md-12">
+                    <div class="col-md-8 col-md-offset-2">
                         <div class="form-group">
                             <asp:Label ID="Label7" runat="server" Text="Nuevo Nombre de Administrador" CssClass="font-weight-bold"></asp:Label>
                             <asp:TextBox ID="txtNombreAdmin" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-8 col-md-offset-2">
                         <div class="form-group">
                             <asp:Label ID="Label13" runat="server" Text="Correo Electronico" CssClass="font-weight-bold"></asp:Label>
                             <asp:TextBox ID="txtMailAdmin" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-8 col-md-offset-2">
                         <div class="form-group">
                             <asp:Label ID="Label8" runat="server" Text="Ingrese su Contraseña" CssClass="font-weight-bold"></asp:Label>
                             <asp:TextBox ID="txtPasswordAdmin" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-8 col-md-offset-2">
                         <div class="form-group">
-                            <asp:CheckBox ID="chkRobot2" runat="server" Text="No Soy un Robot" />
+                            <div class="form-check-inline">
+                                <label class="form-check-label " for="chkRobot2">
+                                    <asp:CheckBox ID="chkRobot2" runat="server" Text="" CssClass="form-check-input"/>
+                                    No Soy un Robot
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -90,50 +100,43 @@
         <div class="col-md-12">
             <div class="card" id="OlvidoPassword">
                 <div class="card-body">
-                   <asp:Panel ID="Pnl3"  runat="server" CssClass="card">
-                    <h2 class="card-title text-center text-custom">Restablecer Contraseña de Administrador</h2>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:Label ID="Label12" runat="server" Text="Correo Electronico" CssClass="font-weight-bold"></asp:Label>
-                            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:Panel ID="Pnl3" runat="server" CssClass="card">
+                        <h2 class="card-title text-center text-custom">Restablecer Contraseña de Administrador</h2>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <asp:Label ID="Label12" runat="server" Text="Correo Electronico" CssClass="font-weight-bold"></asp:Label>
+                                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:Label ID="Label10" runat="server" Text="Nueva Contraseña" CssClass="font-weight-bold"></asp:Label>
-                            <asp:TextBox ID="txtPassword3" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <asp:Label ID="Label10" runat="server" Text="Nueva Contraseña" CssClass="font-weight-bold"></asp:Label>
+                                <asp:TextBox ID="txtPassword3" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña" CssClass="font-weight-bold"></asp:Label>
-                            <asp:TextBox ID="txtPassword4" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña" CssClass="font-weight-bold"></asp:Label>
+                                <asp:TextBox ID="txtPassword4" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <asp:CheckBox ID="chkRobot3" runat="server" Text="No Soy un Robot" />
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="form-group">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label" for="chkRobot3">
+                                        <asp:CheckBox ID="chkRobot3" runat="server" Text="" CssClass="form-check-input"/>
+                                        No Soy un Robot
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="form-group text-center">
+                                <asp:Button ID="btnCancelarPass" runat="server" Text="Cancelar" OnClick="BtnRestablecerPassword_Click" CssClass="btn btn-primary" />
+                                <asp:Button ID="btnAceptarPass" runat="server" Text="Aceptar" OnClick="BtnRestablecerPassword_Click" CssClass="btn btn-primary" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group">
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="form-group text-center">
-                            <asp:Button ID="btnCancelarPass" runat="server" Text="Cancelar" OnClick="BtnRestablecerPassword_Click" CssClass="btn btn-primary" />
-                            <asp:Button ID="btnAceptarPass" runat="server" Text="Aceptar" OnClick="BtnRestablecerPassword_Click" CssClass="btn btn-primary" />
-                        </div>
-                    </div>
-                   </asp:Panel>
+                    </asp:Panel>
                 </div>
             </div>
         </div>
