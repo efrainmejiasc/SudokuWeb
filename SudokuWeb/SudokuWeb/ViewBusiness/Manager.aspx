@@ -56,14 +56,14 @@
                                     OnRowUpdating="GridView1_RowUpdating"
                                     OnRowDataBound="GridView1_RowDataBound"
                                     OnRowCancelingEdit="GridView1_RowCancelingEdit"
-                                    
+                                    OnRowCommand="GridView1_RowCommand"
                                     CssClass="table-striped table-hover table-condensed small-top-margin" Width="100%">
 
                                     <HeaderStyle BackColor="#2C3E50" Font-Bold="True" ForeColor="White" Wrap="False" BorderColor="#1abc9c" BorderStyle="Solid" BorderWidth="0px" Font-Size="12pt" HorizontalAlign="Center" />
-                                    <EditRowStyle BackColor="DimGray" ForeColor="White" Wrap="False" Font-Size="12pt" Font-Bold="True" HorizontalAlign="Center" />
+                                    <EditRowStyle BackColor="Silver" ForeColor="DimGray" Wrap="False" Font-Size="10pt" Font-Bold="True" HorizontalAlign="Center" />
                                     <AlternatingRowStyle BackColor="White" ForeColor="DimGray" Wrap="False" Font-Size="9pt" HorizontalAlign="Center" />
                                     <RowStyle BackColor="White" Wrap="False" ForeColor="DimGray" Font-Size="9pt" HorizontalAlign="Center" />
-                                    <SelectedRowStyle BackColor="#343a40" Wrap="False" ForeColor="White" BorderStyle="Solid" BorderWidth="3px" Font-Size="12pt" HorizontalAlign="Center" />
+                                    <SelectedRowStyle BackColor="White" Wrap="False" ForeColor="DimGray" BorderStyle="None" BorderWidth="3px" Font-Size="10pt" HorizontalAlign="Center" />
                                     <Columns>
                                         <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="true" />
                                         <asp:BoundField DataField="Producto" HeaderText="Producto" ReadOnly="false" />
@@ -72,6 +72,7 @@
                                         <asp:BoundField DataField="Precio" HeaderText="Precio" ReadOnly="false" />
                                         <asp:BoundField DataField="Fecha" HeaderText="Fecha Creacion" ReadOnly="true" />
                                         <asp:BoundField DataField="FechaModificacion" HeaderText="Fecha Actualizacion" ReadOnly="true" />
+                                        <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Eliminar" ControlStyle-CssClass="btn btn-primary btn-sm"/>
                                     </Columns>
                                 </asp:GridView>
                         </div>
