@@ -1,6 +1,7 @@
 ﻿function MostrarVentana(idDiv)
 {
     $('#' + idDiv).modal('toggle');
+    alert('');
 }
 
 function OcultarVentana(idDiv)
