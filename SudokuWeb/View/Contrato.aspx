@@ -33,7 +33,7 @@
             <div class="col-md-12 text-center">
                 <div class="card">
                     <div class="card-body">
-                        <h2 class="card-title text-center text-custom">Terminos y Condiciones Sudoku Para Todos</h2>
+                        <h2 class="card-title text-center text-custom"><%= Resources.Contrato.aspx.Terminos %></h2>
                         <iframe src="http://docs.google.com/gview?url=http://www.bbvacomtinental.com/js/TerminosCondiciones.pdf&embedded=true" style="width: 1000px; height: 550px;" frameborder="5"></iframe>
 
                     </div>
@@ -45,7 +45,7 @@
                             <div class="form-check-inline">
                                 <label class="form-check-label" for="chkRobot">
                                     <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input" />
-                                    No Soy un Robot
+                                    <%= Resources.Contrato.aspx.chkRobot %>
                                 </label>
                             </div>
                         </div>

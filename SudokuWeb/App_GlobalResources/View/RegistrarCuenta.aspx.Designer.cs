@@ -61,11 +61,101 @@ namespace Resources.RegistrarCuenta {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Aceptar.
+        /// </summary>
+        internal static string btnAceptar {
+            get {
+                return ResourceManager.GetString("btnAceptar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cancelar.
+        /// </summary>
+        internal static string btnCancelar {
+            get {
+                return ResourceManager.GetString("btnCancelar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a No Soy un Robot.
+        /// </summary>
+        internal static string chkRobot {
+            get {
+                return ResourceManager.GetString("chkRobot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Iniciar Sesión.
+        /// </summary>
+        internal static string IniciarSesion {
+            get {
+                return ResourceManager.GetString("IniciarSesion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Inicio.
         /// </summary>
         internal static string MenuInicio {
             get {
                 return ResourceManager.GetString("MenuInicio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Registrarse.
+        /// </summary>
+        internal static string Registrarse {
+            get {
+                return ResourceManager.GetString("Registrarse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Correo Electronico.
+        /// </summary>
+        internal static string txtMail {
+            get {
+                return ResourceManager.GetString("txtMail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre Completo.
+        /// </summary>
+        internal static string txtNombreCompleto {
+            get {
+                return ResourceManager.GetString("txtNombreCompleto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Constraseña.
+        /// </summary>
+        internal static string txtPassword {
+            get {
+                return ResourceManager.GetString("txtPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Confirmar Contraseña.
+        /// </summary>
+        internal static string txtPassword2 {
+            get {
+                return ResourceManager.GetString("txtPassword2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre de Usuario.
+        /// </summary>
+        internal static string txtUsuario {
+            get {
+                return ResourceManager.GetString("txtUsuario", resourceCulture);
             }
         }
     }

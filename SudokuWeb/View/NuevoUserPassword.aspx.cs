@@ -37,6 +37,13 @@ namespace SudokuWeb.View
                 chkRobotUser.Checked = false;
                 chkRobotPass.Checked = false;
             }
+
+            btnAceptarMensaje.Text = Resources.Controles.btnAceptar;
+            btnAceptarPass.Text = Resources.Controles.btnAceptar;
+            btnAceptarUser.Text = Resources.Controles.btnAceptar;
+            btnCancelarPass.Text = Resources.Controles.btnCancelar;
+            btnCancelarUser.Text = Resources.Controles.btnCancelar;
+            
         }
 
         protected void BtnUsername_Click(object sender, EventArgs e)

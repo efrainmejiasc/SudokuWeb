@@ -34,7 +34,7 @@
                             <a href="../default.aspx" class="nav-link mr-sm-2"><%= Resources.RegistrarCuenta.aspx.MenuInicio %></a>
                         </li>
                         <li class="nav-item">
-                            <a href="Login.aspx" class="nav-link mr-sm-2">Iniciar Sesión</a>
+                            <a href="Login.aspx" class="nav-link mr-sm-2"><%=Resources.RegistrarCuenta.aspx.IniciarSesion %></a>
                         </li>
                     </ul>
                 </div>
@@ -46,36 +46,36 @@
                 <div class="col-md-6 offset-md-3 my-5">
                     <div class="card">
                         <div class="card-body">
-                            <h2 class="card-title text-center text-custom">Registrarse</h2>
+                            <h2 class="card-title text-center text-custom"><%= Resources.RegistrarCuenta.aspx.Registrarse %></h2>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label1" runat="server" Text="Nombre Completo" CssClass="font-weight-bold"></asp:Label>
+                                    <asp:Label ID="Label1" runat="server" Text="" CssClass="font-weight-bold"><%= Resources.RegistrarCuenta.aspx.txtNombreCompleto %></asp:Label>
                                     <asp:TextBox ID="txtNombreCompleto" runat="server" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label2" runat="server" Text="Correo Electronico" CssClass="font-weight-bold"></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Text="" CssClass="font-weight-bold"><%= Resources.RegistrarCuenta.aspx.txtMail %></asp:Label>
                                     <asp:TextBox ID="txtMail" runat="server" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label3" runat="server" Text="Nombre de Usuario" CssClass="font-weight-bold"></asp:Label>
+                                    <asp:Label ID="Label3" runat="server" Text="" CssClass="font-weight-bold"><%= Resources.RegistrarCuenta.aspx.txtUsuario %></asp:Label>
                                     <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>
 
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label4" runat="server" Text="Contraseña" CssClass="font-weight-bold"></asp:Label>
+                                    <asp:Label ID="Label4" runat="server" Text="" CssClass="font-weight-bold"><%= Resources.RegistrarCuenta.aspx.txtPassword %></asp:Label>
                                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label5" runat="server" Text="Confirmar Contraseña" CssClass="font-weight-bold"></asp:Label>
+                                    <asp:Label ID="Label5" runat="server" Text="" CssClass="font-weight-bold"><%= Resources.RegistrarCuenta.aspx.txtPassword2 %></asp:Label>
                                     <asp:TextBox ID="txtPassword2" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@
                                 <div class="form-group">
                                     <div class="form-check-inline">
                                         <label class="form-check-label" for="chkRobot">
-                                            <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input"/> No Soy un Robot
+                                            <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input"/> <%= Resources.RegistrarCuenta.aspx.chkRobot %>
                                         </label>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
 
                             <div class="col-md-12">
                                 <div class="form-group text-center">
-                                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="BtnRegistro_Click" CssClass="btn btn-primary" />
+                                    <asp:Button ID="btnCancelar" runat="server" Text="" OnClick="BtnRegistro_Click" CssClass="btn btn-primary" />
                                     <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="BtnRegistro_Click" CssClass="btn btn-primary" />
                                 </div>
                             </div>

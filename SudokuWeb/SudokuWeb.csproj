@@ -417,6 +417,26 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\ControlGlobal\Controles.pt.designer.cs">
+      <DependentUpon>Controles.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\ControlGlobal\Controles.en-US.designer.cs">
+      <DependentUpon>Controles.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\ControlGlobal\Controles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Controles.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\default.aspx.pt.designer.cs">
+      <DependentUpon>default.aspx.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="App_GlobalResources\default.aspx.Designer.cs">
       <DependentUpon>default.aspx.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -427,15 +447,55 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="App_GlobalResources\MenuCulture.pt.designer.cs">
+      <DependentUpon>MenuCulture.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\MenuCulture.en-US.designer.cs">
+      <DependentUpon>MenuCulture.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\MenuCulture.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenuCulture.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\View\Contrato.aspx.pt.designer.cs">
+      <DependentUpon>Contrato.aspx.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\View\Contrato.aspx.en-US.designer.cs">
+      <DependentUpon>Contrato.aspx.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\View\Contrato.aspx.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contrato.aspx.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\View\NuevoUserPassword.aspx.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NuevoUserPassword.aspx.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\View\RegistrarCuenta.aspx.pt.designer.cs">
+      <DependentUpon>RegistrarCuenta.aspx.pt.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\View\RegistrarCuenta.aspx.designer.cs">
+      <DependentUpon>RegistrarCuenta.aspx.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="App_GlobalResources\View\RegistrarCuenta.aspx.en-US.designer.cs">
       <DependentUpon>RegistrarCuenta.aspx.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="App_GlobalResources\View\RegistrarCuenta.aspx.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RegistrarCuenta.aspx.resx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
@@ -573,15 +633,87 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\View\RegistrarCuenta.aspx.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>RegistrarCuenta.aspx.Designer.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_GlobalResources\View\RegistrarCuenta.aspx.en-US.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>RegistrarCuenta.aspx.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\View\RegistrarCuenta.aspx.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RegistrarCuenta.aspx.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\View\RegistrarCuenta.aspx.pt.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RegistrarCuenta.aspx.pt.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\default.aspx.pt.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>default.aspx.pt.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\View\Contrato.aspx.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contrato.aspx.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\View\Contrato.aspx.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contrato.aspx.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\View\Contrato.aspx.pt.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contrato.aspx.pt.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MenuCulture.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MenuCulture.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MenuCulture.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MenuCulture.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MenuCulture.pt.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MenuCulture.pt.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ControlGlobal\Controles.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Controles.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ControlGlobal\Controles.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Controles.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\View\NuevoUserPassword.aspx.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>NuevoUserPassword.aspx.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ControlGlobal\Controles.pt.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Controles.pt.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <PropertyGroup>
