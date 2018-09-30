@@ -12,6 +12,7 @@ namespace SudokuWeb.ViewBusiness
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["AdministradorMasPassword"] = null;
             if (!IsPostBack)
             {
                 chkRobotUser.Checked = false;
@@ -35,10 +36,12 @@ namespace SudokuWeb.ViewBusiness
                         string resultado = Engine.EngineUtil.AutentificacionAdministrador(administrador, password);
                         if (resultado == "Autentificacion Exitosa")
                         {
+                            Session["AdministradorMasPassword"] = administrador + password;
                             Response.Redirect("Manager.aspx");
                         }
                         else
                         {
+                            Session["AdministradorMasPassword"] = null;
                             lblMensaje.Text = resultado;
                             string script2 = "MostrarVentana('msj');";
                             ScriptManager.RegisterStartupScript(this, typeof(Page), "MostrarVentana('msj')", script2, true);
