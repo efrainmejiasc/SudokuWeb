@@ -22,6 +22,9 @@ namespace SudokuWeb.View
             {
                 chkRobot.Checked = false;
             }
+
+            btnAceptar.Text = Resources.Controles.btnAceptar;
+            btnCancelar.Text = Resources.Controles.btnCancelar;
         }
 
         protected void BtnActivarCuenta_Click(object sender, EventArgs e)

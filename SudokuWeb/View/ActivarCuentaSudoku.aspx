@@ -33,13 +33,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="../default.aspx" class="nav-link mr-sm-2">Inicio</a>
+                            <a href="../default.aspx" class="nav-link mr-sm-2"><%= Resources.MenuCulture.Inicio %></a>
                         </li>
                         <li class="nav-item">
-                            <a href="Login.aspx" class="nav-link mr-sm-2">Iniciar Sesión</a>
+                            <a href="Login.aspx" class="nav-link mr-sm-2"><%= Resources.MenuCulture.Sesion %></a>
                         </li>
                         <li class="nav-item">
-                            <a href="RegistrarCuenta.aspx" class="nav-link mr-sm-2">Regístrate</a>
+                            <a href="RegistrarCuenta.aspx" class="nav-link mr-sm-2"><%= Resources.MenuCulture.Registrarse %></a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +56,7 @@
                                 <div class="form-group text-center">
                                     <div class="form-check-inline">
                                         <label class="form-check-label" for="chkRobot">
-                                            <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input"/> No Soy un Robot
+                                            <asp:CheckBox ID="chkRobot" runat="server" CssClass="form-check-input"/> <%= Resources.Controles.chkRobot %>
                                         </label>
                                     </div>
                                 </div>

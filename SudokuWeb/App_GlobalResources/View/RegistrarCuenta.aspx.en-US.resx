@@ -117,7 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnAceptar" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="btnCancelar" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="chkRobot" xml:space="preserve">
+    <value>I am not a robot</value>
+  </data>
+  <data name="IniciarSesion" xml:space="preserve">
+    <value>Log In</value>
+  </data>
   <data name="MenuInicio" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Registrarse" xml:space="preserve">
+    <value>Check in</value>
+  </data>
+  <data name="txtMail" xml:space="preserve">
+    <value>EMail</value>
+  </data>
+  <data name="txtNombreCompleto" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="txtPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="txtPassword2" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="txtUsuario" xml:space="preserve">
+    <value>Username</value>
   </data>
 </root>

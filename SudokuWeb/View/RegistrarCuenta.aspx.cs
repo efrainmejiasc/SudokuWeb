@@ -12,6 +12,8 @@ namespace SudokuWeb.View
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack) { LimpiarTexto(); }
+            btnAceptar.Text = Resources.RegistrarCuenta.aspx.btnAceptar;
+            btnCancelar.Text = Resources.RegistrarCuenta.aspx.btnCancelar;
         }
 
         protected void BtnRegistro_Click(object sender, EventArgs e)

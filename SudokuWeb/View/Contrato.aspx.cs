@@ -15,6 +15,8 @@ namespace SudokuWeb.View
             {
                 chkRobot.Checked = false;
             }
+            btnAceptar.Text = Resources.Contrato.aspx.btnAceptar;
+            btnCancelar.Text = Resources.Contrato.aspx.btnCancelar;
         }
 
         protected void BtnContrato_Click(object sender, EventArgs e)

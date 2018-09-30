@@ -32,13 +32,13 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="../default.aspx" class="nav-link mr-sm-2">Inicio</a>
+                            <a href="../default.aspx" class="nav-link mr-sm-2"><%= Resources.MenuCulture.Inicio %></a>
                         </li>
                         <li class="nav-item">
-                            <a href="RegistrarCuenta.aspx" class="nav-link mr-sm-2">Regístrate</a>
+                            <a href="RegistrarCuenta.aspx" class="nav-link mr-sm-2"><%= Resources.MenuCulture.Registrarse %></a>
                         </li>
                         <li class="nav-item">
-                            <a href="RestablecerDataCliente.aspx" class="nav-link mr-sm-2">Olvidaste Usuario o Contraseña</a>
+                            <a href="RestablecerDataCliente.aspx" class="nav-link mr-sm-2"><%= Resources.MenuCulture.OlvidasteContraseña %></a>
                         </li>
                     </ul>
                 </div>
