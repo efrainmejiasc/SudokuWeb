@@ -12,7 +12,7 @@ namespace SudokuWeb.View
         protected void Page_Load(object sender, EventArgs e)
         {
 
-          GridView1 = Engine.EngineUtil.MostrarProductosVenta(GridView1);
+          //GridView1 = Engine.EngineUtil.MostrarProductosVenta(GridView1);
 
         }
 
