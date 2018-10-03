@@ -12,6 +12,10 @@ namespace SudokuWeb.ViewBusiness
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["AdministradorMasPassword"] == null)
+            {
+                Response.Redirect("Entry.aspx");
+            }
             txtMoneda.Text = "$";
             if (!IsPostBack && Session ["DtProducto"] != null)
             {
