@@ -58,6 +58,29 @@ namespace SudokuWeb.Models
             return resultado;
         }
 
+
+        public string  SeleccionUsuario(int id)
+        {
+            object obj = new object();
+            string  resultado = string.Empty;
+            SqlConnection Conexion = new SqlConnection(cadenaConexion);
+            using (Conexion)
+            {
+                Conexion.Open();
+                SqlCommand command = new SqlCommand("Sp_SeleccionUsuarioConId", Conexion);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@ID",id);
+                obj = command.ExecuteScalar();
+                Conexion.Close();
+            }
+            if (obj != null)
+            {
+                resultado = obj.ToString();
+            }
+            return resultado;
+        }
+
         public int InsertarCliente(string MAIL,string NOMBRE, string USUARIO, string PASSWORD)
         {
             int  resultado = new int();
@@ -185,10 +208,10 @@ namespace SudokuWeb.Models
             return resultado;
         }
 
-        public string LogeoCliente(string USUARIO , string PASSWORD,string ESTADO)
+        public int LogeoCliente(string USUARIO , string PASSWORD,string ESTADO)
         {
             object obj = new object();
-            string resultado = string.Empty;
+            int id = 0;
             SqlConnection Conexion = new SqlConnection(cadenaConexion);
             using (Conexion)
             {
@@ -204,9 +227,9 @@ namespace SudokuWeb.Models
             }
             if (obj != null)
             {
-                resultado = obj.ToString();
+                id = Convert.ToInt32(obj);
             }
-            return resultado;
+            return id;
         }
 
         public int InsertarConexionUsuario(string USUARIO, string IDENTIFICADOR, string IP)

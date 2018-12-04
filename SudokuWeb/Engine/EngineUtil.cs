@@ -293,16 +293,17 @@ namespace SudokuWeb.Engine
                 return resultado;
             }
 
-            string existeUsuarioPassword = ModeloDb.LogeoCliente(USUARIO, PASSWORD, "ACTIVO");
-            if (existeUsuarioPassword == string.Empty)
+            int id = ModeloDb.LogeoCliente(USUARIO, PASSWORD, "ACTIVO");
+            if (id == 0)
             {
                 resultado = Models.EngineData.UsuarioPassworInactivoNoExiste;
             }
             else
             {
                 EngineUtil Funcion = new EngineUtil();
-                HttpContext.Current.Session["Identificador"] = Funcion.ConvertirBase64(USUARIO + PASSWORD);
-                HttpContext.Current.Session["Usuario"] = USUARIO;
+                string USER = ModeloDb.SeleccionUsuario(id);
+                HttpContext.Current.Session["Identificador"] = Funcion.ConvertirBase64(USER + PASSWORD);
+                HttpContext.Current.Session["Usuario"] = USER;
                 resultado = Models.EngineData.loginExitoso;
             }
 

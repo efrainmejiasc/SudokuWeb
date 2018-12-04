@@ -53,7 +53,7 @@
                             <h2 class="card-title text-center text-custom">Inicio de sesión</h2>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="Label1" runat="server" Text="Nombre de Usuario" CssClass="font-weight-bold"></asp:Label>
+                                    <asp:Label ID="Label1" runat="server" Text="Correo Electronico o Nombre de Usuario" CssClass="font-weight-bold"></asp:Label>
                                     <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
